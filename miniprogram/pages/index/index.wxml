@@ -1,0 +1,5 @@
+<!--index.wxml-->
+  <view class='meta'>
+    <image class='poster' src='../../images/cz_logo.png' background-size="cover"></image>
+       <text class='title'>中国南方航空股份有限公司(CZ)</text>
+  </view>

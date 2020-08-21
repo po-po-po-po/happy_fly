@@ -1,0 +1,22 @@
+<!--pages/item/item.wxml-->
+<!--详情页-->
+<!--等待框-->
+<loading hidden="{{!loading}}">加载中...</loading>
+<!--滚动列表-->
+<scroll-view scroll-y="true" wx:if="{{airportDetail.airport.airportName}}">
+  <view class='meta'>
+    <image class='poster' src='{{airportDetail.airport.airportUrl}}' background-size="cover"></image>
+    <text class='title'>{{airportDetail.airport.airportName}}({{airportDetail.airport.airportCode}})</text>
+    <text class='info'>所在区域：{{airportDetail.airport.airportArea}}</text>
+    <text class='info'>机场热力值：{{airportDetail.airport.isHot}}</text>
+    <text class='info'>机场简介：{{airportDetail.airport.airportDescription}}</text>
+  </view>
+  <view class='summary'>
+    <text class='label'>主要飞往城市机场：</text>
+    <view  wx:for="{{airportDetail.airportsList}}" wx:key="id">
+     <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportAbbreviate}}&flightNameStart={{airportDetail.airportAbbreviate}}'>
+     <text class='content'>{{item.airportName}}</text>
+     </navigator>
+    </view>
+  </view>
+</scroll-view>

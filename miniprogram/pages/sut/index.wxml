@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse }}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:if="{{hasUserInfo}}">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+
+  <view class="list-wrapper">
+    <block wx:for="{{menuitems}}" wx:key="item">
+      <navigator url="{{item.url}}" class="list-item" hover-class="list-item_active">
+        <view class='item'>
+          <image class='item-image' src='../../images/liuyan.png'></image>
+          <text class="item-text">{{item.text}}</text>
+        </view>
+        <view class="div-line"></view>
+      </navigator>
+    </block>
+  </view>
+
+  
+</view>

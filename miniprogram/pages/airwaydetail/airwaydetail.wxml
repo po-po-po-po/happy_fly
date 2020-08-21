@@ -1,0 +1,27 @@
+<scroll-view scroll-y="true" >
+
+  <view class='meta'>
+    <text class='title'>{{airwayDetail.airwayNameStart}}飞往{{airwayDetail.airwayNameEnd}}</text>
+    <text class='info'>航线简介：{{airwayDetail.airwayDescription}}</text>
+  </view>
+
+<!--pages/airwaydetail/airwaydetail.wxml-->
+<!-- 每一行 -->
+<view class="row" wx:for="{{list}}" wx:key="id" bindtap="rowTapped" data-id="{{item.name}}">
+    <!-- 左侧 -->
+     <view class="left">
+            <view class="flight">{{item.flightNo}}</view>
+            <view class="flighttime">{{item.flightDate}}</view>
+      </view>
+
+    <!-- 名称与语句 -->
+    <view class="content">
+        <view class="top">
+            <view class="location">{{item.flightNameStart}}</view>
+             <view class="location">---------</view>
+            <view class="location">{{item.flightNameEnd}}</view>
+        </view>
+    </view>
+</view>
+
+</scroll-view>

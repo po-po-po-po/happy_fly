@@ -1,0 +1,22 @@
+<view class=' wh-padding search-top'>
+  <view class='search-container'>
+    <icon type="search" size='14' />
+    <input placeholder='请输入航班起始地或航班号' name="id"  bindconfirm='bindInput' value='{{inputValue}}'></input>
+  </view>
+</view>
+<!-- 每一行 -->
+<view class="row" wx:for="{{list}}" wx:key="id" bindtap="rowTapped" data-id="{{item.name}}">
+    <!-- 左侧 -->
+     <view class="left">
+            <view class="flight">{{item.flightNo}}</view>
+            <view class="flighttime">{{item.flightDate}}</view>
+      </view>
+    <!-- 名称与语句 -->
+    <view class="content">
+        <view class="top">
+            <view class="location">{{item.flightNameStart}}</view>
+             <view class="location">---------</view>
+            <view class="location">{{item.flightNameEnd}}</view>
+        </view>
+    </view>
+</view>

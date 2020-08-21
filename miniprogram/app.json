@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/sut/index",
+    "pages/flight/flight",
+    "pages/airports/airports",
+    "pages/airways/airways",
+    "pages/message/message",
+    "pages/airportsdetail/airportsdetail",
+    "pages/airwaydetail/airwaydetail",
+    "pages/welcome/welcome"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3CC472",
+    "navigationBarTitleText": "快乐飞",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar":{
+    "list":[
+        {
+            "pagePath":"pages/index/index",
+            "text":"首页"
+        },
+        {
+          "pagePath":"pages/airports/airports",
+          "text":"查询"
+      },
+        {
+          "pagePath":"pages/sut/index",
+          "text":"我的"
+      }
+    ]
+}
+}

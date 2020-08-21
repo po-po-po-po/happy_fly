@@ -1,0 +1,56 @@
+<view class=' wh-padding search-top'>
+  <view class='search-container'>
+    <icon type="search" size='14' />
+    <input placeholder='请输入机场名称' name="id"  bindconfirm='bindInput' value='{{inputValue}}'></input>
+  </view>
+</view>
+
+
+<!--列表页-->
+<view class='container'>
+  <!--等待框-->
+  <loading hidden="{{!loading}}">加载中...</loading>
+  <!--顶部标题栏-->
+  <view class='page-header'>
+   <text class='page-title'>{{title}}</text>
+  </view>
+  <!--列表-->
+  <view class='page-body' wx:for="{{list}}" wx:key="id">
+    <!--类型判断,显示不同的数据-->
+    <block wx:if="{{type === 'us_box'}}">
+      <!--类型判断,显示不同的数据-->
+      <navigator url='../airportsdetail/airportsdetail?id={{item.id}}'>
+        <view class='item'>
+       <image class='poster' src='{{item.airportUrl}}'></image>
+          <view class='meta'>
+            <text class='title'>{{item.airportName}}</text>
+            <view class='artists'>
+             <text>{{item.airportCode}}</text>
+            </view>
+            <view class='rating'>
+              <text>执飞航线{{item.id}}条</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <!--另一种情况-->
+    <block wx:else>
+    <!--类型判断,显示不同的数据-->
+      <navigator url='../airportsdetail/airportsdetail?id={{item.id}}'>
+        <view class='item'>
+       <image class='poster' src='{{item.cityUrl}}'></image>
+          <view class='meta'>
+            <text class='title'>{{item.airportName}}</text>
+            <view class='artists'>
+             <text>{{item.airportCode}}</text>
+            </view>
+            <view class='rating'>
+              <text>执飞航线{{item.id}}条</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
