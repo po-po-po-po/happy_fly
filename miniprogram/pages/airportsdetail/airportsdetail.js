@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     const _this = this;
     // 拼接请求url
-    const url = 'http://www.potucs.com:9999/airport/findAirportDetail/' + options.id;
+    const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAirportDetail/' + options.id;
     console.log(url);
     // 请求数据
     wx.request({
