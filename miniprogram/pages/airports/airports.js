@@ -22,17 +22,18 @@ Page({
       url: url,
       method: 'post',
       data: {
-        "pageSize": 50  
+        "pageSize": 300 
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-        console.log(res.data.data.data);
+        console.log(res.data.data);
         // 赋值
         _this.setData({
-          title: '热门机场TOP50',
+          title: '全国民用机场()',
           list: res.data.data.data,
+          airlines: res.data.data.airlines,
           loading: false // 关闭等待框
         })
       }
@@ -45,10 +46,10 @@ Page({
     wx.showLoading({ title: '正在搜索' })
     console.log(inputValue)
     wx.request({
-     url: 'http://www.potucs.com:9999/airport/findAllAirport',
+     url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAllAirport',
      method: 'post',
      data: {
-      "pageSize": 50  ,
+      "pageSize": 300  ,
       "airportName": inputValue            //搜索内容     
     },
     dataType: 'json',
