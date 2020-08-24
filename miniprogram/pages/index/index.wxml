@@ -5,10 +5,11 @@
   <view class="app-moduler">
     <navigator url="url" class="mod-item">
       <view class="mod-img">
-        <image src="http://www.potucs.com:9998/wechat/airline/mu.png" class="mod-image"></image>
+        <image src="{{airlines.data.A1.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>东方航空</text>  
+           <!-- <text>{{airlines.data.A1.airlinesName}}</text>     -->
+           南方航空
       </view>
       <!--
       <view class="mod-info">
