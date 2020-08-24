@@ -1,8 +1,7 @@
-
- <view class="appointment">
-  <view>
- <image src="http://www.potucs.com:9998/wechat/index.jpg" class="mod-image"></image> 
-       </view>
+<view class="index-img">
+ <image src="http://www.potucs.com:9998/wechat/index.jpg"></image> 
+</view>
+<view class="appointment">
   <view class="app-moduler">
     <navigator url="url" class="mod-item">
       <view class="mod-img">

@@ -169,10 +169,12 @@ page {
   font-size: 42rpx;
   color: #444;
 }
+/*******首页图片****/
+.index-img{
+width:100%;
+text-align: center;
 
-
-
-
+}
 /***航司信息*****/
 .mod-item{
 width:22%;
