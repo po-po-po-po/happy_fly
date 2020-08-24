@@ -1,5 +1,6 @@
+//获取应用实例
+const app = getApp()
 Page({
- 
   /**
    * 页面的初始数据
    */
@@ -23,11 +24,11 @@ Page({
     // 提交留言
     wx.request({
       // 传到自己的服务器上
-      url: 'http://www.potucs.com:9999/wxMessage/saveWxMessage',
+      url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/wxMessage/saveWxMessage',
       method: 'POST',  
       data: {
         content: value,
-        userId: 1
+        code: app.globalData.code
       }
     })
     // 提交完成后的显示

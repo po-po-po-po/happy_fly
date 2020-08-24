@@ -8,7 +8,8 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     menuitems: [
-      { text: '留言版', url: '../message/message?userInfo=userInfo', icon: '../../images/icon-index.png', tips: '' }
+      { text: '功能反馈', url: '../message/message?userInfo=userInfo', icon: 'http://www.potucs.com:9998/wechat/logo/fankui.png', tips: '' },
+      { text: '使用说明', url: '../message/message?userInfo=userInfo', icon: 'http://www.potucs.com:9998/wechat/logo/use.png', tips: '' }
     ]
   },
   onLoad: function () {
@@ -48,7 +49,7 @@ Page({
     })
       // 将这个数据发送给后端
       wx.request({
-      url: 'http://www.potucs.com:9999/wxUser/saveWxUser',
+      url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/wxUser/saveWxUser',
       method:"POST",
       data:{
         nickName: e.detail.userInfo.nickName,

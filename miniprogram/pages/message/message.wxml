@@ -5,7 +5,7 @@
     <button class="send" form-type="submit">提交反馈</button>
   </form>
 </view>
-
+<!--
   <view class='summary'>
     <text class='content'>我的留言：</text>
     <view  wx:for="{{list}}" wx:key="id">
@@ -18,3 +18,4 @@
       </block>
     </view>
   </view>
+  -->
