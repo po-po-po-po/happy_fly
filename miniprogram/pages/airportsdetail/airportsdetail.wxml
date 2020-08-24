@@ -2,20 +2,29 @@
 <!--详情页-->
 <!--等待框-->
 <loading hidden="{{!loading}}">加载中...</loading>
+
+<view class=' wh-padding search-top'>
+  <view class='search-container'>
+    <icon type="search" size='14' />
+    <input placeholder='请输入城市或省份或航司代码(比如南航CZ)' name="id"  bindconfirm='bindInput' value='{{inputValue}}'></input>
+  </view>
+</view>
 <!--滚动列表-->
 <scroll-view scroll-y="true" wx:if="{{airportDetail.airport.airportName}}">
-  <view class='meta'>
   <!--
     <image class='poster' src='{{airportDetail.airport.airportUrl}}' background-size="cover"></image>
     -->
-    <text class='title'>{{airportDetail.airport.airportName}}({{airportDetail.airport.airportCode}})</text>
+    <view class='meta'>
+    <text class='title'>
+    {{airportDetail.airport.airportName}}({{airportDetail.airport.airportCode}})</text>
+    </view>
+      <!--
     <text class='info'>所在区域：{{airportDetail.airport.airportArea}}</text>
     <text class='info'>机场热力值：{{airportDetail.airport.isHot}}</text>
-    <text class='info'>机场简介：该机场出发航线()条，执飞航班()条,其中热门top10航线为()
-</text>
-  </view>
+    <text class='info'>机场简介：该机场出发航线()条，执飞航班()条,其中热门top10航线为()</text>
+      -->
   <view class='summary'>
-    <text class='label'>主要飞往城市机场：</text>
+    <text class='label'>可飞往城市：</text>
     <view  wx:for="{{airportDetail.airportsList}}" wx:key="id">
      <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportAbbreviate}}&flightNameStart={{airportDetail.airportAbbreviate}}'>
      <text class='content'>{{item.airportName}}</text>
