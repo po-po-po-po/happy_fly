@@ -31,4 +31,18 @@
      </navigator>
     </view>
   </view>
+
+  <!-- grid   画个重点-->
+  <view class="grids">
+        <view class="grid" wx:for="{{airportDetail.airportsList}}" wx:key="index" wx:for-index="bindex">
+            <view>
+                <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
+                   
+                        <text class="grid-label2">{{item.airportName}}</text>
+                    
+                    <text class="grid-label">{{item.airportName}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
 </scroll-view>
