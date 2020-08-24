@@ -5,11 +5,14 @@
 <!--滚动列表-->
 <scroll-view scroll-y="true" wx:if="{{airportDetail.airport.airportName}}">
   <view class='meta'>
+  <!--
     <image class='poster' src='{{airportDetail.airport.airportUrl}}' background-size="cover"></image>
+    -->
     <text class='title'>{{airportDetail.airport.airportName}}({{airportDetail.airport.airportCode}})</text>
     <text class='info'>所在区域：{{airportDetail.airport.airportArea}}</text>
     <text class='info'>机场热力值：{{airportDetail.airport.isHot}}</text>
-    <text class='info'>机场简介：{{airportDetail.airport.airportDescription}}</text>
+    <text class='info'>机场简介：该机场出发航线()条，执飞航班()条,其中热门top10航线为()
+</text>
   </view>
   <view class='summary'>
     <text class='label'>主要飞往城市机场：</text>
