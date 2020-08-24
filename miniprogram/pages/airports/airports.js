@@ -22,17 +22,18 @@ Page({
       url: url,
       method: 'post',
       data: {
-        "pageSize": 50  
+        "pageSize": 250 
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-        console.log(res.data.data.data);
+        console.log(res.data.data);
         // 赋值
         _this.setData({
           title: '热门机场TOP50',
           list: res.data.data.data,
+          count: res.data.data.airlines,
           loading: false // 关闭等待框
         })
       }

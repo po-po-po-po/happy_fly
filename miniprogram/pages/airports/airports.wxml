@@ -1,7 +1,7 @@
 <view class=' wh-padding search-top'>
   <view class='search-container'>
     <icon type="search" size='14' />
-    <input placeholder='请输入机场名称' name="id"  bindconfirm='bindInput' value='{{inputValue}}'></input>
+    <input placeholder='请输入机场名称或所在城市或所在省份' name="id"  bindconfirm='bindInput' value='{{inputValue}}'></input>
   </view>
 </view>
 
@@ -12,7 +12,7 @@
   <loading hidden="{{!loading}}">加载中...</loading>
   <!--顶部标题栏-->
   <view class='page-header'>
-   <text class='page-title'>{{title}}</text>
+   <text class='page-title'>全国民用机场({{count}})</text>
   </view>
   <!--列表-->
   <view class='page-body' wx:for="{{list}}" wx:key="id">
@@ -41,12 +41,12 @@
         <view class='item'>
        <image class='poster' src='{{item.cityUrl}}'></image>
           <view class='meta'>
-            <text class='title'>{{item.airportName}}</text>
-            <view class='artists'>
-             <text>{{item.airportCode}}</text>
+            <text class='title'>{{item.airportName}}({{item.airportCode}})</text>
+            <view class='rating'>
+               <text>执飞航线{{item.airportAirwaysNum}}条</text>
             </view>
             <view class='rating'>
-              <text>执飞航线{{item.id}}条</text>
+              <text>执飞航班{{item.airportFlightNum}}次</text>
             </view>
           </view>
         </view>
