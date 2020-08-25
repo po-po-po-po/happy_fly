@@ -182,7 +182,7 @@ justify-content: center;
 width:22%;
 float: left;
 margin-left:10rpx;
-margin-top:20rpx;
+margin-top:30rpx;
 position: relative;
 }
 .mod-signup{
@@ -194,16 +194,15 @@ height:40rpx;
 }
 .mod-img{
 width:25%;
-height:100rpx;
+height:80rpx;
 } 
 .mod-image{
 padding-left: 60rpx;
-width: 80%;
-height:60rpx;
+width: 100%;
+height:50rpx;
 }
 .mod-title{
 font-size:28rpx;
-font-family: '微软雅黑';
 display:flex;
 height:40rpx;
 flex-direction:row;
