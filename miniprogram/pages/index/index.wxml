@@ -3,7 +3,7 @@
 </view>
 <view class="appointment">
   <view class="app-moduler">
-    <navigator url="url" class="mod-item">
+    <navigator url="{{airlines.data.A1.navigatorUrl}}" class="mod-item">
       <view class="mod-img">
         <image src="{{airlines.data.A1.airlinesIcon}}" class="mod-image"></image>
       </view>
