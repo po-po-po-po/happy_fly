@@ -21,7 +21,7 @@
         <image src="http://www.potucs.com:9998/wechat/airline/zh.png" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>东方航空</text>  
+         <text>东方航空</text>
       </view>
       <!--
       <view class="mod-info">
@@ -34,7 +34,7 @@
         <image src="http://www.potucs.com:9998/wechat/airline/ca.png" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>东方航空</text>  
+         <text>东方航空</text>
       </view>
       <!--
       <view class="mod-info">
@@ -45,10 +45,10 @@
     
     <navigator url="url" class="mod-item">
       <view class="mod-img">
-        <image src="http://www.potucs.com:9998/wechat/airline/cz.png" class="mod-image"></image>
+        <image src="http://www.potucs.com:9998/wechat/airline/hu.png" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>东方航空</text>  
+         <text>海南航空</text>  
       </view>
       <!--
       <view class="mod-info">
@@ -67,10 +67,10 @@
       </view>
       -->
       <view class="mod-img">
-        <image src="http://www.potucs.com:9998/wechat/airline/mu.png" class="mod-image"></image>
+        <image src="http://www.potucs.com:9998/wechat/airline/3u.png" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>东方航空</text>  
+         <text>四川航空</text>  
       </view>
       <!--
       <view class="mod-info">
@@ -83,10 +83,44 @@
         <image src="{{signupimg}}"></image>
       </view>
       <view class="mod-img">
-        <image src="http://www.potucs.com:9998/wechat/airline/cz.png" class="mod-image"></image>
+        <image src="http://www.potucs.com:9998/wechat/airline/zh.png" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>东方航空</text>  
+         <text>深圳航空</text>  
+      </view>
+      <!--
+      <view class="mod-info">
+        <view class="moinfont">运行航班次</view>
+      </view>
+      -->
+    </navigator>
+    <navigator url="url" class="mod-item">
+          <!--
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      -->
+      <view class="mod-img">
+        <image src="http://www.potucs.com:9998/wechat/airline/sc.png" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>山东航空</text>  
+      </view>
+      <!--
+      <view class="mod-info">
+        <view class="moinfont">运行航班次</view>
+      </view>
+      -->
+    </navigator>
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="http://www.potucs.com:9998/wechat/airline/ho.png" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>吉祥航空</text>  
       </view>
       <!--
       <view class="mod-info">

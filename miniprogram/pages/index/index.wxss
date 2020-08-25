@@ -171,10 +171,12 @@ page {
 }
 /*******首页图片****/
 .index-img{
-width:100%;
-text-align: center;
-
+display:flex;                
+justify-content: center;
 }
+.index-img image { 
+  width:100%;
+  }
 /***航司信息*****/
 .mod-item{
 width:22%;
@@ -195,16 +197,16 @@ width:25%;
 height:100rpx;
 } 
 .mod-image{
-padding-left: 40rpx;
-width: 100%;
+padding-left: 60rpx;
+width: 80%;
 height:60rpx;
 }
 .mod-title{
-font-size:32rpx;
+font-size:28rpx;
 font-family: '微软雅黑';
 display:flex;
 height:40rpx;
-flex-direction:column;
+flex-direction:row;
 justify-content: center;
 text-overflow: -o-ellipsis-lastline;
 text-overflow: ellipsis;
