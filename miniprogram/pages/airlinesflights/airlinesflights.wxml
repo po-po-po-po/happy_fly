@@ -3,7 +3,7 @@
 <!--筛选框-->
 <view class="tabTit box">
   <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
-    <text>{{item}}</text>
+    <text style="font-size:12px">{{item}}</text>
     <image src="/images/arrow-down.png"></image>
   </view>
 </view>

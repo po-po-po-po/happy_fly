@@ -27,7 +27,7 @@ Page({
   onLoad: function (options) { // options 为 board页传来的参数
     const _this = this;
     // 拼接请求url
-    const url = 'http://www.potucs.com:9999/airlines/findFlightsAndAirportsByAirlines' ;
+    const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines' ;
     // 请求数据
     wx.request({
       url: url,
@@ -106,7 +106,7 @@ Page({
       console.log("sortId::::"+that.data.sort_id);
       console.log("flightDate::::"+that.data.flight_date_start);
       wx.request({
-       url: 'http://www.potucs.com:9999/airlines/findFlightsAndAirportsByAirlines',
+       url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines',
        method: 'post',
        data: {
         flightNameStart:that.data.flightNameStart,
