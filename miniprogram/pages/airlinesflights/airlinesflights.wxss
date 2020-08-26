@@ -43,13 +43,13 @@
   }
 
   .title {
-    font-size: 42rpx;
+    font-size: 22rpx;
     color: rgb(158, 10, 72);
     align-items: center;
     padding-left: 60rpx;
   }
   .title1 {
-    font-size: 42rpx;
+    font-size: 22rpx;
     color: rgb(158, 10, 72);
     align-items: center;
   }
