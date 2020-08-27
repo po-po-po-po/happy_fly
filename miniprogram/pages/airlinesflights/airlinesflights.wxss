@@ -9,7 +9,7 @@
 }
 .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 50%;
 }
 .top, .bottom {
@@ -22,8 +22,8 @@
 /*航班时间*/
 .flightDate {
     color: #4d4d4d;
-    font-size: 25rpx;
-    margin: 16rpx;
+    font-size: 20rpx;
+    margin: 5rpx;
 }
 
 /*日期*/
@@ -38,8 +38,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 200rpx, 200rpx;
-    padding-left: 80rpx;
+    margin: 100rpx, 200rpx;
+    padding-left: 60rpx;
   }
 
   .title {

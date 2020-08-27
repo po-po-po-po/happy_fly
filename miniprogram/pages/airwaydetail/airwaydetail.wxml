@@ -33,7 +33,7 @@
   <view class='meta'>
     <text class='title'>{{airwayDetail.airwayNameStart}}</text>
      <image  class="plane" src="http://www.potucs.com:9998/wechat/logo/plane.png" background-size="cover"></image>
-       <text class='title'>{{airwayDetail.airwayNameEnd}}</text>
+       <text class='title1'>{{airwayDetail.airwayNameEnd}}</text>
   </view>
 
 <!-- 每一行 -->
@@ -42,20 +42,15 @@
      <view class="top">
          <view>
      <image  class="plane" src="{{item.airlinesIcon}}" background-size="cover"></image>
+       </view>
     </view>
-          <view class="left">{{item.airlinesName}}</view>
-            <view class="left">{{item.flightNo}}</view>
-      </view>
-    <!-- 航班时间 -->
+        <view class="content">
         <view class="top">
-            <view class="flightDate">{{item.flightDate}}</view>
-        </view>
-    <!-- 航班时间 -->
-    <view class="content">
-        <view class="top">
-            <view class="flightDate">{{item.flightNameStart}}--{{item.flightNameEnd}}
-            <text style='color:red;'>{{item.flightRemark}}</text></view>
-        </view>
-    </view>
+          <view class="flightDate">{{item.airlinesName}}</view>
+            <view class="flightDate">{{item.flightNo}}</view>
+              <view class="flightDate">{{item.flightDate}}</view>
+             <view class="flightDate">{{item.flightNameStart}}--{{item.flightNameEnd}} </view>
+            </view> </view>
+    
 </view>
 </scroll-view>
