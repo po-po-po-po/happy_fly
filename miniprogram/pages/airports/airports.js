@@ -46,11 +46,11 @@ Page({
     wx.showLoading({ title: '正在搜索' })
     console.log(inputValue)
     wx.request({
-     url: 'http://www.potucs.com:9999/airport/findAllAirport',
+     url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAllAirport',
      method: 'post',
      data: {
       "pageSize": 50  ,
-      "airportName": inputValue            //搜索内容     
+      "search": inputValue            //搜索内容     
     },
     dataType: 'json',
      header: { 'Content-Type': 'application/json' },
