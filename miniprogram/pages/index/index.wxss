@@ -171,16 +171,18 @@ page {
 }
 /*******首页图片****/
 .index-img{
-width:100%;
-text-align: center;
-
+display:flex;                
+justify-content: center;
 }
+.index-img image { 
+  width:100%;
+  }
 /***航司信息*****/
 .mod-item{
 width:22%;
 float: left;
 margin-left:10rpx;
-margin-top:20rpx;
+margin-top:30rpx;
 position: relative;
 }
 .mod-signup{
@@ -192,19 +194,18 @@ height:40rpx;
 }
 .mod-img{
 width:25%;
-height:100rpx;
+height:80rpx;
 } 
 .mod-image{
-padding-left: 40rpx;
+padding-left: 60rpx;
 width: 100%;
-height:60rpx;
+height:50rpx;
 }
 .mod-title{
-font-size:32rpx;
-font-family: '微软雅黑';
+font-size:28rpx;
 display:flex;
 height:40rpx;
-flex-direction:column;
+flex-direction:row;
 justify-content: center;
 text-overflow: -o-ellipsis-lastline;
 text-overflow: ellipsis;

@@ -20,7 +20,8 @@
     "pages/message/message",
     "pages/airportsdetail/airportsdetail",
     "pages/airwaydetail/airwaydetail",
-    "pages/welcome/welcome"
+    "pages/welcome/welcome",
+    "pages/airlinesflights/airlinesflights"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -32,20 +33,20 @@
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
-  "tabBar":{
-    "list":[
-        {
-            "pagePath":"pages/index/index",
-            "text":"首页"
-        },
-        {
-          "pagePath":"pages/airports/airports",
-          "text":"查询"
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
       },
-        {
-          "pagePath":"pages/sut/index",
-          "text":"我的"
+      {
+        "pagePath": "pages/airports/airports",
+        "text": "查询"
+      },
+      {
+        "pagePath": "pages/sut/index",
+        "text": "我的"
       }
     ]
-}
+  }
 }
