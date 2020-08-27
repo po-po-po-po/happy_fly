@@ -1,26 +1,61 @@
 <scroll-view scroll-y="true" >
 
+<!--筛选框-->
+<view class="tabTit box">
+  <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+    <text style="font-size:12px">{{item}}</text>
+    <image src="/images/arrow-down.png"></image>
+  </view>
+</view>
+
+
+<!--筛选项-->
+<view class="tabLayer" hidden="{{tab[0]}}">
+    <text class="{{flightNameStart==''?'active':''}}" data-id="" data-index="0" data-txt="出发机场" bindtap="filter">不限</text>
+    <text class="{{flightNameStart==item.airlinesAbbreviate?'active':''}}" wx:for="{{airlinesList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airlinesAbbreviate}}" data-index="0" data-txt="{{item.airlinesAbbreviate}}" bindtap="filter">{{item.airlinesAbbreviate}}</text>
+</view>
+
+<view class="tabLayer" hidden="{{tab[1]}}">
+    <text class="{{flight_date_start==0?'active':''}}" data-id="0" data-index="1" data-txt="起飞时间" bindtap="filter">不限</text>
+    <text class="{{flight_date_start==1?'active':''}}" data-id="1" data-index="1" data-txt="00:00-08:00" bindtap="filter">00:00-08:00</text>
+    <text class="{{flight_date_start==2?'active':''}}" data-id="2" data-index="1" data-txt="08:00-12:00" bindtap="filter">08:00-12:00</text>
+     <text class="{{flight_date_start==3?'active':''}}" data-id="2" data-index="1" data-txt="12:00-20:00" bindtap="filter">12:00-20:00</text>
+    <text class="{{flight_date_start==4?'active':''}}" data-id="2" data-index="1" data-txt="20:00-24:00" bindtap="filter">20:00-24:00</text>
+</view>
+
+<view class="tabLayer" hidden="{{tab[2]}}">
+    <text class="{{sort_id==0?'active':''}}" data-id="0" data-index="2" data-txt="时间排序" bindtap="filter">不限</text>
+    <text class="{{sort_id==1?'active':''}}" data-id="1" data-index="2" data-txt="从早到晚" bindtap="filter">从早到晚</text>
+    <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="从晚到早" bindtap="filter">从晚到早</text>
+</view>
+
+<!--航线头-->
   <view class='meta'>
-    <text class='title'>{{airwayDetail.airwayNameStart}}飞往{{airwayDetail.airwayNameEnd}}</text>
+    <text class='title'>{{airwayDetail.airwayNameStart}}</text>
+     <image  class="plane" src="http://www.potucs.com:9998/wechat/logo/plane.png" background-size="cover"></image>
+       <text class='title'>{{airwayDetail.airwayNameEnd}}</text>
   </view>
 
-<!--pages/airwaydetail/airwaydetail.wxml-->
 <!-- 每一行 -->
 <view class="row" wx:for="{{list}}" wx:key="id" bindtap="rowTapped" data-id="{{item.name}}">
     <!-- 左侧 -->
-     <view class="left">
-            <view class="flight">{{item.flightNo}}</view>
-            <view class="flighttime">{{item.flightDate}}</view>
+     <view class="top">
+         <view>
+     <image  class="plane" src="{{item.airlinesIcon}}" background-size="cover"></image>
+    </view>
+          <view class="left">{{item.airlinesName}}</view>
+            <view class="left">{{item.flightNo}}</view>
       </view>
-
-    <!-- 名称与语句 -->
+    <!-- 航班时间 -->
+        <view class="top">
+            <view class="flightDate">{{item.flightDate}}</view>
+        </view>
+    <!-- 航班时间 -->
     <view class="content">
         <view class="top">
-            <view class="location">{{item.flightNameStart}}</view>
-             <view class="location">---------</view>
-            <view class="location">{{item.flightNameEnd}}</view>
+            <view class="flightDate">{{item.flightNameStart}}--{{item.flightNameEnd}}
+            <text style='color:red;'>{{item.flightRemark}}</text></view>
         </view>
     </view>
 </view>
-
 </scroll-view>

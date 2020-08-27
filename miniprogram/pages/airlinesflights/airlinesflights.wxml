@@ -39,7 +39,7 @@
   <view class='meta'>
     <text class='title'>{{airwayDetail.airwayNameStart}}</text>
      <image  class="plane" src="http://www.potucs.com:9998/wechat/logo/plane.png" background-size="cover"></image>
-       <text class='title1'>{{airwayDetail.airwayNameEnd}}</text>
+       <text class='title'>{{airwayDetail.airwayNameEnd}}</text>
   </view>
 
 <!-- 每一行 -->
