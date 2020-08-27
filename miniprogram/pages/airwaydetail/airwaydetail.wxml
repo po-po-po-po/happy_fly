@@ -2,7 +2,6 @@
 
   <view class='meta'>
     <text class='title'>{{airwayDetail.airwayNameStart}}飞往{{airwayDetail.airwayNameEnd}}</text>
-    <text class='info'>航线简介：{{airwayDetail.airwayDescription}}</text>
   </view>
 
 <!--pages/airwaydetail/airwaydetail.wxml-->

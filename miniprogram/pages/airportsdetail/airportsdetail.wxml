@@ -28,7 +28,7 @@
         <view class="grid" wx:for="{{cityList}}" wx:key="index" wx:for-index="bindex">
             <view>
                 <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
-                        <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportAbbreviate}}&flightNameStart={{airportDetail.airportAbbreviate}}'>
+                        <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportAbbreviate}}&flightNameStart={{airportDetail.airport.airportAbbreviate}}'>
                     <text class="grid-label">{{item.airportLocation}}</text>
                     </navigator>
                 </view>
