@@ -28,7 +28,7 @@ Page({
         console.log(res.data);
         // 赋值
         _this.setData({
-          info: res.data
+          info: res.data.data
         })
       }
     })
