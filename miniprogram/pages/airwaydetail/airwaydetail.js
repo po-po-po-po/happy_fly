@@ -9,7 +9,10 @@ Page({
     type: '', // 数据类型
     loading: true, // 显示等待框
     tabTxt: ['航空公司', '起飞时间', '排序'],//分类
-    tab: [true, true, true]
+    tab: [true, true, true],
+    airlinesCode: '',//航司id,
+    flightNameStart: '',
+    flightNameEnd: ''
   },
  
   /**
@@ -38,6 +41,8 @@ Page({
           airwayDetail: res.data.data.airway,
           list: res.data.data.flightList,
           airlinesList: res.data.data.airlinesList,
+          flightNameStart: res.data.data.airway.airwayNameStart,
+          flightNameEnd: res.data.data.airway.airwayNameEnd,
           loading: false // 关闭等待框
         })
       }
@@ -64,7 +69,7 @@ Page({
             tab: [true, true, true],
             tabTxt: tabTxt,
             //airline_id: id,
-            flightNameStart: id
+            airlinesCode: id
           });
           break;
         case '1':
@@ -92,17 +97,16 @@ Page({
       //调用数据接口，获取数据
       getDataList:function(){
         let that = this;
-        console.log("flightNameStart::::"+that.data.flightNameStart);
         console.log("airlinesCode::::"+that.data.airlinesCode);
-        console.log("sortId::::"+that.data.sort_id);
-        console.log("flightDate::::"+that.data.flight_date_start);
+        console.log("flightNameStart::::"+this.data.flightNameStart);
+        console.log("flightNameEnd::::"+this.data.flightNameEnd);
         wx.request({
-         url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines',
+         url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/flight/findAllFlightsByAirline',
          method: 'post',
          data: {
-          flightNameStart:that.data.flightNameStart,
-          flightNameEnd:that.data.flightNameEnd,
           airlinesCode:that.data.airlinesCode,
+          flightNameStart: this.data.flightNameStart,
+          flightNameEnd: this.data.flightNameEnd,
           sortId:that.data.sort_id,
           flightDate:that.data.flight_date_start
         },
@@ -112,10 +116,7 @@ Page({
           wx.hideLoading()
           console.log(res.data.data)
           that.setData({
-            flightList: res.data.data.flightList,
-            airportStartList: res.data.data.airportStartList,
-            airlines:res.data.data.airlines,
-            airlinesCode:res.data.data.airlines.airlinesCode
+            list: res.data.data.flightList
           })
          }
         })
