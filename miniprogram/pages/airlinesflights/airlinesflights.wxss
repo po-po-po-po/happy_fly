@@ -125,7 +125,7 @@
   float:left;
   border: solid 1px #eee;
   margin:20rpx 0 0 26rpx;
-  font-size:15px;
+  font-size:10px;
 }
 .tabLayer .active{
   color:#e64340;

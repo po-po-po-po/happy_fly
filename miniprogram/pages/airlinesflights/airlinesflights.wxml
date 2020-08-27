@@ -27,6 +27,13 @@
     <text class="{{sort_id==0?'active':''}}" data-id="0" data-index="2" data-txt="时间排序" bindtap="filter">不限</text>
     <text class="{{sort_id==1?'active':''}}" data-id="1" data-index="2" data-txt="从早到晚" bindtap="filter">从早到晚</text>
     <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="从晚到早" bindtap="filter">从晚到早</text>
+   <text class="{{sort_id==3?'active':''}}" data-id="3" data-index="2" data-txt="出发机场" bindtap="filter">出发机场</text>
+  <text class="{{sort_id==4?'active':''}}" data-id="4" data-index="2" data-txt="到达机场" bindtap="filter">到达机场</text>
+</view>
+
+<view class="tabLayer" hidden="{{tab[3]}}">
+    <text class="{{flightNameEnd==''?'active':''}}" data-id="" data-index="3" data-txt="到达机场" bindtap="filter">不限</text>
+    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="3" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportAbbreviate}}</text>
 </view>
 <!--航线头-->
   <view class='meta'>

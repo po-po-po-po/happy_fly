@@ -8,8 +8,8 @@ Page({
     list: [], // 数据列表
     type: '', // 数据类型
     loading: true, // 显示等待框
-    tabTxt: ['出发机场', '起飞时间', '排序'],//分类
-    tab: [true, true, true],
+    tabTxt: ['出发机场', '起飞时间', '排序','到达机场'],//分类
+    tab: [true, true, true, true],
     airlinesList: [],
     airlinesCode: '',//航司id
     pinpai_txt: '',
@@ -53,7 +53,7 @@ Page({
   },
     // 选项卡
     filterTab: function (e) {
-      var data = [true, true, true], index = e.currentTarget.dataset.index;
+      var data = [true, true, true, true], index = e.currentTarget.dataset.index;
       data[index] = !this.data.tab[index];
       this.setData({
         tab: data
@@ -68,9 +68,8 @@ Page({
     switch (e.currentTarget.dataset.index) {
       case '0':
         tabTxt[0] = txt;
-        console.log(id)
         self.setData({
-          tab: [true, true, true],
+          tab: [true, true, true, true],
           tabTxt: tabTxt,
           //airline_id: id,
           flightNameStart: id
@@ -79,7 +78,7 @@ Page({
       case '1':
         tabTxt[1] = txt;
         self.setData({
-          tab: [true, true, true],
+          tab: [true, true, true, true],
           tabTxt: tabTxt,
           //flight_date_start: txt,
           flight_date_start: txt
@@ -88,12 +87,21 @@ Page({
       case '2':
         tabTxt[2] = txt;
         self.setData({
-          tab: [true, true, true],
+          tab: [true, true, true, true],
           tabTxt: tabTxt,
           sort_id: id,
           xiaoliang_txt: txt
         });
         break;
+        case '3':
+          tabTxt[3] = txt;
+          self.setData({
+            tab: [true, true, true, true],
+            tabTxt: tabTxt,
+            //airline_id: id,
+            flightNameEnd: id
+          });
+          break;
     }
     //数据筛选
     self.getDataList();
@@ -110,6 +118,7 @@ Page({
        method: 'post',
        data: {
         flightNameStart:that.data.flightNameStart,
+        flightNameEnd:that.data.flightNameEnd,
         airlinesCode:that.data.airlinesCode,
         sortId:that.data.sort_id,
         flightDate:that.data.flight_date_start
