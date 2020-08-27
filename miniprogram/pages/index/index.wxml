@@ -342,4 +342,61 @@
       -->
     </navigator>
    </view>
+
+ <view class="app-moduler">
+    <navigator url="{{airlines.data.A25.navigatorUrl}}" class="mod-item">
+      <view class="mod-img">
+        <image src="{{airlines.data.A25.airlinesIcon}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+           <text>{{airlines.data.A25.airlinesAbbreviate}}</text>     
+      </view>
+      <!--
+      <view class="mod-info">
+        <view class="moinfont">运行航班次</view>
+      </view>
+      -->
+    </navigator>
+       <navigator url="{{airlines.data.A26.navigatorUrl}}" class="mod-item">
+      <view class="mod-img">
+        <image src="{{airlines.data.A26.airlinesIcon}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+           <text>{{airlines.data.A26.airlinesAbbreviate}}</text>     
+      </view>
+      <!--
+      <view class="mod-info">
+        <view class="moinfont">运行航班次</view>
+      </view>
+      -->
+    </navigator>
+    
+      <navigator url="{{airlines.data.A27.navigatorUrl}}" class="mod-item">
+      <view class="mod-img">
+        <image src="{{airlines.data.A27.airlinesIcon}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+           <text>{{airlines.data.A27.airlinesAbbreviate}}</text>     
+      </view>
+      <!--
+      <view class="mod-info">
+        <view class="moinfont">运行航班次</view>
+      </view>
+      -->
+    </navigator>
+
+      <navigator url="{{airlines.data.A28.navigatorUrl}}" class="mod-item">
+      <view class="mod-img">
+        <image src="{{airlines.data.A28.airlinesIcon}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+           <text>{{airlines.data.A28.airlinesAbbreviate}}</text>     
+      </view>
+      <!--
+      <view class="mod-info">
+        <view class="moinfont">运行航班次</view>
+      </view>
+      -->
+    </navigator>
+   </view>
 </view>
