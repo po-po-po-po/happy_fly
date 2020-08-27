@@ -31,6 +31,7 @@ Page({
         // 赋值
         _this.setData({
           airportDetail: res.data,
+          cityList: res.data.airportsList.data,
           loading: false // 隐藏等待框
         })
       }

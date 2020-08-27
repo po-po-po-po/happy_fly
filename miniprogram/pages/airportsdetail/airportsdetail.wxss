@@ -23,7 +23,7 @@
 }
 .summary {
   width: 80%;
-  margin: 80rpx auto;
+  margin: 40rpx auto;
 }
 .label {
   font-size: 30rpx;

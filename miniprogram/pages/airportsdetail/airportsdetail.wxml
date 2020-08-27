@@ -14,20 +14,16 @@
   <!--
     <image class='poster' src='{{airportDetail.airport.airportUrl}}' background-size="cover"></image>
     -->
-    <view class='meta'>
-    <text class='title'>
-    {{airportDetail.airport.airportName}}({{airportDetail.airport.airportCode}})</text>
-    </view>
       <!--
     <text class='info'>所在区域：{{airportDetail.airport.airportArea}}</text>
     <text class='info'>机场热力值：{{airportDetail.airport.isHot}}</text>
     <text class='info'>机场简介：该机场出发航线()条，执飞航班()条,其中热门top10航线为()</text>
       -->
   <view class='summary'>
-    <text class='label'>可飞往城市：</text>
-    <view  wx:for="{{airportDetail.airportsList}}" wx:key="id">
+    <text class='label'> {{airportDetail.airport.airportAbbreviate}}可飞往城市</text>
+    <view  wx:for="{{cityList}}" wx:key="id">
      <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportAbbreviate}}&flightNameStart={{airportDetail.airportAbbreviate}}'>
-     <text class='content'>{{item.airportName}}</text>
+     <text class='content'>{{item.airportLocation}}</text>
      </navigator>
     </view>
   </view>
