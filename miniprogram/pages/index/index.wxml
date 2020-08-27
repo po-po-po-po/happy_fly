@@ -8,7 +8,7 @@
         <image src="{{airlines.data.A1.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>南方航空</text>     
+           <text>{{airlines.data.A2.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -21,7 +21,7 @@
         <image src="{{airlines.data.A2.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A2.airlinesName}}</text>     
+           <text>{{airlines.data.A2.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -35,7 +35,7 @@
         <image src="{{airlines.data.A3.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A3.airlinesName}}</text>     
+           <text>{{airlines.data.A3.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -49,7 +49,7 @@
         <image src="{{airlines.data.A4.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A4.airlinesName}}</text>     
+           <text>{{airlines.data.A4.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -65,7 +65,7 @@
         <image src="{{airlines.data.A13.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A13.airlinesName}}</text>     
+           <text>{{airlines.data.A13.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -78,7 +78,7 @@
         <image src="{{airlines.data.A14.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A14.airlinesName}}</text>     
+           <text>{{airlines.data.A14.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -92,7 +92,7 @@
         <image src="{{airlines.data.A15.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A15.airlinesName}}</text>     
+           <text>{{airlines.data.A15.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -106,7 +106,7 @@
         <image src="{{airlines.data.A16.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A16.airlinesName}}</text>     
+           <text>{{airlines.data.A16.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -122,7 +122,7 @@
         <image src="{{airlines.data.A17.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A17.airlinesName}}</text>     
+           <text>{{airlines.data.A17.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -135,7 +135,7 @@
         <image src="{{airlines.data.A18.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A18.airlinesName}}</text>     
+           <text>{{airlines.data.A18.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -149,7 +149,7 @@
         <image src="{{airlines.data.A19.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A19.airlinesName}}</text>     
+           <text>{{airlines.data.A19.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -163,7 +163,7 @@
         <image src="{{airlines.data.A20.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A20.airlinesName}}</text>     
+           <text>{{airlines.data.A20.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -178,7 +178,7 @@
         <image src="{{airlines.data.A21.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A21.airlinesName}}</text>     
+           <text>{{airlines.data.A21.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -191,7 +191,7 @@
         <image src="{{airlines.data.A22.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A22.airlinesName}}</text>     
+           <text>{{airlines.data.A22.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -205,7 +205,7 @@
         <image src="{{airlines.data.A23.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A23.airlinesName}}</text>     
+           <text>{{airlines.data.A23.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -219,7 +219,7 @@
         <image src="{{airlines.data.A24.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A24.airlinesName}}</text>     
+           <text>{{airlines.data.A24.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -235,7 +235,7 @@
         <image src="{{airlines.data.A5.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A5.airlinesName}}</text>     
+           <text>{{airlines.data.A5.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -248,7 +248,7 @@
         <image src="{{airlines.data.A6.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A6.airlinesName}}</text>     
+           <text>{{airlines.data.A6.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -262,7 +262,7 @@
         <image src="{{airlines.data.A7.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A7.airlinesName}}</text>     
+           <text>{{airlines.data.A7.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -276,7 +276,7 @@
         <image src="{{airlines.data.A8.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A8.airlinesName}}</text>     
+           <text>{{airlines.data.A8.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -292,7 +292,7 @@
         <image src="{{airlines.data.A9.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A9.airlinesName}}</text>     
+           <text>{{airlines.data.A9.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -305,7 +305,7 @@
         <image src="{{airlines.data.A10.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A10.airlinesName}}</text>     
+           <text>{{airlines.data.A10.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -319,7 +319,7 @@
         <image src="{{airlines.data.A11.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A11.airlinesName}}</text>     
+           <text>{{airlines.data.A11.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
@@ -333,7 +333,7 @@
         <image src="{{airlines.data.A12.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A12.airlinesName}}</text>     
+           <text>{{airlines.data.A12.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">

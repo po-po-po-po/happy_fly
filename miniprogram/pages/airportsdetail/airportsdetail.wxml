@@ -20,23 +20,17 @@
     <text class='info'>机场简介：该机场出发航线()条，执飞航班()条,其中热门top10航线为()</text>
       -->
   <view class='summary'>
-    <text class='label'> {{airportDetail.airport.airportAbbreviate}}可飞往城市</text>
-    <view  wx:for="{{cityList}}" wx:key="id">
-     <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportAbbreviate}}&flightNameStart={{airportDetail.airportAbbreviate}}'>
-     <text class='content'>{{item.airportLocation}}</text>
-     </navigator>
-    </view>
+    <text class='label'> {{airportDetail.airport.airportName}}可飞往城市</text>
   </view>
 
   <!-- grid   画个重点-->
   <view class="grids">
-        <view class="grid" wx:for="{{airportDetail.airportsList}}" wx:key="index" wx:for-index="bindex">
+        <view class="grid" wx:for="{{cityList}}" wx:key="index" wx:for-index="bindex">
             <view>
                 <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
-                   
-                        <text class="grid-label2">{{item.airportName}}</text>
-                    
-                    <text class="grid-label">{{item.airportName}}</text>
+                        <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportAbbreviate}}&flightNameStart={{airportDetail.airportAbbreviate}}'>
+                    <text class="grid-label">{{item.airportLocation}}</text>
+                    </navigator>
                 </view>
             </view>
         </view>
