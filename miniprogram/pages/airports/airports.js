@@ -49,7 +49,7 @@ Page({
      url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAllAirport',
      method: 'post',
      data: {
-      "pageSize": 50  ,
+      "pageSize": 250  ,
       "search": inputValue            //搜索内容     
     },
     dataType: 'json',

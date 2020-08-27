@@ -7,7 +7,8 @@ Page({
   data: {
     title: '',
     loading: true,
-    movie: {}
+    movie: {},
+    flightNameStart: ''
   },
  
   /**
@@ -31,6 +32,7 @@ Page({
         // 赋值
         _this.setData({
           airportDetail: res.data,
+          flightNameStart: res.data.airport.airportName,
           cityList: res.data.airportsList.data,
           loading: false // 隐藏等待框
         })
@@ -46,5 +48,32 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.title + '机场详情'
     })
-  }
+  },
+  bindInput(e) { 
+    let that = this;
+    let inputValue =e.detail.value; //获取表单所有name=id的值 
+    wx.showLoading({ title: '正在搜索' })
+    console.log(inputValue)
+    wx.request({
+     url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAirwaysDestination/',
+     method: 'post',
+     data: {
+      "pageSize": 250  ,
+      "airportAbbreviate": flightNameStart,
+      "search": inputValue 
+     },
+     header: {
+       'content-type': 'json' // 默认值
+     },
+     success:function(res) {
+      console.log(res.data);
+      // 赋值
+      that.setData({
+        airportDetail: res.data,
+        cityList: res.data.airportsList.data,
+        loading: false // 隐藏等待框
+      })
+    }
+    })
+   }
 })
