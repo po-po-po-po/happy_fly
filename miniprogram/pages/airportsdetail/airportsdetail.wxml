@@ -20,7 +20,7 @@
     <text class='info'>机场简介：该机场出发航线()条，执飞航班()条,其中热门top10航线为()</text>
       -->
   <view class='summary'>
-    <text class='label'> {{airportDetail.airport.airportName}}可飞往城市</text>
+    <text class='label'>{{airlines}}{{airportDetail.airport.airportName}}可飞往城市如下</text>
   </view>
 
   <!-- grid   画个重点-->

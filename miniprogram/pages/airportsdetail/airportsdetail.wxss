@@ -26,7 +26,7 @@
   margin: 40rpx auto;
 }
 .label {
-  font-size: 40rpx;
+  font-size: 28rpx;
   color: rgb(235, 11, 11);
   display: block;
 }
@@ -109,7 +109,7 @@
 .grid {
   position: relative;
   float: left;
-  padding: 20px 10px;
+  padding: 10px 10px;
   width: 25%;              
   box-sizing: border-box;
 }
@@ -166,7 +166,7 @@ color: rgb(187, 184, 184)
   text-align: center;
   font-weight: bold;
   color: rgb(116, 117, 116);
-  font-size: 14px;
+  font-size: 12px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

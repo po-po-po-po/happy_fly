@@ -32,7 +32,7 @@ Page({
         // 赋值
         _this.setData({
           airportDetail: res.data,
-          flightNameStart: res.data.airport.airportName,
+          flightNameStart: res.data.airport.airportAbbreviate,
           cityList: res.data.airportsList.data,
           loading: false // 隐藏等待框
         })
@@ -53,24 +53,23 @@ Page({
     let that = this;
     let inputValue =e.detail.value; //获取表单所有name=id的值 
     wx.showLoading({ title: '正在搜索' })
-    console.log(inputValue)
     wx.request({
-     url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAirwaysDestination/',
+     url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAirwaysDestination',
      method: 'post',
      data: {
       "pageSize": 250  ,
-      "airportAbbreviate": flightNameStart,
+      "airportAbbreviate": this.data.flightNameStart,
       "search": inputValue 
      },
-     header: {
-       'content-type': 'json' // 默认值
-     },
+     dataType: 'json',
+     header: { 'Content-Type': 'application/json' },
      success:function(res) {
-      console.log(res.data);
+      console.log(res.data.data);
+      wx.hideLoading()
       // 赋值
       that.setData({
-        airportDetail: res.data,
-        cityList: res.data.airportsList.data,
+        cityList: res.data.data.data,
+        airlines: res.data.data.airlines,
         loading: false // 隐藏等待框
       })
     }
