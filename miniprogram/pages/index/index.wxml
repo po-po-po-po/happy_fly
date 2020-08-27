@@ -8,7 +8,7 @@
         <image src="{{airlines.data.A1.airlinesIcon}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-           <text>{{airlines.data.A2.airlinesAbbreviate}}</text>     
+           <text>{{airlines.data.A1.airlinesAbbreviate}}</text>     
       </view>
       <!--
       <view class="mod-info">
