@@ -1,4 +1,4 @@
-<!--miniprogram/pages/info/info.wxml-->
-  <view class='summary'>
-    <text class='label'>{{info}}</text>
+   <!--列表-->
+  <view class='page-body' wx:for="{{info}}" wx:key="id">
+  <text>{{item}}</text>
   </view>
