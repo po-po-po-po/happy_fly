@@ -186,7 +186,7 @@
       </view>
       -->
     </navigator>
-       <navigator url="url" class="mod-item">
+       <navigator url="{{airlines.data.A14.navigatorUrl}}" class="mod-item">
       <view class="mod-img">
         <image src="{{airlines.data.A14.airlinesIcon}}" class="mod-image"></image>
       </view>
