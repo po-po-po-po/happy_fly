@@ -46,7 +46,7 @@ Page({
   onReady: function () {
     // 修改导航栏标题
     wx.setNavigationBarTitle({
-      title: this.data.title + '机场详情'
+      //title: this.data.title + '机场详情'
     })
   },
   bindInput(e) { 
