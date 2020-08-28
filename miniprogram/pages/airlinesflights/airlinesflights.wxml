@@ -54,6 +54,7 @@
       </view>
 
     <!-- 航班时间 -->
+    
         <view class="top">
             <view class="flightDate">{{item.flightDate}}</view>
         </view>

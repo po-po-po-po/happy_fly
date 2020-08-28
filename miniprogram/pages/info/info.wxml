@@ -1,4 +1,4 @@
    <!--列表-->
   <view class='page-body' wx:for="{{info}}" wx:key="id">
-  <text>{{item}}</text>
+   <view class="info">{{item}}</view>
   </view>

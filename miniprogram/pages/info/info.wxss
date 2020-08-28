@@ -1,1 +1,6 @@
-/* miniprogram/pages/info/info.wxss */
+
+
+.info {
+  font-size: 26rpx;
+  color: #999;
+}
