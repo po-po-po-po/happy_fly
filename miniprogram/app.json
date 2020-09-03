@@ -38,11 +38,11 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "航司"
       },
       {
         "pagePath": "pages/airports/airports",
-        "text": "查询"
+        "text": "机场"
       },
       {
         "pagePath": "pages/sut/index",
