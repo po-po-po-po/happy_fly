@@ -12,10 +12,12 @@
       <view class="code">航班 ： {{item.flightNumber}}次</view>
     </view>
   
-   
+    <block wx:if="{{item.airlinesAlliance !== ''}}">
     <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
     <!-- {{item.isFollow ? "已关注" : "关注"}} -->
     {{item.airlinesAlliance}}
     </view>
+    </block>
+
   </view>
 </view>
