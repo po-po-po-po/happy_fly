@@ -35,6 +35,7 @@
     <text class="{{flightNameEnd==''?'active':''}}" data-id="" data-index="3" data-txt="到达机场" bindtap="filter">不限</text>
     <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="3" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportAbbreviate}}</text>
 </view>
+
 <!--航线头-->
   <view class='meta'>
     <text class='title'>{{airwayDetail.airwayNameStart}}</text>
@@ -42,33 +43,19 @@
        <text class='title'>{{airwayDetail.airwayNameEnd}}</text>
   </view>
 
-<!-- 每一行 -->
-<view class="row" wx:for="{{flightList}}" wx:key="id" bindtap="rowTapped" data-id="{{item.name}}">
-
-    <!-- 左侧 -->
-     <view class="top">
-         <view>
-     <image  class="plane" src="{{airlines.airlinesImg}}" background-size="cover"></image>
-    </view>
-            <view class="flight">{{item.flightNo}}</view>
-      </view>
-
-    <!-- 航班时间 -->
-    
-        <view class="top">
-            <view class="flightDate">{{item.flightDate}}</view>
-        </view>
-
-
-    <!-- 航班时间 -->
-    <view class="content">
-        <view class="top">
-            <view class="flightDate">{{item.flightNameStart}}--{{item.flightNameEnd}}
-            <text style='color:red;'>{{item.flightRemark}}</text></view>
+<!-- grid   画个重点-->
+  <view class="grids">
+        <view class="grid" wx:for="{{airwayList}}" wx:key="index" wx:for-index="bindex">
+            <view>
+                <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
+                        <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportNameEnd}}&flightNameStart={{item.airportNameStart}}'>
+                    <text class="grid-label">{{item.airportNameStart}}---{{item.airportNameEnd}}</text>
+                         <text class="grid-label2">{{item.flightNumber}}班</text>
+                    </navigator>
+                </view>
+            </view>
         </view>
     </view>
 
-
-</view>
 
 </scroll-view>

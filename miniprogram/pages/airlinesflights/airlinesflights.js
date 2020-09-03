@@ -45,6 +45,7 @@ Page({
           flightList: res.data.data.flightList,
           airportStartList: res.data.data.airportStartList,
           airlines:res.data.data.airlines,
+          airwayList: res.data.data.airwayList,
           airlinesCode:res.data.data.airlines.airlinesCode,
           loading: false // 关闭等待框
         })
@@ -132,6 +133,7 @@ Page({
           flightList: res.data.data.flightList,
           airportStartList: res.data.data.airportStartList,
           airlines:res.data.data.airlines,
+          airwayList: res.data.data.airwayList,
           airlinesCode:res.data.data.airlines.airlinesCode
         })
        }
