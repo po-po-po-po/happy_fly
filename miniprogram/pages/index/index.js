@@ -13,7 +13,7 @@ Page({
   onLoad: function (options) { // options 为 board页传来的参数
     const _this = this;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airlines/wechatIndexAirlines' ;
+    const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airlines/findAirlinesIndex' ;
     // 请求数据
     wx.request({
       url: url,
@@ -29,7 +29,7 @@ Page({
         // 赋值
         _this.setData({
           title: '热门机场TOP50',
-          airlines: res.data,
+          airlines: res.data.data,
           loading: false // 关闭等待框
         })
       }
