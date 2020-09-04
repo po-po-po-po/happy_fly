@@ -9,7 +9,7 @@
         <text class="name-text">{{item.airlinesName}}({{item.airlinesCode}})</text>
         <i class="iconfont {{item.gender ? 'nv' : 'nan'}}"></i>
       </view>
-      <view class="code">航班 ： {{item.flightNumber}}次</view>
+      <view class="code">航班:{{item.flightNumber}}次|航线:{{item.airwayNumber}}条</view>
     </view>
   
     <block wx:if="{{item.airlinesAlliance !== ''}}">
