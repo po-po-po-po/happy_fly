@@ -11,7 +11,7 @@
 
 <!--筛选项-->
 <view class="tabLayer" hidden="{{tab[0]}}">
-    <text class="{{flightNameStart==''?'active':''}}" data-id="" data-index="0" data-txt="出发机场" bindtap="filter">不限</text>
+    <text class="{{airlinesCode==''?'active':''}}" data-id="" data-index="0" data-txt="航空公司" bindtap="filter">不限</text>
     <text class="{{flightNameStart==item.airlinesAbbreviate?'active':''}}" wx:for="{{airlinesList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airlinesCode}}" data-index="0" data-txt="{{item.airlinesAbbreviate}}" bindtap="filter">{{item.airlinesAbbreviate}}</text>
 </view>
 

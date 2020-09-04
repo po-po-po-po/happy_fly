@@ -27,6 +27,7 @@ Page({
       url: url,
       method: 'post',
       data: {
+        airlinesCode:options.airlinesCode,
         flightNameStart:options.flightNameStart,
         flightNameEnd:options.flightNameEnd
       },
@@ -37,6 +38,7 @@ Page({
         console.log(res.data.data);
         // 赋值
         _this.setData({
+          airlinesCode:'',
           title: '航线详情',
           airwayDetail: res.data.data.airway,
           list: res.data.data.flightList,
@@ -104,6 +106,7 @@ Page({
          url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/flight/findAllFlightsByAirline',
          method: 'post',
          data: {
+       
           airlinesCode:that.data.airlinesCode,
           flightNameStart: this.data.flightNameStart,
           flightNameEnd: this.data.flightNameEnd,
@@ -116,6 +119,7 @@ Page({
           wx.hideLoading()
           console.log(res.data.data)
           that.setData({
+            airlinesList: res.data.data.airlinesList,
             list: res.data.data.flightList
           })
          }
