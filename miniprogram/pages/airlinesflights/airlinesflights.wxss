@@ -234,7 +234,7 @@
 .grid-label2{
 display: flex;
 justify-content: center;
-margin: 0 auto;
+margin: 10rpx auto;
 font-size: 10px;
 color: rgb(187, 184, 184)
   
@@ -242,7 +242,7 @@ color: rgb(187, 184, 184)
 
 .grid-label {
   display: block;
-  margin-top: 4px;
+  margin-top: 14px;
   text-align: center;
   font-weight: bold;
   color: rgb(116, 117, 116);
