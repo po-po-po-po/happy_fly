@@ -43,10 +43,11 @@
   }
 
   .title {
-    font-size: 22rpx;
+    font-size: 32rpx;
+    margin-top: 100rpx;
     color: rgb(158, 10, 72);
     align-items: center;
-    padding-left: 60rpx;
+    padding-left: 100rpx;
   }
   .title1 {
     font-size: 22rpx;
@@ -111,7 +112,7 @@
   width:750rpx;
   overflow: hidden;
   position: fixed;
-  top:90rpx;
+  top:60rpx;
   z-index: 1;
   background: #fff;
   padding-bottom: 40rpx;
@@ -119,9 +120,9 @@
   text-align: center;
 }
 .tabLayer text{
-  width:210rpx;
-  height:60rpx;
-  line-height:60rpx;
+  width:150rpx;
+  height:40rpx;
+  line-height:40rpx;
   float:left;
   border: solid 1px #eee;
   margin:20rpx 0 0 26rpx;
@@ -188,8 +189,8 @@
 .grid {
   position: relative;
   float: left;
-  padding: 10px 10px;
-  width:50%;              
+
+  width:33.3%;              
   box-sizing: border-box;
 }
 
@@ -234,18 +235,18 @@
 display: flex;
 justify-content: center;
 margin: 0 auto;
-font-size: 12px;
+font-size: 10px;
 color: rgb(187, 184, 184)
   
 }
 
 .grid-label {
   display: block;
-  margin-top: 8px;
+  margin-top: 4px;
   text-align: center;
   font-weight: bold;
   color: rgb(116, 117, 116);
-  font-size: 12px;
+  font-size: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

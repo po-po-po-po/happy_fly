@@ -11,8 +11,11 @@
 
 <!--筛选项-->
 <view class="tabLayer" hidden="{{tab[0]}}">
+
     <text class="{{flightNameStart==''?'active':''}}" data-id="" data-index="0" data-txt="出发机场" bindtap="filter">不限</text>
-    <text class="{{flightNameStart==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="0" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportAbbreviate}}</text>
+
+    <text class="{{flightNameStart==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="0" data-txt="{{item.airportAbbreviate}}" bindtap="filter">    {{item.airportAbbreviate}} </text>
+ 
 </view>
 
 <view class="tabLayer" hidden="{{tab[1]}}">
@@ -35,10 +38,9 @@
 </view>
 
 <!--航线头-->
-  <view class='meta'>
-    <text class='title'>{{airwayDetail.airwayNameStart}}</text>
-     <image  class="plane" src="http://www.potucs.com:9998/wechat/logo/plane.png" background-size="cover"></image>
-       <text class='title'>{{airwayDetail.airwayNameEnd}}</text>
+
+    <view class='meta'>
+      <text class='title'>    {{airlines.airlinesName}}</text>
   </view>
 
 <!-- grid   画个重点-->
@@ -47,7 +49,7 @@
             <view>
                 <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
                         <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportNameEnd}}&flightNameStart={{item.airportNameStart}}&airlinesCode={{airlines.airlinesCode}}'>
-                    <text class="grid-label">{{item.airportNameStart}}---{{item.airportNameEnd}}</text>
+                    <text class="grid-label">{{item.airportNameStart}}--{{item.airportNameEnd}}</text>
                          <text class="grid-label2">{{item.flightNumber}}班</text>
                     </navigator>
                 </view>
