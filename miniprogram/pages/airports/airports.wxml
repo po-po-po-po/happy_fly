@@ -15,7 +15,7 @@
    <text class='page-title'>全国民用机场({{count}})</text>
   </view>
   <!--列表-->
-  <view class='page-body' wx:for="{{list}}" wx:key="id">
+  <view class='page-body' wx:for="{{list}}" wx:for-index="bindex"  wx:key="id">
     <!--类型判断,显示不同的数据-->
     <block wx:if="{{type === 'us_box'}}">
       <!--类型判断,显示不同的数据-->
@@ -41,7 +41,7 @@
         <view class='item'>
        <image class='poster' src='{{item.cityUrl}}'></image>
           <view class='meta'>
-            <text class='title'>{{item.airportName}}({{item.airportCode}})</text>
+            <text class='title'>{{bindex+1}}.{{item.airportName}}({{item.airportCode}})</text>
             <view class='rating'>
                <text>执飞航线{{item.airportAirwaysNum}}条</text>
             </view>
