@@ -22,8 +22,9 @@
     <text class="{{flight_date_start==0?'active':''}}" data-id="0" data-index="1" data-txt="起飞时间" bindtap="filter">不限</text>
     <text class="{{flight_date_start==1?'active':''}}" data-id="1" data-index="1" data-txt="00:00-08:00" bindtap="filter">00:00-08:00</text>
     <text class="{{flight_date_start==2?'active':''}}" data-id="2" data-index="1" data-txt="08:00-12:00" bindtap="filter">08:00-12:00</text>
-     <text class="{{flight_date_start==3?'active':''}}" data-id="2" data-index="1" data-txt="12:00-20:00" bindtap="filter">12:00-20:00</text>
-    <text class="{{flight_date_start==4?'active':''}}" data-id="2" data-index="1" data-txt="20:00-24:00" bindtap="filter">20:00-24:00</text>
+     <text class="{{flight_date_start==3?'active':''}}" data-id="3" data-index="1" data-txt="12:00-20:00" bindtap="filter">12:00-20:00</text>
+    <text class="{{flight_date_start==4?'active':''}}" data-id="4" data-index="1" data-txt="20:00-24:00" bindtap="filter">20:00-24:00</text>
+      
 </view>
 
 <view class="tabLayer" hidden="{{tab[2]}}">
