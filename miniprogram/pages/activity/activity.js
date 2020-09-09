@@ -19,7 +19,7 @@ Page({
       url: url,
       method: 'post',
       data: {
-       
+        airlinesCode:options.airline_code
       },
       header: {
         'content-type': 'application/json' // 默认值

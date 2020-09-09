@@ -13,7 +13,7 @@
     </view>
   
     <block wx:if="{{item.airlinesAlliance !== ''}}">
-        <navigator url="../activity/activity" class="mod-item">
+        <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
     <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
     <!-- {{item.isFollow ? "已关注" : "关注"}} -->
     {{item.airlinesAlliance}}
