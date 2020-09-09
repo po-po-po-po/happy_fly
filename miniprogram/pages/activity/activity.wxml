@@ -1,6 +1,6 @@
 <view class="schoollist">
 
-  <block wx:for="{{items}}" wx:key="item">
+  <block wx:for="{{list}}" wx:key="item">
 
     <view class="school-list">
 
@@ -8,9 +8,9 @@
 
         <view class="school-list-info" index="{{index}}">
 
-          <image class="school-list-photo" src="{{item.imageUrl}}"/>
+          <image class="school-list-photo" src="{{item.bannerImgUrl}}"/>
 
-          <text class="school-list-desc">{{item.content}}</text>
+          <text class="school-list-desc">{{item.title}}</text>
 
         </view>
 
