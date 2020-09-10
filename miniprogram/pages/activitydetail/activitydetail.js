@@ -7,6 +7,15 @@ Page({
               onLoad: function (options) {
                 // 获得高度
                 let winPage = this;
+                wx.getSystemInfo({
+                  success: function (res) {
+                    let winHeight = res.windowHeight;
+                    console.log(winHeight);
+                    winPage.setData({
+                      dkheight: winHeight
+                    })
+                  }
+                }),
                 wx.request({
                   url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/activity/activityDetail',
                   method: 'post',
