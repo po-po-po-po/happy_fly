@@ -1,6 +1,6 @@
  <view class="headLine box box-tb">
 
-    <view class="headLineWra box box-lr"  wx:for="{{headLineList}}" bindtap="jumpDetails" data-Id="{{item.id}}" >
+    <view class="headLineWra box box-lr"  wx:for="{{headLineList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id">
 
       <view class="headLineContent box box-tb box-align-center box-pack-around">
 
