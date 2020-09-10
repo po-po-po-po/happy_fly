@@ -2,21 +2,28 @@ let wxparse = require("../../wxParse/wxParse.js");
 Page({
             data: {
               dkheight:300,
-              dkcontent: "你好<br/>nihao, <br/><br/><br/><br/><br/><br/><br/>这个是测试<br/><br/>你同意了吗<br/><br/><br/>hehe<b>n你好啊，我加粗了kk</b >",
-
+              dkcontent: "",
               },
               onLoad: function (options) {
                 // 获得高度
                 let winPage = this;
-                wx.getSystemInfo({
-                  success: function (res) {
-                    let winHeight = res.windowHeight;
-                    console.log(winHeight);
+                wx.request({
+                  url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/activity/activityDetail',
+                  method: 'post',
+                  data: {
+                    id:options.id
+                  },
+                  header: {
+                    'content-type': 'application/json' // 默认值
+                  },
+                  success: function(res) {
+                    // 赋值
                     winPage.setData({
-                      dkheight: winHeight - winHeight*0.05 - 80
+                      dkcontent:  wxparse.wxParse('dkcontent', 'html', res.data.data.content, winPage, 5)
                     })
                   }
                 })
-                wxparse.wxParse('dkcontent', 'html', this.data.dkcontent, this, 5);
-              }
+              
+              },
+            
       })
