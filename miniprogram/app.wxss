@@ -30,7 +30,7 @@ page {
   margin-top: 40rpx;
   height: 140rpx;
   width: 100%;
-  background: #fff;
+  background: rgb(6, 253, 26);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-left: none;
   border-right: none;

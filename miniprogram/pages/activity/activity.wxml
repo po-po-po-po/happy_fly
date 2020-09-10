@@ -4,13 +4,16 @@
 
     <view class="school-list">
 
-      <navigator url="/pages/photo/photo?id={{item.id}}">
+      <navigator url="../activitydetail/activitydetail?id={{item.id}}">
 
         <view class="school-list-info" index="{{index}}">
 
           <image class="school-list-photo" src="{{item.bannerImgUrl}}"/>
 
-          <text class="school-list-desc">{{item.title}}</text>
+          <text class="school-list-desc">
+            {{item.title}}(<block wx:if="{{item.status == 0}}"><text style="color:rgb(250, 0, 0)">进行中</text ></block><block wx:if="{{item.status == 1}}"><text style="color:rgb(255, 165, 0)">已结束</text ></block><block wx:if="{{item.status == 2}}"><text style="color:rgb(	84, 255, 159)">未开始</text ></block>)
+          
+          </text>
 
         </view>
 
