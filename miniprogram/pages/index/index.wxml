@@ -1,3 +1,6 @@
+<view class="index-img">
+ <image src="http://www.potucs.com:9998/wechat/index.jpg"></image> 
+</view>
 <view class="box transition" >
   <view class="title">内地航司</view>
   <view class="user-panel" wx:for="{{airlines}}" wx:for-index="bindex" wx:key="index">

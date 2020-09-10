@@ -95,3 +95,12 @@ page {
 .follows {
   background-color: #eee;
 }
+
+/*******首页图片****/
+.index-img{
+  display:flex;                
+  justify-content: center;
+  }
+  .index-img image { 
+    width:100%;
+    }
