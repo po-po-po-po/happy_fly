@@ -1,4 +1,2 @@
-.intro {
-  margin: 30px;
-  text-align: center;
-}
+/* pages/flight/index.wxss */
+@import '../../style/weui.wxss';

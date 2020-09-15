@@ -23,7 +23,8 @@
     "pages/welcome/welcome",
     "pages/airlinesflights/airlinesflights",
     "pages/info/info",
-    "pages/citys/citys"
+    "pages/citys/citys",
+    "pages/city/city"
   ],
   "permission": {
     "scope.userLocation": {
@@ -53,6 +54,10 @@
       {
         "pagePath": "pages/citys/citys",
         "text": "城市"
+      },
+      {
+        "pagePath": "pages/city/city",
+        "text": "航班"
       },
       {
         "pagePath": "pages/sut/index",
