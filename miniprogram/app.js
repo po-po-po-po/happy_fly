@@ -1,5 +1,57 @@
 //app.js
+import utils from 'pages/utils/sutil.js'
 App({
+  globalData:{
+    userInfo:null,
+    searchParams: {
+      dcity: 'SHA',
+      dcityName: '上海',
+      acity: 'TAO',
+      acityName: '青岛',
+      ddate: ''
+    },
+    cityTarget: '',
+
+    flightDetail: null,
+    flightInfos: [],
+  },
+  getCityName: function (cb) {
+    if (this.globalData.cityTarget === 'dcity') {
+      cb(this.globalData.searchParams.dcityName)
+    } else if (this.globalData.cityTarget === 'acity') {
+      cb(this.globalData.searchParams.acityName)
+    }
+  },
+  setCityTarget: function (newValue) {
+    //console.log('setTarget: ' + newValue)
+    this.globalData.cityTarget = newValue
+  },
+  setCityInfo: function (cityInfo) {
+    console.log(cityInfo)
+    if (this.globalData.cityTarget === 'dcity') {
+      this.globalData.searchParams.dcityName = cityInfo.cityname
+      this.globalData.searchParams.dcity = cityInfo.citycode
+    } else if (this.globalData.cityTarget === 'acity') {
+      this.globalData.searchParams.acityName = cityInfo.cityname
+      this.globalData.searchParams.acity = cityInfo.citycode
+    }
+  },
+  setDcity : function (newValue) {
+    this.globalData.searchParams.dcity = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setAcity : function (newValue) {
+    this.globalData.searchParams.acity = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setDdate : function (newValue) {
+    //this.globalData.searchParams.ddate = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  getSearchParams: function(cb) {
+    //console.log(cb)
+    cb(this.globalData.searchParams)
+  },
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -15,6 +67,5 @@ App({
       })
     }
 
-    this.globalData = {}
   }
 })

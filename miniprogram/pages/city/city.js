@@ -41,7 +41,7 @@ Page({
     //调用应用实例的方法获取全局数据
     App.getSearchParams(function(params){
       //更新数据
-      // console.log(params)
+       console.log(params)
       that.setData({
         dcity:params.dcity,
         dcityName: params.dcityName,
