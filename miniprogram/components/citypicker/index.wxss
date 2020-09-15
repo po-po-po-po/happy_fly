@@ -57,8 +57,10 @@
 .item_city {
   display: flex;
   background-color: #fff;
+  float: left;
+  width:100%;
   height: 100rpx;
-  padding-left: 34rpx;
+  padding-left: 36rpx;
   align-items: center;
   border-bottom: 1rpx solid #ededed;
   font-size: 26rpx;

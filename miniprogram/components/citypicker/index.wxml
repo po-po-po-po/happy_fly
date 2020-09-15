@@ -5,7 +5,7 @@
 <scroll-view scroll-y="true" bindscroll="bindScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
   <view class="hotcity-common thisCity">当前选择机场</view>
   <view class="thisCityName">{{city}}</view>
-  <view>
+  <view class="weui-grids2">
     <text class="hotcity hotcity-common">热门机场</text>
     <view class="weui-grids">
       <block wx:for-items="{{hotcityList}}" wx:key="index">
