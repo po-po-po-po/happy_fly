@@ -4,10 +4,10 @@ App({
   globalData:{
     userInfo:null,
     searchParams: {
-      dcity: 'SHA',
-      dcityName: '上海',
-      acity: 'TAO',
-      acityName: '青岛',
+      dcity: 'CTU',
+      dcityName: '成都双流',
+      acity: 'PEK',
+      acityName: '北京首都',
       ddate: ''
     },
     cityTarget: '',
