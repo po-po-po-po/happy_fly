@@ -5,7 +5,7 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd">                    
-                    <input  class="weui-input" bindtap="dcityfocusEvent" placeholder="请输入出发城市" id="dcity" value="{{dcityName}}"  />
+                    <input  class="weui-input" bindtap="dcityfocusEvent" placeholder="请选择出发城市" id="dcity" value="{{dcityName}}"  />
                 </view>
             </view>
         </view>
@@ -18,7 +18,15 @@
                 </view>
             </view>
         </view>
-
+                <view class="weui-cells__title">航空公司</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">                    
+                    <input  class="weui-input" bindtap="acityfocusEvent" placeholder="请选择航空公司" id="acity" value="{{acityName}}" />
+                </view>
+            </view>
+        </view>
+<!--
         <view class="weui-cells__title">出发日期</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
@@ -29,7 +37,7 @@
                 </view>
             </view>
         </view>
-
+-->
         
 
 
