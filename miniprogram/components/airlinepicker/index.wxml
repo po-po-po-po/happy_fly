@@ -1,0 +1,12 @@
+<view>
+  <input  class="weui-input" bindinput="searchWordInputEvent" placeholder="搜索航空公司" value="{{searchWord}}"  />
+</view>
+<scroll-view scroll-y="true" bindscroll="bindScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
+  <view class="hotcity-common thisCity">当前选择航空公司</view>
+  <view class="thisCityName">{{city}}</view>
+
+
+  <view class="item_city" wx:for="{{cityList}}" wx:key="item" data-citycode="{{item[0]}}" data-cityname="{{item[1]}}" bindtap="bindHotCity">
+      {{item[0]}} - {{item[1]}} - {{item[2]}} - {{item[3]}}
+  </view>
+</scroll-view>

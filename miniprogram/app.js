@@ -8,6 +8,8 @@ App({
       dcityName: '成都双流',
       acity: 'PEK',
       acityName: '北京首都',
+      airlineCode: 'MU',
+      airlineName: '东方航空',
       ddate: ''
     },
     cityTarget: '',
@@ -20,6 +22,8 @@ App({
       cb(this.globalData.searchParams.dcityName)
     } else if (this.globalData.cityTarget === 'acity') {
       cb(this.globalData.searchParams.acityName)
+    } else if (this.globalData.cityTarget === 'airlineCode') {
+      cb(this.globalData.searchParams.airlineCode)
     }
   },
   setCityTarget: function (newValue) {
@@ -34,6 +38,9 @@ App({
     } else if (this.globalData.cityTarget === 'acity') {
       this.globalData.searchParams.acityName = cityInfo.cityname
       this.globalData.searchParams.acity = cityInfo.citycode
+    }else if (this.globalData.cityTarget === 'airlineCode') {
+      this.globalData.searchParams.airlineName = cityInfo.airlineName
+      this.globalData.searchParams.airlineCode = cityInfo.airlineCode
     }
   },
   setDcity : function (newValue) {
@@ -42,6 +49,10 @@ App({
   },
   setAcity : function (newValue) {
     this.globalData.searchParams.acity = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setAirlineCode : function (newValue) {
+    this.globalData.searchParams.airlineCode = newValue.toUpperCase()
     //console.log(this.globalData)
   },
   setDdate : function (newValue) {
