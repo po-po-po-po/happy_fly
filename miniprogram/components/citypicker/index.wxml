@@ -3,10 +3,10 @@
 </view>
 
 <scroll-view scroll-y="true" bindscroll="bindScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
-  <view class="hotcity-common thisCity">当前选择城市</view>
+  <view class="hotcity-common thisCity">当前选择机场</view>
   <view class="thisCityName">{{city}}</view>
   <view>
-    <text class="hotcity hotcity-common">热门城市</text>
+    <text class="hotcity hotcity-common">热门机场</text>
     <view class="weui-grids">
       <block wx:for-items="{{hotcityList}}" wx:key="{{index}}">
         <view class="weui-grid" data-citycode="{{item[0]}}" data-cityname="{{item[1]}}" bindtap="bindHotCity" >
@@ -15,6 +15,7 @@
       </block>
     </view>
   </view>
+
   <view class="item_city" wx:for="{{cityList}}" wx:key="{{item[0]}}" data-citycode="{{item[0]}}" data-cityname="{{item[1]}}" bindtap="bindHotCity">
       {{item[0]}} - {{item[1]}} - {{item[2]}} - {{item[3]}}
   </view>

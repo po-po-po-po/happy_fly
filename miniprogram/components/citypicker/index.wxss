@@ -61,7 +61,7 @@
   padding-left: 34rpx;
   align-items: center;
   border-bottom: 1rpx solid #ededed;
-  font-size: 24rpx;
+  font-size: 26rpx;
   color: #666;
 }
 

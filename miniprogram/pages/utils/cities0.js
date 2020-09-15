@@ -8,8 +8,7 @@ hotCities[4] = new Array('CAN','广州','GUANGZHOU','GZ');
 hotCities[5] = new Array('SYX','三亚','SANYA','SY');
 hotCities[6] = new Array('CTU','成都','CHENGDU','CD');
 hotCities[7] = new Array('SIA','西安','XIAN','XA');
-hotCities[8] = new Array('WUH','武汉','WUHAN','WH');
-hotCities[9] = new Array('TAO','青岛','QINGDAO','QD');
+
 
 
 //初始化所有国内机场城市
