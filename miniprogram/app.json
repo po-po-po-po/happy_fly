@@ -51,10 +51,7 @@
         "pagePath": "pages/airports/airports",
         "text": "机场"
       },
-      {
-        "pagePath": "pages/citys/citys",
-        "text": "城市"
-      },
+     
       {
         "pagePath": "pages/city/city",
         "text": "航班"
