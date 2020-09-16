@@ -3,7 +3,7 @@
 <view class=' wh-padding search-top'>
   <view class='search-container'>
     <icon type="search" size='14' />
-    <input placeholder='搜索机场' name="id"  bindinput="searchWordInputEvent" value='{{searchWord}}'></input>
+    <input placeholder='搜索机场(可输入机场代码,机场名称,机场所在省份)' name="id"  bindinput="searchWordInputEvent" value='{{searchWord}}'></input>
   </view>
 </view>
 
