@@ -49,7 +49,7 @@
         <view class="grid" wx:for="{{airwayList}}" wx:key="index" wx:for-index="bindex">
             <view>
                 <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
-                        <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportNameEnd}}&flightNameStart={{item.airportNameStart}}&airlinesCode={{airlines.airlinesCode}}'>
+                        <navigator url='../flightdetail/airwaydetail?flightNameEnd={{item.airportNameEnd}}&flightNameStart={{item.airportNameStart}}&airlinesCode={{airlines.airlinesCode}}'>
                     <text class="grid-label">{{item.airportNameStart}}--{{item.airportNameEnd}}</text>
                          <text class="grid-label2">{{item.flightNumber}}班</text>
                     </navigator>
