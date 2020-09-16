@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/city/city",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -24,7 +25,6 @@
     "pages/airlinesflights/airlinesflights",
     "pages/info/info",
     "pages/citys/citys",
-    "pages/city/city",
     "pages/city/list"
   ],
   "permission": {
@@ -45,17 +45,18 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "航司"
+        "pagePath": "pages/city/city",
+        "text": "航班"
       },
+      
       {
         "pagePath": "pages/airports/airports",
         "text": "机场"
       },
      
       {
-        "pagePath": "pages/city/city",
-        "text": "航班"
+        "pagePath": "pages/index/index",
+        "text": "航司"
       }
       
     ]
