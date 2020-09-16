@@ -42,7 +42,7 @@
 
 
         <view class="weui-btn-area">
-            <button class="weui-btn" type="primary" bindtap="searchFlight">搜索航班</button>
+            <button class="weui-btn" type="primary" bindtap="searchFlight">查询航线</button>
         </view>
     </view>
 </view>
