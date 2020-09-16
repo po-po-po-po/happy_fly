@@ -26,18 +26,29 @@
                 </view>
             </view>
         </view>
-<!--
-        <view class="weui-cells__title">出发日期</view>
+
+        <view class="weui-cells__title">出发时间开始</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd">           
                     <picker mode="date" value="{{date}}" bindchange="bindDateChange">         
-                        <input  class="weui-input" placeholder="请选择出发日期" id="ddate" value="{{ddate}}" />
+                        <input  class="weui-input" placeholder="请选择出发时间" id="ddate" value="{{ddate}}" />
                     </picker>
                 </view>
             </view>
         </view>
--->
+
+         <view class="weui-cells__title">出发时间结束</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">           
+                    <picker mode="date" value="{{date}}" bindchange="bindDateChange">         
+                        <input  class="weui-input" placeholder="请选择出发时间" id="ddate" value="{{ddate}}" />
+                    </picker>
+                </view>
+            </view>
+        </view>
+
         
 
 

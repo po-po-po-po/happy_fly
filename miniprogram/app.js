@@ -56,7 +56,7 @@ App({
     //console.log(this.globalData)
   },
   setDdate : function (newValue) {
-    //this.globalData.searchParams.ddate = newValue.toUpperCase()
+    this.globalData.searchParams.ddate = newValue.toUpperCase()
     //console.log(this.globalData)
   },
   getSearchParams: function(cb) {
