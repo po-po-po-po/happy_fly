@@ -50,7 +50,8 @@ Page({
   ravDone: function (jsonResult) {
     console.log(jsonResult)
     this.setData({
-      flightInfos: jsonResult.data.flightList
+      airwayList: jsonResult.data.airwayList,
+      airlines:jsonResult.data.airlines
     })
 
     if (jsonResult.data.flightList !== '') {

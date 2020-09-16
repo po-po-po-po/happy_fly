@@ -1,6 +1,6 @@
 const DOMAIN_URL = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT'
 
-const RAV_URL = DOMAIN_URL + '/flight/findAllFlightsByAirline' 
+const RAV_URL = DOMAIN_URL + '/airlines/findFlightsAndAirportsByAirlines' 
 
 function rav(params, done, fail, always) {
   wx.request({
