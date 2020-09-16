@@ -3,6 +3,7 @@ var hotCities=[];
 
 //初始化所有国内机场城市
 var citys=[];
+citys[39] = new Array('1','不限','所有航空公司','全部');
 citys[0] = new Array('CA','中国国际航空','国航','国航系');
 citys[1] = new Array('MU','中国东方航空|上海航空','东航','东航系');
 citys[2] = new Array('CZ','中国南方航空|重庆航空','南航','南航系');
