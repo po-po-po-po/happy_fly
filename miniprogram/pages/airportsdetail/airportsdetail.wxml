@@ -29,7 +29,7 @@
             <view>
                 <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
                         <navigator url='../airwaydetail/airwaydetail?flightNameEnd={{item.airportAbbreviate}}&flightNameStart={{airportDetail.airport.airportAbbreviate}}'>
-                    <text class="grid-label">{{item.airportLocation}}</text>
+                    <text class="grid-label">{{item.airportAbbreviate}}</text>
                     </navigator>
                 </view>
             </view>
