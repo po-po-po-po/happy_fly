@@ -43,7 +43,11 @@ function addDate(d0, x) {
   const month = d1.getMonth() + 1
   const day = d1.getDate()
 
-  return [year, month, day].map(formatNumber).join('-')
+  const hour = d1.getHours()
+  const minute = d1.getMinutes()
+  const seconds = d1.getSeconds()
+
+  return [hour, minute].map(formatNumber).join(':')
 }
 
 module.exports = {
