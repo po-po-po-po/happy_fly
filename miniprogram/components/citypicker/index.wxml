@@ -1,5 +1,5 @@
 <view>
-  <input  class="weui-input" bindinput="searchWordInputEvent" placeholder="搜索机场(机场名称/机场拼音/机场所在城市)" value="{{searchWord}}"  />
+  <input  class="weui-input" bindinput="searchWordInputEvent" placeholder="搜索机场" value="{{searchWord}}"  />
 </view>
 
 <scroll-view scroll-y="true" bindscroll="bindScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
