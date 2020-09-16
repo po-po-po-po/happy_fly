@@ -1,5 +1,5 @@
 // pages/flight/list.js
-const api = require('../../utils/api.js')
+const api = require('../utils/api.js')
 const app = getApp()
 
 Page({
