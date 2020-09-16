@@ -123,3 +123,31 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+/*搜索框*/
+.search-top{
+  padding: 20rpx;
+  font-size: 28rpx;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+}
+.search-top navigator{
+  width: 20%;
+  text-align: center;
+}
+.search-container{
+  width: 100%;
+  background-color: #efefef;
+  justify-content: center;
+  align-items: center;
+  padding:10rpx 10rpx 10rpx 20rpx;
+  border-radius: 6rpx;
+  display: flex;
+}
+.search-container icon{
+  margin-right: 10rpx;
+}
+.search-container input{
+  width: 95%;
+}
