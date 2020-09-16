@@ -23,7 +23,7 @@ App({
     } else if (this.globalData.cityTarget === 'acity') {
       cb(this.globalData.searchParams.acityName)
     } else if (this.globalData.cityTarget === 'airlineCode') {
-      cb(this.globalData.searchParams.airlineCode)
+      cb(this.globalData.searchParams.airlineName)
     }
   },
   setCityTarget: function (newValue) {
