@@ -56,11 +56,8 @@
       {
         "pagePath": "pages/city/city",
         "text": "航班"
-      },
-      {
-        "pagePath": "pages/sut/index",
-        "text": "我的"
       }
+      
     ]
   }
 }
