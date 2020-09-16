@@ -24,7 +24,8 @@
     "pages/airlinesflights/airlinesflights",
     "pages/info/info",
     "pages/citys/citys",
-    "pages/city/city"
+    "pages/city/city",
+    "pages/city/list"
   ],
   "permission": {
     "scope.userLocation": {
