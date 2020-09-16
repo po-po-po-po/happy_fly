@@ -1,8 +1,7 @@
 <view wx:for="{{flightInfos}}" wx:key="{{item.id}}" class="weui-flex" bindtap="showFlightDetail" data-flight-info="{{item}}" wx:key="id">
+	<view class="weui-flex__item text-center">{{item.airlinesName}}</view>
 	<view class="weui-flex__item ml-1 text-center">{{item.flightNo}}</view>
-	<view class="weui-flex__item text-center">{{item.depTime}}</view>
-	<view class="weui-flex__item text-center">{{item.arrTime}}</view>
-	<view class="weui-flex__item text-center">{{item.depPortName}}</view>
-	<view class="weui-flex__item text-center">{{item.arrPortName}}</view>
-	<view class="weui-flex__item text-center">{{item.lowestPrice.price}}</view>
+	<view class="weui-flex__item text-center">{{item.flightDate}}</view>
+	<view class="weui-flex__item text-center">{{item.flightNameStart}}</view>
+	<view class="weui-flex__item text-center">{{item.flightNameEnd}}</view>
 </view>

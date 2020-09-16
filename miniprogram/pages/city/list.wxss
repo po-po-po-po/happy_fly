@@ -1,1 +1,1 @@
-/* pages/flight/list.wxss */
+@import '../../style/weui.wxss';
