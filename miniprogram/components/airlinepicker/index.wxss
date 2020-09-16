@@ -151,5 +151,5 @@
   margin-right: 10rpx;
 }
 .search-container input{
-  width: 95%;
+  width: 100%;
 }
