@@ -6,8 +6,8 @@ App({
     searchParams: {
       dcity: 'CTU',
       dcityName: '成都双流',
-      acity: 'PEK',
-      acityName: '北京首都',
+      acity: 'SHA',
+      acityName: '上海虹桥',
       airlineCode: 'MU',
       airlineName: '东方航空',
       ddate: ''
