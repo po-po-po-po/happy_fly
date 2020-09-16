@@ -51,12 +51,15 @@
       
       {
         "pagePath": "pages/airports/airports",
-        "text": "民用机场"
+        "text": "机场"
       },
      
       {
         "pagePath": "pages/index/index",
         "text": "航空公司"
+      },  {
+        "pagePath": "pages/sut/index",
+        "text": "我的"
       }
       
     ]
