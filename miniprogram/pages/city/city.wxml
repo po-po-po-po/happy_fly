@@ -42,8 +42,8 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd">           
-                    <picker mode="time" value="{{date}}" bindchange="bindDateChange">         
-                        <input  class="weui-input" placeholder="请选择出发时间" id="ddate" value="{{ddate}}" />
+                    <picker mode="time" value="{{date1}}" bindchange="bindDateChange1">         
+                        <input  class="weui-input" placeholder="请选择出发时间" id="ddate1" value="{{ddate1}}" />
                     </picker>
                 </view>
             </view>

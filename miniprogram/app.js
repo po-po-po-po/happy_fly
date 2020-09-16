@@ -10,7 +10,8 @@ App({
       acityName: '上海虹桥',
       airlineCode: 'MU',
       airlineName: '东方航空',
-      ddate: ''
+      ddate: '',
+      ddate1: ''
     },
     cityTarget: '',
 
@@ -57,6 +58,10 @@ App({
   },
   setDdate : function (newValue) {
     this.globalData.searchParams.ddate = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setDdate1 : function (newValue) {
+    this.globalData.searchParams.ddate1 = newValue.toUpperCase()
     //console.log(this.globalData)
   },
   getSearchParams: function(cb) {

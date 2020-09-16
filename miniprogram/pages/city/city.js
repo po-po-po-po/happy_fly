@@ -11,7 +11,8 @@ Page({
     acityName: '',
     airlineCode:'',
     irlineName:'',
-    ddate: ''
+    ddate: '',
+    ddate1: ''
   },
   bindKeyInput: function(e) {
     const inputId = e.currentTarget.id
@@ -23,6 +24,8 @@ Page({
       App.setDdate(e.detail.value)
     }else if (inputId === 'airlineCode') {
       App.setDdate(e.detail.value)
+    }else if (inputId === 'ddate1') {
+      App.setDdate1(e.detail.value)
     }
     
     this.getSearchParams()
@@ -60,7 +63,8 @@ Page({
         acityName: params.acityName,
         airlineCode:params.airlineCode,
         airlineName: params.airlineName,
-        ddate: params.ddate
+        ddate: params.ddate,
+        ddate1: params.ddate1
       })
     })
   },
@@ -70,7 +74,7 @@ Page({
     })
   },
   onLoad:function(options){    
-    App.setDdate(utils.tomorrow())
+   // App.setDdate(utils.tomorrow())
   },
   onReady:function(){
     // 页面渲染完成
@@ -91,6 +95,10 @@ Page({
   },
   bindDateChange: function (e) {
     App.setDdate(e.detail.value)
+    this.getSearchParams()
+  },
+  bindDateChange1: function (e) {
+    App.setDdate1(e.detail.value)
     this.getSearchParams()
   }
 })

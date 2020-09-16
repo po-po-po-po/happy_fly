@@ -9,8 +9,10 @@ Page({
     acity: '',
     acityName: '',
     ddate: '',
+    ddate1: '',
     startPosition: -1,
     airlinesCode:'',
+    flightDate:'',
     flightInfos: []
   },
   getSearchParams: function() {
@@ -19,13 +21,23 @@ Page({
     app.getSearchParams(function(params){      
       //更新数据
       console.log(params)
+      let ddate=params.ddate;
+      let ddate1=params.ddate1;
+      if(ddate===''){
+        ddate='24:00'
+      }
+      if(ddate1===''){
+        ddate1='00:00'
+      }
       that.setData({
         dcity:params.dcity,
         flightNameStart: params.dcityName,
         acity:params.acity,
         flightNameEnd: params.acityName,
         airlinesCode:params.airlineCode,
-        ddate: params.ddate
+        flightDate: ddate+"-"+ ddate1
+        //ddate: params.ddate,
+        //ddate1: params.ddate1
       })
     })
   },
@@ -41,7 +53,8 @@ Page({
     const params = {
       flightNameStart: this.data.flightNameStart,
       flightNameEnd: this.data.flightNameEnd,
-      airlinesCode:this.data.airlinesCode
+      airlinesCode:this.data.airlinesCode,
+      flightDate: this.data.flightDate
       //ddate: this.data.ddate,
       //startPosition: this.data.startPosition
     }
