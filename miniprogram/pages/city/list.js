@@ -24,10 +24,10 @@ Page({
       let ddate=params.ddate;
       let ddate1=params.ddate1;
       if(ddate===''){
-        ddate='24:00'
+        ddate='00:00'
       }
       if(ddate1===''){
-        ddate1='00:00'
+        ddate1='24:00'
       }
       that.setData({
         dcity:params.dcity,
