@@ -67,8 +67,8 @@ Page({
 
     App.setCityInfo(
       {
-        'citycode': citycode,
-        'cityname': cityname
+        'airlineCode': citycode,
+        'airlineName': cityname
       }
     )
 

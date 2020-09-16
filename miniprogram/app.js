@@ -52,7 +52,7 @@ App({
     //console.log(this.globalData)
   },
   setAirlineCode : function (newValue) {
-    this.globalData.searchParams.airlineCode = newValue.toUpperCase()
+    this.globalData.searchParams.airlineName = newValue.toUpperCase()
     //console.log(this.globalData)
   },
   setDdate : function (newValue) {

@@ -9,6 +9,8 @@ Page({
     dcityName: '',
     acity: '',
     acityName: '',
+    airlineCode:'',
+    irlineName:'',
     ddate: ''
   },
   bindKeyInput: function(e) {
@@ -18,6 +20,8 @@ Page({
     } else if (inputId === 'acity') {
       App.setAcity(e.detail.value)
     } else if (inputId === 'ddate') {
+      App.setDdate(e.detail.value)
+    }else if (inputId === 'airlineCode') {
       App.setDdate(e.detail.value)
     }
     
@@ -54,6 +58,8 @@ Page({
         dcityName: params.dcityName,
         acity:params.acity,
         acityName: params.acityName,
+        airlineCode:params.airlineCode,
+        airlineName: params.airlineName,
         ddate: params.ddate
       })
     })
