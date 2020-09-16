@@ -134,7 +134,8 @@ Page({
           airportStartList: res.data.data.airportStartList,
           airlines:res.data.data.airlines,
           airwayList: res.data.data.airwayList,
-          airlinesCode:res.data.data.airlines.airlinesCode
+          airlinesCode:res.data.data.airlines.airlinesCode,
+          condition:res.data.data.flightCondition
         })
        }
       })

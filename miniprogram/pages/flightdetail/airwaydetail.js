@@ -29,7 +29,8 @@ Page({
       data: {
         airlinesCode:options.airlinesCode,
         flightNameStart:options.flightNameStart,
-        flightNameEnd:options.flightNameEnd
+        flightNameEnd:options.flightNameEnd,
+        flightDate:options.flightDate
       },
       header: {
         'content-type': 'application/json' // 默认值

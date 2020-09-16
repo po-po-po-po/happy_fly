@@ -64,7 +64,8 @@ Page({
     console.log(jsonResult)
     this.setData({
       airwayList: jsonResult.data.airwayList,
-      airlines:jsonResult.data.airlines
+      airlines:jsonResult.data.airlines,
+      condition:jsonResult.data.flightCondition
     })
 
     if (jsonResult.data.flightList !== '') {
