@@ -1,19 +1,19 @@
 //初始化常用机场城市
 var hotCities=[];
-hotCities[0] = new Array('SHA','上海','SHANGHAI','SH'); 
-hotCities[1] = new Array('BJS','北京','BEIJING','BJ'); 
-hotCities[2] = new Array('SZX','深圳','SHENZHEN','SZ'); 
-hotCities[3] = new Array('KMG','昆明','KUNMING','KM');
-hotCities[4] = new Array('CAN','广州','GUANGZHOU','GZ'); 
-hotCities[5] = new Array('SYX','三亚','SANYA','SY');
-hotCities[6] = new Array('CTU','成都','CHENGDU','CD');
-hotCities[7] = new Array('SIA','西安','XIAN','XA');
+hotCities[0] = new Array('SHA','上海虹桥','SHANGHAI','上海'); 
+hotCities[1] = new Array('BJS','北京首都','BEIJING','北京'); 
+hotCities[2] = new Array('SZX','深圳宝安','SHENZHEN','广东'); 
+hotCities[3] = new Array('KMG','昆明长水','KUNMING','云南');
+hotCities[4] = new Array('CAN','广州白云','GUANGZHOU','广东'); 
+hotCities[5] = new Array('LXA','拉萨贡嘎','LSHA','西藏');
+hotCities[6] = new Array('CTU','成都双流','CHENGDU','四川');
+hotCities[7] = new Array('XIY','西安咸阳','XIAN','陕西');
 
 
 
 //初始化所有国内机场城市
 var citys=[];
-citys[0] = new Array('SHA','上海','SHANGHAI','SH');
+citys[0] = new Array('SHA','上海虹桥','SHANGHAIHONGQIAO','上海');
 citys[1] = new Array('HYN','黄岩','HUANGYAN','HY');
  
 citys[2] = new Array('HGH','杭州','HANGZHOU','HZ');
@@ -328,7 +328,7 @@ citys[156] = new Array('BJS','北京','BEIJING','BJ');
 citys[157] = new Array('YUS','玉树','YUSHU','YS');
 citys[158] = new Array('WDS','十堰武当山机场','SHIYAN','SY');
 citys[159] = new Array('RIZ','日照','RIZHAO','RZ');
-
+citys[160] = new Array('PVG','上海浦东','SHANGHAIPUDONG','上海');
 module.exports = {
 	hotCities, 
 	cities: citys
