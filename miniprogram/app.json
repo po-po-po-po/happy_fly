@@ -49,7 +49,7 @@
       
       {
         "pagePath": "pages/airports/airports",
-        "text": "机场"
+        "text": "民用机场"
       },
      
       {
@@ -60,7 +60,7 @@
         "text": "航班|航线"
       }, {
         "pagePath": "pages/sut/index",
-        "text": "我的"
+        "text": "问题|建议"
       }
       
     ]
