@@ -20,7 +20,8 @@ Page({
                   url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/activity/activityDetail',
                   method: 'post',
                   data: {
-                    id:options.id
+                    id:options.id,
+                    airportCode:options.airportCode
                   },
                   header: {
                     'content-type': 'application/json' // 默认值

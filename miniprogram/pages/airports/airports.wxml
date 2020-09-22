@@ -28,7 +28,18 @@
              <text>{{item.airportCode}}</text>
             </view>
             <view class='rating'>
-              <text>执飞航线{{item.id}}条</text>
+              <text>执飞航线{{item.id}}1条</text>
+            </view>
+            <view class='rating'>
+            
+                <block wx:if="{{item.airportCode !== ''}}">
+        <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
+    <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+    <!-- {{item.isFollow ? "已关注" : "关注"}} -->
+    {{item.airportCode}}
+    </view>
+        </navigator>
+    </block>
             </view>
           </view>
         </view>
@@ -41,7 +52,8 @@
         <view class='item'>
        <image class='poster' src='{{item.cityUrl}}'></image>
           <view class='meta'>
-            <text class='title'>{{bindex+1}}.{{item.airportName}}({{item.airportCode}})</text>
+            <text class='title'>{{item.airportName}}({{item.airportCode}})</text>
+            <view class='rating1'>
             <view class='rating'>
                <text>执飞航线{{item.airportAirwaysNum}}条</text>
             </view>
@@ -49,6 +61,22 @@
               <text>执飞航班{{item.airportFlightNum}}次</text>
             </view>
           </view>
+            <view class='rating1'>
+         <view class='rating2'>
+                <block wx:if="{{item.isHot !== ''}}">
+        <navigator url="../activitydetail/activitydetail?airportCode={{item.airportCode}}" class="mod-item">
+    <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+    <!-- {{item.isFollow ? "已关注" : "关注"}} -->
+{{item.isHot}}
+    </view>
+        </navigator>
+    </block>
+      </view>   
+  </view>
+          </view>
+
+ 
+
         </view>
       </navigator>
     </block>

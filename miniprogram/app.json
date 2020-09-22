@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/airports/airports",
     "pages/city/city",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -16,7 +17,7 @@
     "pages/im/room/room",
     "pages/sut/index",
     "pages/flight/flight",
-    "pages/airports/airports",
+   
     "pages/airways/airways",
     "pages/message/message",
     "pages/airportsdetail/airportsdetail",
@@ -44,10 +45,7 @@
   "style": "v2",
   "tabBar": {
     "list": [
-      {
-        "pagePath": "pages/city/city",
-        "text": "航班|航线"
-      },
+    
       
       {
         "pagePath": "pages/airports/airports",
@@ -57,7 +55,10 @@
       {
         "pagePath": "pages/index/index",
         "text": "航空公司"
-      },  {
+      },   {
+        "pagePath": "pages/city/city",
+        "text": "航班|航线"
+      }, {
         "pagePath": "pages/sut/index",
         "text": "我的"
       }

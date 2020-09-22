@@ -37,7 +37,7 @@
   margin-bottom: 15rpx;
 }
 .item .meta .title {
-  font-size: 32rpx;
+  font-size: 28rpx;
 }
 .item .meta .sub-title {
   font-size: 22rpx;
@@ -48,9 +48,19 @@
   color: #999;
 }
 .item .rating {
-  font-size: 28rpx;
+  font-size: 24rpx;
   font-weight: bold;
   color: #999;
+}
+.rating1 {
+  float: left;
+
+  align-items: center;
+}
+.rating2 {
+  font-size: 28rpx;
+  margin-left: 24rpx;
+  margin-top: 15rpx;
 }
 .tips {
   font-size: 28rpx;
@@ -94,4 +104,21 @@
 }
 .search-container input{
   width: 95%;
+}
+
+
+.follow {
+  flex-shrink: 0;
+  width:120%;
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 6rpx;
+  background-color: #f40000;
+}
+
+.follows {
+  background-color: #eee;
 }
