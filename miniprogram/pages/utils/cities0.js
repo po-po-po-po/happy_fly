@@ -228,7 +228,8 @@ citys[211] = new Array('YKH','营口兰旗','营口','辽宁');
 citys[212] = new Array('YZY','张掖甘州','张掖','甘肃');
 citys[213] = new Array('ZHY','中卫沙坡头','中卫','宁夏');
 citys[214] = new Array('DQA','大庆萨尔图','大庆','黑龙江');
-
+citys[215] = new Array('JIU','九江庐山','九江','江西');
+citys[216] = new Array('LLF','永州零陵','永州','湖南');
 
 module.exports = {
 	hotCities, 
