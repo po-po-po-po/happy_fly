@@ -48,9 +48,10 @@
     <!--另一种情况-->
     <block wx:else>
     <!--类型判断,显示不同的数据-->
-      <navigator url='../airportsdetail/airportsdetail?id={{item.id}}'>
         <view class='item'>
+              <navigator url='../airportsdetail/airportsdetail?id={{item.id}}'>
        <image class='poster' src='{{item.cityUrl}}'></image>
+           </navigator>
           <view class='meta'>
             <text class='title'>{{item.airportName}}({{item.airportCode}})</text>
             <view class='rating1'>
@@ -74,11 +75,8 @@
       </view>   
   </view>
           </view>
-
- 
-
         </view>
-      </navigator>
+  
     </block>
   </view>
 </view>

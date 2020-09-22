@@ -27,6 +27,7 @@ Page({
                     'content-type': 'application/json' // 默认值
                   },
                   success: function(res) {
+                    console.log("www"+ res.data.data)
                     // 赋值
                     winPage.setData({
                       dkcontent:  wxparse.wxParse('dkcontent', 'html', res.data.data.content, winPage, 5)
