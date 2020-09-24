@@ -109,8 +109,8 @@
 .grid {
   position: relative;
   float: left;
-  padding: 10px 10px;
-  width: 25%;              
+  padding: 6px 6px;
+  width: 20%;              
   box-sizing: border-box;
 }
 
@@ -166,7 +166,7 @@ color: rgb(187, 184, 184)
   text-align: center;
   font-weight: bold;
   color: rgb(116, 117, 116);
-  font-size: 12px;
+  font-size: 8px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

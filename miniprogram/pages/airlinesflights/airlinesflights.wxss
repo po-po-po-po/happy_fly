@@ -120,13 +120,13 @@
   text-align: center;
 }
 .tabLayer text{
-  width:150rpx;
+  width:90rpx;
   height:40rpx;
   line-height:40rpx;
   float:left;
   border: solid 1px #eee;
-  margin:20rpx 0 0 26rpx;
-  font-size:10px;
+  margin:10rpx 0 0 10rpx;
+  font-size:8px;
 }
 .tabLayer .active{
   color:#e64340;
@@ -189,7 +189,6 @@
 .grid {
   position: relative;
   float: left;
-
   width:33.3%;              
   box-sizing: border-box;
 }

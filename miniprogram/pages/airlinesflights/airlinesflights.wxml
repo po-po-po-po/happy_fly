@@ -14,7 +14,7 @@
 
     <text class="{{flightNameStart==''?'active':''}}" data-id="" data-index="0" data-txt="出发机场" bindtap="filter">不限</text>
 
-    <text class="{{flightNameStart==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="0" data-txt="{{item.airportAbbreviate}}" bindtap="filter">    {{item.airportAbbreviate}} </text>
+    <text class="{{flightNameStart==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="0" data-txt="{{item.airportAbbreviate}}" bindtap="filter">    {{item.airportLocation}} </text>
  
 </view>
 
@@ -35,7 +35,7 @@
 
 <view class="tabLayer" hidden="{{tab[3]}}">
     <text class="{{flightNameEnd==''?'active':''}}" data-id="" data-index="3" data-txt="到达机场" bindtap="filter">不限</text>
-    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="3" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportAbbreviate}}</text>
+    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="3" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportLocation}}</text>
 </view>
 
 <!--航线头-->
