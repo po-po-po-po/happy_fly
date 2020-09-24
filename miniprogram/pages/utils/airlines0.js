@@ -43,7 +43,7 @@ citys[35] = new Array('RY','江西航空','江西航空','南航系');
 citys[36] = new Array('GY','多彩贵州航空','多彩贵州航空','');
 citys[37] = new Array('GX','广西北部湾航空','北部湾','海航系');
 citys[38] = new Array('9H','长安航空','长安航空','海航系');
-
+citys[39] = new Array('HNA','海航马甲','海航','海航系');
 
 
 module.exports = {
