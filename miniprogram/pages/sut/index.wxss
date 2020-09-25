@@ -49,7 +49,7 @@
 .item-text {
   position: fixed;
   left: 150rpx;
-  font-size: 38rpx;
+  font-size: 26rpx;
 }
 .item-array {
   position: fixed;
