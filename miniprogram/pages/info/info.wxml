@@ -8,7 +8,9 @@
       </view>
       <view class="code">航班 {{item.post}} 城市 {{item.fans}}</view>
     </view>
+      <navigator url="../flightsplan/flightsplan" class="mod-item">
     <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">{{item.isFollow ? "已关注" : "添加行程"}}</view>
+       </navigator>
   </view>
 </view>
  
