@@ -48,6 +48,7 @@ Page({
         'title': 'MU7850',
         'flightStart': '广州白云',
         'flightEnd': '杭州萧山',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'timeStart': '08:00',
         'timeEnd': '12:00',
         'source': '中国东方航空',
@@ -56,6 +57,7 @@ Page({
         'title': 'MU7850',
         'flightStart': '广州白云',
         'flightEnd': '杭州萧山',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'timeStart': '08:00',
         'timeEnd': '12:00',
         'source': '中国东方航空',
@@ -65,6 +67,7 @@ Page({
         'title': 'MU7850',
         'flightStart': '广州白云',
         'flightEnd': '杭州萧山',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'timeStart': '08:00',
         'timeEnd': '12:00',
         'source': '中国东方航空',
@@ -72,6 +75,7 @@ Page({
       },  {
         'title': 'MU7850',
         'flightStart': '广州白云',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'flightEnd': '杭州萧山',
         'timeStart': '08:00',
         'timeEnd': '12:00',
@@ -81,6 +85,7 @@ Page({
       {
         'title': 'MU7850',
         'flightStart': '广州白云',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'flightEnd': '杭州萧山',
         'timeStart': '08:00',
         'timeEnd': '12:00',
@@ -90,6 +95,7 @@ Page({
         'title': 'MU7850',
         'flightStart': '广州白云',
         'flightEnd': '杭州萧山',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'timeStart': '08:00',
         'timeEnd': '12:00',
         'source': '中国东方航空',
@@ -98,6 +104,7 @@ Page({
       {
         'title': 'MU7850',
         'flightStart': '广州白云',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'flightEnd': '杭州萧山',
         'timeStart': '08:00',
         'timeEnd': '12:00',
@@ -106,6 +113,7 @@ Page({
       },  {
         'title': 'MU7850',
         'flightStart': '广州白云',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'flightEnd': '杭州萧山',
         'timeStart': '08:00',
         'timeEnd': '12:00',

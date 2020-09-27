@@ -59,8 +59,8 @@
 }
 
 .arrowsBox image {
-  width: 66rpx;
-  height: 66rpx;
+  width: 52rpx;
+  height: 52rpx;
   /*padding-left: 50rpx;*/
 }
 
