@@ -16,11 +16,8 @@
         <view class='item'>
           <image class='item-image' src='{{item.icon}}'></image>
           <text class="item-text">{{item.text}}</text>
-           <text class="item-text1">{{item.text}}</text>
         </view>
-         <view class='item'>
-           <text class="item-text1">{{item.text}}</text>
-        </view>
+       
       </navigator>
     </block>
   </view>
