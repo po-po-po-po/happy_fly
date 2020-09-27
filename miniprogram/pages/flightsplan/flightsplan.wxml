@@ -53,7 +53,7 @@
 
 
         <view class="weui-btn-area">
-            <button class="weui-btn"  form-type="submit" bindtap="searchFlight">添加行程</button>
+            <button class="weui-btn"  form-type="submit" >添加行程</button>
         </view>
     </view>
   </form>

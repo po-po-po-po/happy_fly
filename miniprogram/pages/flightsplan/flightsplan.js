@@ -68,43 +68,31 @@ Page({
       })
     })
   },
-  searchFlight: function () {
-     // 提交留言
-     wx.request({
-      // 传到自己的服务器上
-      url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/saveUserflight',
-      method: 'POST',  
-      data: {
-        airlinesCode:options.airlinesCode,
-        flightNameStart:options.flightNameStart,
-        flightNameEnd:options.flightNameEnd,
-        flightDate:options.flightDate
-      }
-    })
-   
-  },
+
    // 获取富文本中的内容，并提交留言
  bindFormSubmit: function(e) {
   var that = this;
   // 获取输入的内容
-  var value = e.detail.value.flightNo;
-  if (value.length < 5) {
+  var flightNameStart = e.detail.value.flightNameStart;
+  var flightNameEnd = e.detail.value.flightNameEnd;
+  if (flightNameStart=="不限" || flightNameEnd=="不限") {
     wx.showModal({
       title: '提示',
-      content: '字数少于5个字',
+      content: '请选择出发机场和到达机场',
     })
-  } else {
+  }
+   else {
     // 提交留言
     wx.request({
       // 传到自己的服务器上
       url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/saveUserflight',
       method: 'POST',  
       data: {
-        airlinesCode:options.airlinesCode,
-        flightNo:options.flightNo,
-        flightNameStart:options.flightNameStart,
-        flightNameEnd:options.flightNameEnd,
-        flightDate:options.flightDate
+        airlinesCode:e.detail.value.airlinesCode,
+        flightNo:e.detail.value.flightNo,
+        flightNameStart:e.detail.value.flightNameStart,
+        flightNameEnd:e.detail.value.flightNameEnd,
+        flightDate:e.detail.value.flightDate
       }
     })
     // 提交完成后的显示
