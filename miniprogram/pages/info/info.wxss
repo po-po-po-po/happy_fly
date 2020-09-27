@@ -34,7 +34,7 @@
 
 .headLineTitle {
   width: 90%;
-  height: 60rpx;
+  height: 26rpx;
   line-height: 26rpx;
   font-weight: 700;
   font-size: 26rpx;
@@ -47,9 +47,8 @@
 
 .headLineInfor {
   width: 90%;
-  height: 20%;
+  height: 26rpx;
   font-size: 26rpx;
-  margin-top: 40rpx;
   color: #666;
 }
 
