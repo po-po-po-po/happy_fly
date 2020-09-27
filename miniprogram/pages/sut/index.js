@@ -63,32 +63,47 @@ Page({
   }
   ,
   getUserInfo: function(e) {
-    console.log(app)
     app.globalData.userInfo = e.detail.userInfo
+    wx.login({
+      success: function (res) {
+        var code = res.code;
+        if (code) {
+          console.log('获取用户登录凭证：' + code);
+          // --------- 发送凭证 ------------------
+              // 将这个数据发送给后端
+      wx.request({
+        url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/wxUser/saveWxUser',
+        method:"POST",
+        data:{
+          code: code,
+          nickName: e.detail.userInfo.nickName,
+          avatarUrl: e.detail.userInfo.avatarUrl,
+          gender: e.detail.userInfo.gender,
+          city: e.detail.userInfo.city,
+          country: e.detail.userInfo.country,
+          province: e.detail.userInfo.province,
+          avatarUrl: e.detail.userInfo.avatarUrl,
+          signature: e.detail.signature,
+          iv: e.detail.iv,
+          rawData: e.detail.rawData,
+          encryptedData: e.detail.encryptedData
+        },
+         success: (e) => {
+          }
+      })
+          // ------------------------------------
+
+        } else {
+          console.log('获取用户登录态失败：' + res.errMsg);
+        }
+      }
+    });
+
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-      // 将这个数据发送给后端
-      wx.request({
-      url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/wxUser/saveWxUser',
-      method:"POST",
-      data:{
-        nickName: e.detail.userInfo.nickName,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        gender: e.detail.userInfo.gender,
-        city: e.detail.userInfo.city,
-        country: e.detail.userInfo.country,
-        province: e.detail.userInfo.province,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        signature: e.detail.signature,
-        iv: e.detail.iv,
-        rawData: e.detail.rawData,
-        encryptedData: e.detail.encryptedData
-      },
-       success: (e) => {
-        }
-    })
+
   },
   login: function () {
     console.log(111)

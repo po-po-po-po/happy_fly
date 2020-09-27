@@ -69,10 +69,52 @@ Page({
     })
   },
   searchFlight: function () {
-    wx.navigateTo({
-      url: 'list'
+     // 提交留言
+     wx.request({
+      // 传到自己的服务器上
+      url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/saveUserflight',
+      method: 'POST',  
+      data: {
+        airlinesCode:options.airlinesCode,
+        flightNameStart:options.flightNameStart,
+        flightNameEnd:options.flightNameEnd,
+        flightDate:options.flightDate
+      }
     })
+   
   },
+   // 获取富文本中的内容，并提交留言
+ bindFormSubmit: function(e) {
+  var that = this;
+  // 获取输入的内容
+  var value = e.detail.value.flightNo;
+  if (value.length < 5) {
+    wx.showModal({
+      title: '提示',
+      content: '字数少于5个字',
+    })
+  } else {
+    // 提交留言
+    wx.request({
+      // 传到自己的服务器上
+      url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/saveUserflight',
+      method: 'POST',  
+      data: {
+        airlinesCode:options.airlinesCode,
+        flightNo:options.flightNo,
+        flightNameStart:options.flightNameStart,
+        flightNameEnd:options.flightNameEnd,
+        flightDate:options.flightDate
+      }
+    })
+    // 提交完成后的显示
+    wx.showToast({
+      title: '感谢反馈',
+      icon: 'success',
+      duration: 2000
+    })
+  }
+},
   onLoad:function(options){    
    // App.setDdate(utils.tomorrow())
   },
