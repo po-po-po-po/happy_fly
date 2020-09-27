@@ -4,37 +4,33 @@ Page({
     data: {    
         userInfo: {},    
         hasUserInfo: false,        
-        canIUse: wx.canIUse('button.open-type.getUserInfo'),    
-        orderItems: [
+        canIUse: wx.canIUse('button.open-type.getUserInfo'),   
+        fankui: '../message/message?userInfo=userInfo',
+        xingcheng: '../message/message?userInfo=userInfo',
+        item1: 
       {        
         typeId: 0,        
-        name: '待付款',        
-        url: 'bill',        
-        imageurl: 'https://www.potucs.com/wechat/airport/can.png',
-      },
-      {        
-        typeId: 1,        
-        name: '待收货',        
-        url: 'bill',        
-        imageurl: 'https://www.potucs.com/wechat/airport/tao.png',
-      },
-      {        
-        typeId: 2,        
-        name: '待评价',        
-        url: 'bill',        
-        imageurl: 'https://www.potucs.com/wechat/airport/szx.png'
-      },
-      {        
-        typeId: 3,        
-        name: '退换/售后',        
-        url: 'bill',        
-        imageurl: 'https://www.potucs.com/wechat/airport/pek.png'
+        name: '问题建议',        
+        url: '../message/message?userInfo=userInfo',        
+        imageurl: 'http://www.potucs.com:9998/wechat/logo/fankui.png',
       }
-    ],
+    ,
+    item2: 
+      {        
+        typeId: 0,        
+        name: '我的行程',        
+        url: '../message/message?userInfo=userInfo',        
+        imageurl: 'http://www.potucs.com:9998/wechat/logo/xingcheng.png',
+      }
+    
   },  
     //事件处理函数
-  toOrder: function () {
-    wx.navigateTo({      url: '../order/order'
+  toItem1: function () {
+    wx.navigateTo({url: "../message/message?userInfo=userInfo"
+    })
+  },
+  toItem2: function () {
+    wx.navigateTo({url: "../info/info"
     })
   },
   onLoad: function () {

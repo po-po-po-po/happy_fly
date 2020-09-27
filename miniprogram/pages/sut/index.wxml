@@ -1,4 +1,3 @@
-
 <view class="userinfo">
   <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn"> 点击微信授权 </button>
   <block wx:else>
@@ -11,13 +10,16 @@
   <text class="myorderlook-text">查看全部订单</text>
   -->
   </view><view class="line"></view><view class="navs">
-  <block wx:for-items="{{orderItems}}" wx:key="name">
-    <view class="nav-item" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
-      <image src="{{item.imageurl}}" class="nav-image" />
-      <text>{{item.name}}</text>
+    <view class="nav-item" catchtap="toItem1" data-type="{{item1.name}}" data-typeid="{{item1.typeId}}">
+      <image src="{{item1.imageurl}}" class="nav-image" />
+      <text>{{item1.name}}</text>
     </view>
-  </block></view><view class="separate"></view><view class="person-list">
- 
+       <view class="nav-item" catchtap="toItem2" data-type="{{item2.name}}" data-typeid="{{item2.typeId}}">
+      <image src="{{item2.imageurl}}" class="nav-image" />
+      <text>{{item2.name}}</text>
+    </view>
+  </view><view class="separate"></view><view class="person-list">
+  <!--
   <view class="list-item">
     <image class="item-image" src="../../images/person/personal_card.png"></image>
     <text class="item-text">优惠券</text>
@@ -46,4 +48,6 @@
   <view class="list-item">
     <image class="item-image" src="../../images/person/personal_customer.png"></image>
     <text class="item-text">在线客服</text>
-  </view></view><view class="separate"></view>
+  </view>
+    -->
+  </view><view class="separate"></view>
