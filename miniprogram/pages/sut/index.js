@@ -8,9 +8,9 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     menuitems: [
-      { text: '问题|建议', url: '../message/message?userInfo=userInfo', icon: 'http://www.potucs.com:9998/wechat/logo/fankui.png', tips: '' }
-      /** ,
-      { text: '使用说明', url: '../info/info', icon: 'http://www.potucs.com:9998/wechat/logo/use.png', tips: '' }*/
+      { text: '问题建议', url: '../message/message?userInfo=userInfo', icon: 'http://www.potucs.com:9998/wechat/logo/fankui.png', tips: '' }
+      ,
+      { text: '我的行程', url: '../info/info', icon: 'http://www.potucs.com:9998/wechat/logo/use.png', tips: '' }
     ]
   },
   onLoad: function () {

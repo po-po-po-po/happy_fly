@@ -1,6 +1,6 @@
 <view data-id="liuyan">
   <form bindsubmit="bindFormSubmit">
-    <textarea class="view-liuyan" minlength="4" maxlength="122" name="textarea" placeholder="请输入留言内容" bindinput="bindInputText">
+    <textarea class="view-liuyan" minlength="4" maxlength="122" name="textarea" placeholder="请输入建议内容,看到后1-2日会修改,请随时关注。" bindinput="bindInputText">
     </textarea>
     <button class="send" form-type="submit">提交反馈</button>
   </form>
