@@ -1,41 +1,32 @@
  <view class="headLine box box-tb">
-
-    <view class="headLineWra box box-lr"  wx:for="{{headLineList}}" bindtap="jumpDetails" data-Id="{{item.id}}" >
-
+    <view class="headLineWra box box-lr"  wx:for="{{headLineList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id">
+     <view class="arrowsBox box box-tb box-pack-center">
+        <image src="https://www.potucs.com/wechat/airline/mu.png"></image> 
+      </view>
       <view class="headLineContent box box-tb box-align-center box-pack-around">
-
         <view class="headLineTitle">
-
-          {{item.title}}
-
+          {{item.title}}（{{item.source}}）
         </view>
-
+           <view class="headLineInfor  box box-lr box-pack-between">
+          <view class="headLineSource">
+             {{item.flightStart}}
+          </view>
+          <view class="headLineSource">
+           {{item.date}} {{item.timeEnd}}
+          </view>
+        </view>
+        
         <view class="headLineInfor  box box-lr box-pack-between">
-
           <view class="headLineSource">
-
-             {{item.date}}
-
+             {{item.flightEnd}}
           </view>
-
           <view class="headLineSource">
-
-           {{item.source}}
-
+           {{item.date}} {{item.timeEnd}}
           </view>
-
         </view>
-
       </view>
-
-      <view class="arrowsBox box box-tb box-pack-center">
-
-        <image src="https://www.potucs.com/wechat/airline/cz.png"></image>
-
-      </view>
-
+     
     </view>
-
   </view>
 
 

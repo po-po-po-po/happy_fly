@@ -7,51 +7,95 @@ Page({
   data: {
     'headLineList': [
       {
-        'title': 'MU7850 广州白云-杭州萧山',
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
+        'source': '中国东方航空',
+        'date': '2017-9-10'
+      },  {
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
         'source': '中国东方航空',
         'date': '2017-9-10'
       }, {
-        'title': 'MU7850 广州白云-杭州萧山',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      }, {
-        'title': 'MU7850 广州白云-杭州萧山',
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
         'source': '中国东方航空',
         'date': '2017-9-10'
       },
       {
-        'title': 'MU7850 广州白云-杭州萧山',
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
         'source': '中国东方航空',
         'date': '2017-9-10'
-      }, {
-        'title': 'MU7850 广州白云-杭州萧山',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },
-      {
-        'title': 'MU7850 广州白云-杭州萧山',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      }, {
-        'title': 'MU7850 广州白云-杭州萧山',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },
-      {
-        'title': 'MU7850 广州白云-杭州萧山',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      }, {
-        'title': 'MU7850 广州白云-杭州萧山',
+      },  {
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
         'source': '中国东方航空',
         'date': '2017-9-10'
       },
       {
-        'title': 'MU7850 广州白云-杭州萧山',
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
         'source': '中国东方航空',
         'date': '2017-9-10'
-      }, {
-        'title': 'MU7850 广州白云-杭州萧山',
+      },  {
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
+        'source': '中国东方航空',
+        'date': '2017-9-10'
+      },
+      {
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
+        'source': '中国东方航空',
+        'date': '2017-9-10'
+      },  {
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
+        'source': '中国东方航空',
+        'date': '2017-9-10'
+      },
+      {
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
+        'source': '中国东方航空',
+        'date': '2017-9-10'
+      },  {
+        'title': 'MU7850',
+        'flightStart': '广州白云',
+        'flightEnd': '杭州萧山',
+        'timeStart': '08:00',
+        'timeEnd': '12:00',
         'source': '中国东方航空',
         'date': '2017-9-10'
       }
