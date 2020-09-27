@@ -5,10 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
+    friends: [{
+      'name': '破',
+      'post': '12',
+      'airline':'https://www.potucs.com/wechat/airline/ca.png',
+      'fans': '23',
+      'timeStart': '08:00',
+      'timeEnd': '12:00',
+      'source': '中国东方航空',
+      'avatarUrl': '2017-9-10'
+    }],
     'headLineList': [
       {
         'title': 'MU7850',
         'flightStart': '广州白云',
+        'airline':'https://www.potucs.com/wechat/airline/mu.png',
         'flightEnd': '杭州萧山',
         'timeStart': '08:00',
         'timeEnd': '12:00',
@@ -19,6 +30,7 @@ Page({
         'flightStart': '广州白云',
         'flightEnd': '杭州萧山',
         'timeStart': '08:00',
+        'airline':'https://www.potucs.com/wechat/airline/sc.png',
         'timeEnd': '12:00',
         'source': '中国东方航空',
         'date': '2017-9-10'
@@ -27,6 +39,7 @@ Page({
         'flightStart': '广州白云',
         'flightEnd': '杭州萧山',
         'timeStart': '08:00',
+        'airline':'https://www.potucs.com/wechat/airline/cz.png',
         'timeEnd': '12:00',
         'source': '中国东方航空',
         'date': '2017-9-10'

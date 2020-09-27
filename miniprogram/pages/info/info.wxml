@@ -1,12 +1,26 @@
- 
+ <view class="box transition" wx:if="{{friends.length}}">
+  <view class="user-panel" wx:for="{{friends}}" wx:key="index">
+    <image class="head" src="https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoPk2sdEuKdunsmQic9ZsO4K4L2mJsJiaVhvdzlWibSRWox1n1q3OfRd6IjUN93yfQ4jurcmjaibaVSQA/132"></image>
+    <view class="center">
+      <view class="name">
+        <text class="name-text">{{item.name}}</text>
+        <i class="iconfont {{item.gender ? 'nan' : 'nv'}}"></i>
+      </view>
+      <view class="code">航班 {{item.post}} 城市 {{item.fans}}</view>
+    </view>
+    <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">{{item.isFollow ? "已关注" : "添加行程"}}</view>
+  </view>
+</view>
  
  <view class="headLine box box-tb">
     <view class="headLineWra box box-lr"  wx:for="{{headLineList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id">
+   
      <view class="arrowsBox box box-tb box-pack-center">
-        <image src="https://www.potucs.com/wechat/airline/mu.png"></image> 
+        <image src="{{item.airline}}"></image> 
       </view>
+   
       <view class="headLineContent box box-tb box-align-center box-pack-around">
-        <view class="headLineTitle">
+         <view class="headLineTitle">
           {{item.title}}（{{item.source}}）
         </view>
            <view class="headLineInfor  box box-lr box-pack-between">
