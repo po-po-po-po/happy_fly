@@ -21,6 +21,10 @@
   color: rgb(15, 15, 15);
   background: none !important; 
 }
+.userinfo-avatar {  
+ width: 140rpx;
+ height: 140rpx;
+}
 /* 订单 */
 .order {  
   display: flex;  
