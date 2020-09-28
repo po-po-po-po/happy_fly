@@ -1,6 +1,6 @@
  <view class="box transition" >
   <view class="user-panel" >
-   <navigator url='../scheduling/scheduling?id={{item.airlinesCode}}'>
+   <navigator url='../flightsmap/flightsplan'>
     <image class="head" src="{{wxUser.avatarUrl}}"></image>
     </navigator>
     <view class="center">
