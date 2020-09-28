@@ -5,121 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    friends: [{
-      'name': '破',
-      'post': '12',
-      'airline':'https://www.potucs.com/wechat/airline/ca.png',
-      'fans': '23',
-      'timeStart': '08:00',
-      'timeEnd': '12:00',
-      'source': '中国东方航空',
-      'avatarUrl': '2017-9-10'
-    }],
     'headLineList': [
-      {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'airline':'https://www.potucs.com/wechat/airline/mu.png',
-        'flightEnd': '杭州萧山',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },  {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'flightEnd': '杭州萧山',
-        'timeStart': '08:00',
-        'airline':'https://www.potucs.com/wechat/airline/sc.png',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      }, {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'flightEnd': '杭州萧山',
-        'timeStart': '08:00',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },
-      {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'flightEnd': '杭州萧山',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },  {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'flightEnd': '杭州萧山',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },
-      {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'flightEnd': '杭州萧山',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },  {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'flightEnd': '杭州萧山',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },
-      {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'flightEnd': '杭州萧山',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },  {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'flightEnd': '杭州萧山',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },
-      {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'flightEnd': '杭州萧山',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      },  {
-        'title': 'MU7850',
-        'flightStart': '广州白云',
-        'airline':'https://www.potucs.com/wechat/airline/cz.png',
-        'flightEnd': '杭州萧山',
-        'timeStart': '08:00',
-        'timeEnd': '12:00',
-        'source': '中国东方航空',
-        'date': '2017-9-10'
-      }
     ],
   },
 
@@ -127,7 +13,44 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    const _this = this;
+      // 提交留言
+      wx.login({
+        success: function (res) {
+          var code = res.code;
+          if (code) {
+            console.log('获取用户登录凭证：' + code);
+            console.log(res);
+            // --------- 发送凭证 ------------------
+                // 将这个数据发送给后端
+        wx.request({
+          // 传到自己的服务器上
+          url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/findUserFlightsByCondition',
+          method: 'POST',  
+          data: {
+            code:code
+          } ,
+           header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: function(res) {
+            console.log(res.data.data);
+            // 赋值
+            _this.setData({
+              title: '我的航班',
+              flightList: res.data.data.userFlightVoList,
+              citiesNo: res.data.data.citiesNo,
+              flightsNo: res.data.data.flightsNo,
+              wxUser: res.data.data.wxUser,
+              loading: false // 关闭等待框
+            })
+          }
+        })
+          } else {
+            console.log('获取用户登录态失败：' + res.errMsg);
+          }
+        }
+      });
   },
   // 资讯
   jumpDetails: function (e) {

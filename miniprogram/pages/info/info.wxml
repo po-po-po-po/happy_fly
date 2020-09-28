@@ -1,12 +1,12 @@
- <view class="box transition" wx:if="{{friends.length}}">
-  <view class="user-panel" wx:for="{{friends}}" wx:key="index">
-    <image class="head" src="https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoPk2sdEuKdunsmQic9ZsO4K4L2mJsJiaVhvdzlWibSRWox1n1q3OfRd6IjUN93yfQ4jurcmjaibaVSQA/132"></image>
+ <view class="box transition" >
+  <view class="user-panel" >
+    <image class="head" src="{{wxUser.avatarUrl}}"></image>
     <view class="center">
       <view class="name">
-        <text class="name-text">{{item.name}}</text>
+        <text class="name-text">{{wxUser.nickName}}</text>
         <i class="iconfont {{item.gender ? 'nan' : 'nv'}}"></i>
       </view>
-      <view class="code">航班 {{item.post}} 城市 {{item.fans}}</view>
+      <view class="code">航班 {{flightsNo}} 城市 {{citiesNo}}</view>
     </view>
       <navigator url="../flightsplan/flightsplan" class="mod-item">
     <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">{{item.isFollow ? "已关注" : "添加行程"}}</view>
@@ -15,7 +15,7 @@
 </view>
  
  <view class="headLine box box-tb">
-    <view class="headLineWra box box-lr"  wx:for="{{headLineList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id">
+    <view class="headLineWra box box-lr"  wx:for="{{flightList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id">
    
    <!--
      <view class="arrowsBox box box-tb box-pack-center">
@@ -24,23 +24,23 @@
    -->
       <view class="headLineContent box box-tb box-align-center box-pack-around">
          <view class="headLineTitle">
-          {{item.title}}（{{item.source}}）
+          {{item.flightNo}}（{{item.airlinesName}}）
         </view>
            <view class="headLineInfor  box box-lr box-pack-between">
           <view class="headLineSource">
-             {{item.flightStart}}
+             {{item.flightNameStart}}
           </view>
           <view class="headLineSource">
-           {{item.date}} {{item.timeEnd}}
+           {{item.flightDate}} {{item.flightStartTime}}
           </view>
         </view>
         
         <view class="headLineInfor  box box-lr box-pack-between">
           <view class="headLineSource">
-             {{item.flightEnd}}
+             {{item.flightNameEnd}}
           </view>
           <view class="headLineSource">
-           {{item.date}} {{item.timeEnd}}
+           {{item.flightDate}} {{item.flightEndTime}}
           </view>
         </view>
       </view>
