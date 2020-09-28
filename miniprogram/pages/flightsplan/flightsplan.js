@@ -87,14 +87,26 @@ Page({
   }
    else {
     // 提交留言
+        // 提交留言
+        wx.login({
+          success: function (res) {
+            var code = res.code;
+            if (code) {
+              console.log('获取用户登录凭证：' + code);
+              console.log(res);
+              // --------- 发送凭证 ------------------
+                  // 将这个数据发送给后端
     wx.request({
       // 传到自己的服务器上
       url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/saveUserflight',
       method: 'POST',  
       data: {
+        code:code,
         airlinesCode:that.data.airlineCode,
         flightNo:e.detail.value.flightNo,
         flightNameStart:that.data.dcityName,
+        airportNameStart:that.data.dcityName,
+        airportNameEnd:that.data.acityName,
         flightNameEnd:that.data.acityName,
         flightDate:that.data.ddate
       }
@@ -105,7 +117,12 @@ Page({
       icon: 'success',
       duration: 2000
     })
-  }
+  }else {
+    console.log('获取用户登录态失败：' + res.errMsg);
+  }    
+}
+});
+}
 },
   onLoad:function(options){    
    // App.setDdate(utils.tomorrow())
