@@ -123,7 +123,7 @@ Page({
   jumpDetails: function (e) {
     console.log(e.currentTarget.dataset.title)
     wx.navigateTo({
-      url: '../scheduling/scheduling',
+      url: '../news/news?title=' + e.currentTarget.dataset.title,
       success: function (res) {
         // success
       },

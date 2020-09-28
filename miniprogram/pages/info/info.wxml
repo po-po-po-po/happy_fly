@@ -1,6 +1,8 @@
  <view class="box transition" >
   <view class="user-panel" >
+   <navigator url='../scheduling/scheduling'>
     <image class="head" src="{{wxUser.avatarUrl}}"></image>
+    </navigator>
     <view class="center">
       <view class="name">
         <text class="name-text">{{wxUser.nickName}}</text>
