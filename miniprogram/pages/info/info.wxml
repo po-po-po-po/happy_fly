@@ -1,6 +1,6 @@
  <view class="box transition" >
   <view class="user-panel" >
-   <navigator url='../scheduling/scheduling'>
+   <navigator url='../scheduling/scheduling?id={{item.airlinesCode}}'>
     <image class="head" src="{{wxUser.avatarUrl}}"></image>
     </navigator>
     <view class="center">
@@ -8,7 +8,7 @@
         <text class="name-text">{{wxUser.nickName}}</text>
         <i class="iconfont {{item.gender ? 'nan' : 'nv'}}"></i>
       </view>
-      <view class="code">航班 {{flightsNo}} 城市 {{citiesNo}}</view>
+      <view class="code">航班 {{flightsNo}} 目的地城市 {{citiesNo}}</view>
     </view>
       <navigator url="../flightsplan/flightsplan" class="mod-item">
     <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">{{item.isFollow ? "已关注" : "添加行程"}}</view>
