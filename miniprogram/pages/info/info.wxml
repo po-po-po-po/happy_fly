@@ -8,7 +8,7 @@
         <text class="name-text">{{wxUser.nickName}}</text>
         <i class="iconfont {{item.gender ? 'nan' : 'nv'}}"></i>
       </view>
-      <view class="code">航班 {{flightsNo}} 目的地城市 {{citiesNo}}</view>
+      <view class="code">航班 {{flightsNo}} 足迹 {{citiesNo}}</view>
     </view>
       <navigator url="../flightsplan/flightsplan" class="mod-item">
     <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">{{item.isFollow ? "已关注" : "添加行程"}}</view>
