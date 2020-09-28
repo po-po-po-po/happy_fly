@@ -1,5 +1,6 @@
 //app.js
 import utils from 'pages/utils/sutil.js'
+import touch from 'pages/utils/touch.js'//新加
 App({
   globalData:{
     userInfo:null,
@@ -30,6 +31,7 @@ App({
     flightInfos: [],
     flightInfos1: [],
   },
+  touch: new touch(),//新加
   getCityName: function (cb) {
     if (this.globalData.cityTarget === 'dcity') {
       cb(this.globalData.searchParams.dcityName)

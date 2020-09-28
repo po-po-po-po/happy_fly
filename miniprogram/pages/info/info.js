@@ -6,8 +6,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-    'headLineList': [
-    ],
+    'flightList': '',
+  },
+  //手指触摸动作开始 记录起点X坐标
+  touchstart: function(e) {
+    //开始触摸时 重置所有删除
+    let data = app.touch._touchstart(e, this.data.flightList)
+    this.setData({
+      flightList: data
+    })
+  },
+ 
+  //滑动事件处理
+  touchmove: function(e) {
+ 
+    let data = app.touch._touchmove(e, this.data.flightList)
+    this.setData({
+      flightList: data
+    })
+  },
+ 
+  //删除事件
+  del: function(e) {
+    wx.showModal({
+      title: '提示',
+      content: '确认要删除此条信息么？',
+      success: function(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          that.data.flightList.splice(e.currentTarget.dataset.index, 1)
+          that.setData({
+            flightList: that.data.flightList
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
 
   /**

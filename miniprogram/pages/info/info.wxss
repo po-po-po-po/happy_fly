@@ -309,3 +309,32 @@ page {
 .follows {
   background-color: #eee;
 }
+
+
+.del {
+  background-color: orangered;
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(180rpx);
+  transform: translateX(180rpx);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+
+.touch-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
+  width: 100%;
+  overflow: hidden;
+}
+
+.touch-move-active .content, .touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}

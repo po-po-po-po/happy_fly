@@ -15,18 +15,22 @@
 </view>
  
  <view class="headLine box box-tb">
-    <view class="headLineWra box box-lr"  wx:for="{{flightList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id">
-   
+   <view class="headLineWra box box-lr touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" wx:for="{{flightList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id">
+   <!--
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}"  bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" wx:for="{{flightList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id" >
+    -->
    <!--
      <view class="arrowsBox box box-tb box-pack-center">
         <image src="{{item.airline}}"></image> 
       </view>
    -->
       <view class="headLineContent box box-tb box-align-center box-pack-around">
+
          <view class="headLineTitle">
           {{item.flightNo}}（{{item.airlinesName}}）
         </view>
-           <view class="headLineInfor  box box-lr box-pack-between">
+
+          <view class="headLineInfor  box box-lr box-pack-between">
           <view class="headLineSource">
              {{item.flightNameStart}}
           </view>
@@ -43,8 +47,12 @@
            {{item.flightDate}} {{item.flightEndTime}}
           </view>
         </view>
+
+
       </view>
      
+      <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+
     </view>
   </view>
 
