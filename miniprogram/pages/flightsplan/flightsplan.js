@@ -28,7 +28,7 @@ Page({
       App.setDdate1(e.detail.value)
     }
     
-    this.getSearchParams()
+    this.getSearchParams1()
   },
   dcityfocusEvent: function(e) {
     App.setCityTarget(e.currentTarget.id)
@@ -40,20 +40,20 @@ Page({
     App.setCityTarget(e.currentTarget.id)
     //console.log(e.currentTarget)
     wx.navigateTo({
-      url: '/components/citypicker/index'
+      url: '/components/plancitypicker/index'
     })
   },
   airlineCodefocusEvent: function(e) {
     App.setCityTarget(e.currentTarget.id)
     //console.log(e.currentTarget)
     wx.navigateTo({
-      url: '/components/airlinepicker/index'
+      url: '/components/planairlinepicker/index'
     })
   },
-  getSearchParams: function() {
+  getSearchParams1: function() {
     var that = this
     //调用应用实例的方法获取全局数据
-    App.getSearchParams(function(params){
+    App.getSearchParams1(function(params){
       //更新数据
        console.log(params)
       that.setData({
@@ -113,7 +113,7 @@ Page({
   onShow:function(){
     // 页面显示
     console.log('onShow')
-    this.getSearchParams()
+    this.getSearchParams1()
   },
   onHide:function(){
     // 页面隐藏
@@ -125,10 +125,10 @@ Page({
   },
   bindDateChange: function (e) {
     App.setDdate(e.detail.value)
-    this.getSearchParams()
+    this.getSearchParams1()
   },
   bindDateChange1: function (e) {
     App.setDdate1(e.detail.value)
-    this.getSearchParams()
+    this.getSearchParams1()
   }
 })

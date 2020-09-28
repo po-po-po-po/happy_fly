@@ -13,6 +13,16 @@ App({
       ddate: '',
       ddate1: ''
     },
+    searchParams1: {
+      dcity: '',
+      dcityName: '',
+      acity: '',
+      acityName: '',
+      airlineCode: '',
+      airlineName: '',
+      ddate: '',
+      ddate1: ''
+    },
     cityTarget: '',
 
     flightDetail: null,
@@ -67,6 +77,10 @@ App({
   getSearchParams: function(cb) {
     //console.log(cb)
     cb(this.globalData.searchParams)
+  },
+  getSearchParams1: function(cb) {
+    //console.log(cb)
+    cb(this.globalData.searchParams1)
   },
   onLaunch: function () {
     

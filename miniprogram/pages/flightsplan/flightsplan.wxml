@@ -6,7 +6,7 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd">                    
-                    <input  class="weui-input" bindtap="dcityfocusEvent" placeholder="请选择出发城市" id="flightNameStart" name="flightNameStart" value="{{dcityName}}"  />
+                    <input  class="weui-input" bindtap="dcityfocusEvent" placeholder="请选择出发机场" id="flightNameStart" name="flightNameStart" value="{{dcityName}}"  />
                 </view>
             </view>
         </view>
@@ -15,7 +15,7 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd">                    
-                    <input  class="weui-input" bindtap="acityfocusEvent" placeholder="请选择到达城市" id="flightNameEnd" name="flightNameEnd" value="{{acityName}}" />
+                    <input  class="weui-input" bindtap="acityfocusEvent" placeholder="请选择到达机场" id="flightNameEnd" name="flightNameEnd" value="{{acityName}}" />
                 </view>
             </view>
         </view>
