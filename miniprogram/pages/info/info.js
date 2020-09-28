@@ -1,4 +1,5 @@
 // pages/inf/inf.js
+var app = getApp()
 Page({
 
   /**
@@ -14,7 +15,14 @@ Page({
    */
   onLoad: function (options) {
     const _this = this;
-      // 提交留言
+    var userinfo=app.globalData.userInfo;
+    console.log(userinfo)
+    if (userinfo==null ) { 
+      wx.showModal({
+        title: '提示',
+        content: '请先获取头像昵称',
+      })
+    }else{
       wx.login({
         success: function (res) {
           var code = res.code;
@@ -51,6 +59,8 @@ Page({
           }
         }
       });
+    }
+    
   },
   // 资讯
   jumpDetails: function (e) {
