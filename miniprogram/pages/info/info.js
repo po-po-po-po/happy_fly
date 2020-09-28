@@ -99,7 +99,7 @@ Page({
             url: url,
             method: 'post',
             data: {
-              "openid": id 
+              "id": id 
             },
             header: {
               'content-type': 'application/json' // 默认值
