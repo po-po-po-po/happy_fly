@@ -72,13 +72,17 @@ Page({
    // 获取富文本中的内容，并提交留言
  bindFormSubmit: function(e) {
   var that = this;
+  this.getSearchParams1();
   // 获取输入的内容
-  var flightNameStart = e.detail.value.flightNameStart;
-  var flightNameEnd = e.detail.value.flightNameEnd;
-  if (flightNameStart=="不限" || flightNameEnd=="不限") {
+  var airlinesCode=that.data.airlineCode;
+  var flightNo=e.detail.value.flightNo;
+  var flightNameStart=that.data.dcityName;
+  var flightNameEnd=that.data.acityName;
+  var flightDate=that.data.ddate;
+  if (flightNameStart=="" || flightNameEnd=="" || airlinesCode =='' || flightNo=='' || flightDate=='' ) { 
     wx.showModal({
       title: '提示',
-      content: '请选择出发机场和到达机场',
+      content: '添加数据不能为空',
     })
   }
    else {
@@ -88,16 +92,16 @@ Page({
       url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/saveUserflight',
       method: 'POST',  
       data: {
-        airlinesCode:e.detail.value.airlinesCode,
+        airlinesCode:that.data.airlineCode,
         flightNo:e.detail.value.flightNo,
-        flightNameStart:e.detail.value.flightNameStart,
-        flightNameEnd:e.detail.value.flightNameEnd,
-        flightDate:e.detail.value.flightDate
+        flightNameStart:that.data.dcityName,
+        flightNameEnd:that.data.acityName,
+        flightDate:that.data.ddate
       }
     })
     // 提交完成后的显示
     wx.showToast({
-      title: '感谢反馈',
+      title: '添加成功',
       icon: 'success',
       duration: 2000
     })
