@@ -26,7 +26,7 @@
       <view class="headLineContent box box-tb box-align-center box-pack-around">
 
          <view class="headLineTitle">
-          <image src="{{item.airlinesImg}}"></image>  {{item.flightNo}}（{{item.airlinesName}}）
+          <image src="{{item.airlinesImg}}"></image>     {{item.flightNo}}（{{item.airlinesName}}）
         </view>
 
           <view class="headLineInfor  box box-lr box-pack-between">
