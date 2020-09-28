@@ -33,7 +33,7 @@ Page({
   dcityfocusEvent: function(e) {
     App.setCityTarget(e.currentTarget.id)
     wx.navigateTo({
-      url: '/components/citypicker/index'
+      url: '/components/plancitypicker/index'
     })
   },
   acityfocusEvent: function(e) {
