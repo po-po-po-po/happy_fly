@@ -57,7 +57,7 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd">                    
-                    <textarea  class="view-liuyan"   placeholder="请输入行程备忘记录" id="userplan" name="userplan" value="{{userplan}}" bindinput="bindInputText">
+                    <textarea  class="view-liuyan"  maxlength="-1"  placeholder="请输入行程备忘记录" id="userplan" name="userplan" value="{{userplan}}" bindinput="bindInputText">
                      
     </textarea>
                 </view>
