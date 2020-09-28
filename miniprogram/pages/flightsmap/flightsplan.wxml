@@ -1,0 +1,75 @@
+<!--pages/flight/index.wxml-->
+<view class="page">
+  <form bindsubmit="bindFormSubmit">
+    <view class="page__bd">
+        <view class="weui-cells__title">出发机场</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">                    
+                    <input  class="weui-input" bindtap="dcityfocusEvent" placeholder="请选择出发机场" id="flightNameStart" name="flightNameStart" value="{{dcityName}}"  />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">到达机场</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">                    
+                    <input  class="weui-input" bindtap="acityfocusEvent" placeholder="请选择到达机场" id="flightNameEnd" name="flightNameEnd" value="{{acityName}}" />
+                </view>
+            </view>
+        </view>
+                <view class="weui-cells__title">航空公司</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">                    
+                    <input  class="weui-input" bindtap="airlineCodefocusEvent" placeholder="请选择航空公司" id="airlineCode" name="airlineCode" value="{{airlineName}}" />
+                </view>
+            </view>
+        </view>
+
+<view class="weui-cells__title">航班号</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">                    
+                    <input  class="weui-input" placeholder="请输入航班号" id="flightNo" name="flightNo" value="{{flightNo}}" />
+                </view>
+            </view>
+        </view>
+
+
+        <view class="weui-cells__title">出发日期</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">           
+                    <picker mode="date" value="{{date}}" bindchange="bindDateChange">         
+                        <input  class="weui-input" placeholder="请选择出发时间" id="ddate" 
+                        name="flightDate"
+                        value="{{ddate}}" />
+                    </picker>
+                </view>
+            </view>
+        </view>
+
+
+
+<view class="weui-cells__title">行程记录</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">                    
+                    <textarea  class="view-liuyan" minlength="4" maxlength="122" placeholder="请输入行程备忘记录" id="userplan" name="userplan" value="{{userplan}}" bindinput="bindInputText">
+                     
+    </textarea>
+                </view>
+            </view>
+        </view>
+
+
+
+        <view class="weui-btn-area">
+            <button class="weui-btn"  form-type="submit" >添加行程</button>
+        </view>
+    </view>
+  </form>
+
+</view>
