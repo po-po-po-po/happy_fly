@@ -17,35 +17,35 @@ Page({
   bindKeyInput: function(e) {
     const inputId = e.currentTarget.id
     if (inputId === 'dcity') {  
-      App.setDcity(e.detail.value)
+      App.setDcity1(e.detail.value)
     } else if (inputId === 'acity') {
-      App.setAcity(e.detail.value)
+      App.setAcity1(e.detail.value)
     } else if (inputId === 'ddate') {
-      App.setDdate(e.detail.value)
+      App.setDdate2(e.detail.value)
     }else if (inputId === 'airlineCode') {
-      App.setDdate(e.detail.value)
+      App.setDdate2(e.detail.value)
     }else if (inputId === 'ddate1') {
-      App.setDdate1(e.detail.value)
+      App.setDdate2(e.detail.value)
     }
     
     this.getSearchParams1()
   },
   dcityfocusEvent: function(e) {
-    App.setCityTarget(e.currentTarget.id)
+    App.setCityTarget1(e.currentTarget.id)
     wx.navigateTo({
       url: '/components/plancitypicker/index'
     })
   },
   acityfocusEvent: function(e) {
-    App.setCityTarget(e.currentTarget.id)
+    App.setCityTarget1(e.currentTarget.id)
     //console.log(e.currentTarget)
     wx.navigateTo({
       url: '/components/plancitypicker/index'
     })
   },
   airlineCodefocusEvent: function(e) {
-    App.setCityTarget(e.currentTarget.id)
-    //console.log(e.currentTarget)
+    App.setCityTarget1(e.currentTarget.id)
+    console.log(e.currentTarget.id)
     wx.navigateTo({
       url: '/components/planairlinepicker/index'
     })
@@ -124,11 +124,11 @@ Page({
     console.log('onUnload')
   },
   bindDateChange: function (e) {
-    App.setDdate(e.detail.value)
+    App.setDdate2(e.detail.value)
     this.getSearchParams1()
   },
   bindDateChange1: function (e) {
-    App.setDdate1(e.detail.value)
+    App.setDdate2(e.detail.value)
     this.getSearchParams1()
   }
 })

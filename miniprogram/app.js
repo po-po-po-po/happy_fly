@@ -24,9 +24,11 @@ App({
       ddate1: ''
     },
     cityTarget: '',
-
+    cityTarget1: '',
     flightDetail: null,
+    flightDetail1: null,
     flightInfos: [],
+    flightInfos1: [],
   },
   getCityName: function (cb) {
     if (this.globalData.cityTarget === 'dcity') {
@@ -37,9 +39,22 @@ App({
       cb(this.globalData.searchParams.airlineName)
     }
   },
+  getCityName1: function (cb) {
+    if (this.globalData.cityTarget1 === 'dcity') {
+      cb(this.globalData.searchParams1.dcityName)
+    } else if (this.globalData.cityTarget1 === 'acity') {
+      cb(this.globalData.searchParams1.acityName)
+    } else if (this.globalData.cityTarget1 === 'airlineCode') {
+      cb(this.globalData.searchParams1.airlineName)
+    }
+  },
   setCityTarget: function (newValue) {
     //console.log('setTarget: ' + newValue)
     this.globalData.cityTarget = newValue
+  },
+  setCityTarget1: function (newValue) {
+    //console.log('setTarget: ' + newValue)
+    this.globalData.cityTarget1 = newValue
   },
   setCityInfo: function (cityInfo) {
     console.log(cityInfo)
@@ -54,16 +69,42 @@ App({
       this.globalData.searchParams.airlineCode = cityInfo.airlineCode
     }
   },
+  setCityInfo1: function (cityInfo) {
+    console.log(cityInfo)
+    console.log(this.globalData)
+    if (this.globalData.cityTarget1 === 'flightNameStart') {
+      this.globalData.searchParams1.dcityName = cityInfo.cityname
+      this.globalData.searchParams1.dcity = cityInfo.citycode
+    } else if (this.globalData.cityTarget1 === 'flightNameEnd') {
+      this.globalData.searchParams1.acityName = cityInfo.cityname
+      this.globalData.searchParams1.acity = cityInfo.citycode
+    }else if (this.globalData.cityTarget1 === 'airlineCode') {
+      this.globalData.searchParams1.airlineName = cityInfo.airlineName
+      this.globalData.searchParams1.airlineCode = cityInfo.airlineCode
+    }
+  },
   setDcity : function (newValue) {
     this.globalData.searchParams.dcity = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setDcity1 : function (newValue) {
+    this.globalData.searchParams1.dcity = newValue.toUpperCase()
     //console.log(this.globalData)
   },
   setAcity : function (newValue) {
     this.globalData.searchParams.acity = newValue.toUpperCase()
     //console.log(this.globalData)
   },
+  setAcity1 : function (newValue) {
+    this.globalData.searchParams1.acity = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
   setAirlineCode : function (newValue) {
     this.globalData.searchParams.airlineName = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setAirlineCode1 : function (newValue) {
+    this.globalData.searchParams1.airlineName = newValue.toUpperCase()
     //console.log(this.globalData)
   },
   setDdate : function (newValue) {
@@ -72,6 +113,10 @@ App({
   },
   setDdate1 : function (newValue) {
     this.globalData.searchParams.ddate1 = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setDdate2 : function (newValue) {
+    this.globalData.searchParams1.ddate = newValue.toUpperCase()
     //console.log(this.globalData)
   },
   getSearchParams: function(cb) {

@@ -34,7 +34,7 @@ Page({
   onShow: function () {
     // 生命周期函数--监听页面显示
     var self = this
-    App.getCityName(function(newVal) {
+    App.getCityName1(function(newVal) {
       self.setData({
         city: newVal
       })
@@ -65,7 +65,7 @@ Page({
       city: cityname
     })
 
-    App.setCityInfo(
+    App.setCityInfo1(
       {
         'airlineCode': citycode,
         'airlineName': cityname
