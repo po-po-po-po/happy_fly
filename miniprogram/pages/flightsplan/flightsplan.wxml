@@ -52,6 +52,20 @@
         </view>
 
 
+
+<view class="weui-cells__title">行程记录</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">                    
+                    <textarea  class="view-liuyan" minlength="4" maxlength="122" placeholder="请输入行程备忘记录" id="userplan" name="userplan" value="{{userplan}}" bindinput="bindInputText">
+                     
+    </textarea>
+                </view>
+            </view>
+        </view>
+
+
+
         <view class="weui-btn-area">
             <button class="weui-btn"  form-type="submit" >添加行程</button>
         </view>

@@ -76,6 +76,7 @@ Page({
   // 获取输入的内容
   var airlinesCode=that.data.airlineCode;
   var flightNo=e.detail.value.flightNo;
+  var userplan=e.detail.value.userplan;
   var flightNameStart=that.data.dcityName;
   var flightNameEnd=that.data.acityName;
   var flightDate=that.data.ddate;
@@ -104,6 +105,7 @@ Page({
         code:code,
         airlinesCode:that.data.airlineCode,
         flightNo:e.detail.value.flightNo,
+        userplan:e.detail.value.userplan,
         flightNameStart:that.data.dcityName,
         airportNameStart:that.data.dcityName,
         airportNameEnd:that.data.acityName,
