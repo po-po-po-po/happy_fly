@@ -21,7 +21,7 @@
      <view class="arrowsBox box box-tb box-pack-center">
         <image src="{{item.airlinesImg}}"></image> 
       </view>
-   -
+   
       <view class="headLineContent box box-tb box-align-center box-pack-around">
 
          <view class="headLineTitle">
