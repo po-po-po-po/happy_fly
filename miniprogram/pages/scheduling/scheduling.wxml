@@ -2,7 +2,7 @@
 
   <view class="lia-lianxi">
     <text class="lia-title"></text>
-    <text class="lia-text">北京首都-成都双流</text>
+    <text class="lia-text">{{userflight.flightNameStart}}-{{userflight.flightNameEnd}}</text>
     <view style="clear:both;"></view>
   </view>
 
@@ -12,8 +12,8 @@
   
   <view class="lia-lianxi">
  
-    <text class="lia-title1">2020-12-12</text>
-    <text class="lia-text1">四川航空(3U8888)</text>
+    <text class="lia-title1">{{userflight.flightDate}}</text>
+    <text class="lia-text1"> {{userflight.airlinesCode}} ({{userflight.flightNo}})</text>
     <view style="clear:both;"></view>
   </view>
     <view style="clear:both;"></view>
@@ -24,7 +24,7 @@
 <view class="req-div">
   <text class="req-title">行程详情</text>
   <view class="req-cen">
-    <text>1.直播带货/短视频推广，纯佣35% 2.样品：在店铺下单，抖音、快手、小红书 微博、视频号、哔哩哔哩、火山、西瓜 收货后6天内出优质图、出短视频（自由拍摄）立即返款 3.5000粉丝以上，优质号优先 4.机构勿扰1.直播带货/短视频推广，纯佣35% 2.样品：在店铺下单，抖音、快手、小红书 微博、视频号、哔哩哔哩、火山、西瓜 收货后6天内出优质图、出短视频（自由拍摄）立即返款 3.5000粉丝以上，优质号优先 4.机构勿扰</text>
+    <text> {{userflight.airlinesCode}}</text>
     <!--
     <image bindtap="reviewImages" mode="widthFix" src="https://static.youcloud.com/img/home/adguanjia2-712ff79dee.jpg" role="img"></image>
     -->

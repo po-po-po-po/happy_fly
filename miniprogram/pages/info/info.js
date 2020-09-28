@@ -121,9 +121,9 @@ Page({
   },
   // 资讯
   jumpDetails: function (e) {
-    console.log(e.currentTarget.dataset.id)
+    var id=e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../scheduling/scheduling?id={{item.id}}',
+      url: '../scheduling/scheduling?id='+id,
       success: function (res) {
         // success
       },
