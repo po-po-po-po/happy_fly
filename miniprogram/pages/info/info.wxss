@@ -65,6 +65,12 @@
   /*padding-left: 50rpx;*/
 }
 
+.headLineContent image {
+  width: 23rpx;
+  height: 23rpx;
+  /*padding-left: 50rpx;*/
+}
+
 .moreButton {
   margin-top: 10rpx;
   width: 100%;

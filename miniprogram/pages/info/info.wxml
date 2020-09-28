@@ -18,14 +18,15 @@
    <view class="headLineWra box box-lr touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" wx:for="{{flightList}}" bindtap="jumpDetails" data-Id="{{item.id}}" wx:key="id">
  
   
+  <!--
      <view class="arrowsBox box box-tb box-pack-center">
         <image src="{{item.airlinesImg}}"></image> 
       </view>
-   
+   -->
       <view class="headLineContent box box-tb box-align-center box-pack-around">
 
          <view class="headLineTitle">
-          {{item.flightNo}}（{{item.airlinesName}}）
+          <image src="{{item.airlinesImg}}"></image>  {{item.flightNo}}（{{item.airlinesName}}）
         </view>
 
           <view class="headLineInfor  box box-lr box-pack-between">
