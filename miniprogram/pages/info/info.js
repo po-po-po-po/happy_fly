@@ -25,25 +25,7 @@ Page({
       flightList: data
     })
   },
- 
-  //删除事件
-  del: function(e) {
-    wx.showModal({
-      title: '提示',
-      content: '确认要删除此条信息么？',
-      success: function(res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-          that.data.flightList.splice(e.currentTarget.dataset.index, 1)
-          that.setData({
-            flightList: that.data.flightList
-          })
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
-    })
-  },
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -96,6 +78,46 @@ Page({
       });
     }
     
+  },
+   
+  //删除事件
+  del: function(e) {
+  
+    wx.showModal({
+      title: '提示',
+      content: '确认要删除此次航班么？',
+      success: function(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          //删除数据
+          var id=e.currentTarget.dataset.index;
+          const _this = this;
+          // 拼接请求url
+          const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/deleteUserflight' ;
+          // 请求数据
+          wx.request({
+            url: url,
+            method: 'post',
+            data: {
+              "openid": id 
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function(res) {
+              wx.showToast({
+                title: '删除成功',
+              })
+             
+            }
+          })
+         
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+   
   },
   // 资讯
   jumpDetails: function (e) {

@@ -51,7 +51,7 @@
 
       </view>
      
-      <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+      <view class="del" catchtap="del" data-index="{{item.id}}">删除</view>
 
     </view>
   </view>
