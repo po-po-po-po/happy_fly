@@ -22,6 +22,6 @@
   </view>
 
   <view class="item_city" wx:for="{{cityList}}" wx:key="item" data-citycode="{{item[0]}}" data-cityname="{{item[1]}}" bindtap="bindHotCity">
-      {{item[0]}} - {{item[1]}} - {{item[2]}} - {{item[3]}}
+      {{item[0]}} - {{item[1]}} -  {{item[3]}}
   </view>
 </scroll-view>

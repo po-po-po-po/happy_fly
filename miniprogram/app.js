@@ -40,9 +40,10 @@ App({
     }
   },
   getCityName1: function (cb) {
-    if (this.globalData.cityTarget1 === 'dcity') {
+    console.log(this.globalData.cityTarget1)
+    if (this.globalData.cityTarget1 === 'flightNameStart') {
       cb(this.globalData.searchParams1.dcityName)
-    } else if (this.globalData.cityTarget1 === 'acity') {
+    } else if (this.globalData.cityTarget1 === 'flightNameEnd') {
       cb(this.globalData.searchParams1.acityName)
     } else if (this.globalData.cityTarget1 === 'airlineCode') {
       cb(this.globalData.searchParams1.airlineName)
