@@ -1,0 +1,18 @@
+
+<view class=' wh-padding search-top'>
+  <view class='search-container'>
+    <icon type="search" size='14' />
+    <input placeholder='搜索航空公司(可输入航空公司代码,名称,所属系)' name="id"  bindinput="searchWordInputEvent" value='{{searchWord}}'></input>
+  </view>
+</view>
+
+
+<scroll-view scroll-y="true" bindscroll="bindScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
+  <view class="hotcity-common thisCity">当前选择航空公司</view>
+  <view class="thisCityName">{{city}}</view>
+
+
+  <view class="item_city" wx:for="{{cityList}}" wx:key="item" data-citycode="{{item[0]}}" data-cityname="{{item[1]}}" bindtap="bindHotCity">
+      {{item[0]}} - {{item[1]}} - {{item[2]}} - {{item[3]}}
+  </view>
+</scroll-view>
