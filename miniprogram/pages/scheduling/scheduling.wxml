@@ -13,7 +13,7 @@
   <view class="lia-lianxi">
  
     <text class="lia-title1">{{userflight.flightDate}}</text>
-    <text class="lia-text1"> {{userflight.airlinesCode}} ({{userflight.flightNo}})</text>
+    <text class="lia-text1"> {{userflight.airlinesName}} ({{userflight.flightNo}})</text>
     <view style="clear:both;"></view>
   </view>
     <view style="clear:both;"></view>
@@ -24,7 +24,7 @@
 <view class="req-div">
   <text class="req-title">行程详情</text>
   <view class="req-cen">
-    <text> {{userflight.airlinesCode}}</text>
+    <text> {{userflight.userplan}}</text>
     <!--
     <image bindtap="reviewImages" mode="widthFix" src="https://static.youcloud.com/img/home/adguanjia2-712ff79dee.jpg" role="img"></image>
     -->
@@ -48,7 +48,7 @@
 
 <view class="entry-view">
  
-  <text class="ent-text">破</text>
+  <text class="ent-text">{{userflight.nickName}}:{{userflight.createTimes}}</text>
   <view style="clear:both;"></view> 
    <!--
   <view class="entry-image" style="height:auto;">
