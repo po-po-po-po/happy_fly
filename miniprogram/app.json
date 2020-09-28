@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/airports/airports",
     "pages/city/city",
-    "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -45,17 +45,17 @@
   "style": "v2",
   "tabBar": {
     "list": [
-    
+      {
+        "pagePath": "pages/index/index",
+        "text": "航空公司"
+      },
       
       {
         "pagePath": "pages/airports/airports",
         "text": "民用机场"
       },
      
-      {
-        "pagePath": "pages/index/index",
-        "text": "航空公司"
-      },   {
+         {
         "pagePath": "pages/city/city",
         "text": "航班航线"
       }, {
