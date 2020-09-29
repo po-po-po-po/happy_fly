@@ -39,10 +39,11 @@ Page({
         let latitude = res.latitude;
         let longitude = res.longitude;
         let marker = this.createMarker(res);
+        let datas= require('../utils/data');
         this.setData({
           centerX: longitude,
           centerY: latitude,
-          markers: this.getLingyuanMarkers(),
+          markers: this.getLingyuanMarkers(datas),
         })
       }
     });
@@ -66,9 +67,9 @@ Page({
     })
   },
 
-  getLingyuanMarkers() {
+  getLingyuanMarkers(datas) {
     let markers = [];
-    for (let item of lingyuanData) {
+    for (let item of datas) {
       let marker = this.createMarker(item);
       markers.push(marker)
     }
