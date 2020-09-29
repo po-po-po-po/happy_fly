@@ -1,6 +1,6 @@
  <view class="box transition" >
   <view class="user-panel" >
-   <navigator url='../flightsmap/flightsplan'>
+   <navigator url=''>
     <image class="head" src="{{wxUser.avatarUrl}}"></image>
     </navigator>
     <view class="center">

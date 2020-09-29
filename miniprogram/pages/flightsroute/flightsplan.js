@@ -15,7 +15,10 @@ Page({
     // centerY: 23.10229,
     markers: [],
     showDialog: false,
-    mapId: "myMap" //wxml中的map的Id值
+    mapId: "myMap", //wxml中的map的Id值
+    avatarUrl:"",
+    routeList:"",
+    nickName:""
   },
   // 点击回到原点
   moveTolocation: function () {
@@ -39,12 +42,42 @@ Page({
         let latitude = res.latitude;
         let longitude = res.longitude;
         let marker = this.createMarker(res);
-        let datas= require('../utils/data');
-        this.setData({
-          centerX: longitude,
-          centerY: latitude,
-          markers: this.getLingyuanMarkers(datas),
-        })
+        wx.login({
+          success: function (res) {
+            var code = res.code;
+            if (code) {
+              console.log('获取用户登录凭证：' + code);
+              console.log(res);
+              // --------- 发送凭证 ------------------
+                  // 将这个数据发送给后端
+          wx.request({
+            // 传到自己的服务器上
+            url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/findUseRoutes',
+            method: 'POST',  
+            data: {
+              code:code
+            } ,
+             header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function(res) {
+              // 赋值
+              that.setData({
+                avatarUrl: res.data.data.avatarUrl,
+                routeList: res.data.data.userFlightRouteListserFlightRoute,
+                nickName: res.data.data.nickName,
+                centerX: longitude,
+                centerY: latitude,
+                markers: that.getLingyuanMarkers(res.data.data.userFlightRouteListserFlightRoute),
+              })
+            }
+          })
+            } else {
+              console.log('获取用户登录态失败：' + res.errMsg);
+            }
+          }
+        });
+        //let datas= require('../utils/data');
       }
     });
   },
@@ -54,7 +87,7 @@ Page({
   // 点击标点获取数据
   markertap(e) {
     var id = e.markerId
-    var name = this.data.markers[id - 1].name
+    var d = this.data.markers[id - 1].name
     console.log(name)
     this.setData({
       lingyuanName: name,
@@ -85,13 +118,13 @@ Page({
     let marker = {
       iconPath: "https://www.potucs.com/wechat/logo/hongqi.png",
       id: point.id || 0,
-      name: point.name || '',
+      name: point.destination || '',
       latitude: latitude,
       longitude: longitude,
       width: 30,
       height: 30,
       label: {
-        content: point.name,
+        content: point.destination,
         color: '#22ac38',
         fontSize: 14,
         bgColor: "#fff",
@@ -101,7 +134,7 @@ Page({
         padding: 3
       },
       callout: {
-        content: point.name,
+        content: point.destination,
         fontSize: 0,
       }
     };

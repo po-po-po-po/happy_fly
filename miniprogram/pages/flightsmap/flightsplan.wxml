@@ -5,7 +5,7 @@
  
  
     <cover-view class='index_bt1'>
-      <cover-image class='xiaoer' bindtap="login" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIUL09akUEgCic0M8neA41OgSI5ZCLbSHxvdmxlMf8Bia5SibvIDGlbxZT7ib2qdyacPAhqUcek9CLd5Q/132" />
+      <cover-image class='xiaoer' bindtap="login" src="{{avatarUrl}}" />
     </cover-view>
 
  
