@@ -41,7 +41,7 @@ Page({
         console.log(res)
         let latitude = res.latitude;
         let longitude = res.longitude;
-        let marker = this.createMarker(res);
+        //let marker = this.createMarker(res);
         wx.login({
           success: function (res) {
             var code = res.code;
@@ -61,6 +61,8 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success: function(res) {
+            console.log(res.data.data.userFlightRouteListserFlightRoute);
+          
               // 赋值
               that.setData({
                 avatarUrl: res.data.data.avatarUrl,
@@ -102,22 +104,25 @@ Page({
 
   getLingyuanMarkers(datas) {
     let markers = [];
+    var index = 0;
     for (let item of datas) {
-      let marker = this.createMarker(item);
+      index++;
+      let marker = this.createMarker(item,index);
       markers.push(marker)
     }
+    console.log(markers)
     return markers;
   },
   // moveToLocation: function () {
   //   this.mapCtx.moveToLocation()
 
   // },
-  createMarker(point) {
+  createMarker(point,index) {
     let latitude = point.latitude;
     let longitude = point.longitude;
     let marker = {
       iconPath: "https://www.potucs.com/wechat/logo/hongqi.png",
-      id: point.id || 0,
+      id: index || 0,
       name: point.destination || '',
       latitude: latitude,
       longitude: longitude,
@@ -126,7 +131,7 @@ Page({
       label: {
         content: point.destination,
         color: '#22ac38',
-        fontSize: 14,
+        fontSize: 12,
         bgColor: "#fff",
         borderRadius: 30,
         borderColor: "#22ac38",
