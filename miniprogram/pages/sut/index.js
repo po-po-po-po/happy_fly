@@ -17,10 +17,17 @@ Page({
     ,
     item2: 
       {        
-        typeId: 0,        
+        typeId: 1,        
         name: '我的行程',        
         url: '../message/message?userInfo=userInfo',        
         imageurl: 'http://www.potucs.com:9998/wechat/logo/xingcheng.png',
+      },
+      item3: 
+      {        
+        typeId: 2,        
+        name: '我的足迹',        
+        url: '../flightsplan/flightsplan',        
+        imageurl: 'http://www.potucs.com:9998/wechat/logo/zuji.png',
       }
     
   },  
@@ -31,6 +38,10 @@ Page({
   },
   toItem2: function () {
     wx.navigateTo({url: "../info/info"
+    })
+  },
+  toItem3: function () {
+    wx.navigateTo({url: "../flightsmap/flightsplan"
     })
   },
   onLoad: function () {

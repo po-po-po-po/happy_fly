@@ -27,6 +27,11 @@
       <image src="{{item2.imageurl}}" class="nav-image" />
       <text>{{item2.name}}</text>
     </view>
+     <view class="nav-item" catchtap="toItem3" data-type="{{item3.name}}" data-typeid="{{item3.typeId}}">
+      <image src="{{item3.imageurl}}" class="nav-image" />
+      <text>{{item3.name}}</text>
+    </view>
+
   </view><view class="separate"></view><view class="person-list">
     <!--
    <view class="list-item">
