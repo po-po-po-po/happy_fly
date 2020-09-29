@@ -21,6 +21,7 @@
     "pages/airwaydetail/airwaydetail",
     "pages/welcome/welcome",
     "pages/airlinesflights/airlinesflights",
+    "pages/flightsroute/flightsplan",
     "pages/info/info",
     "pages/citys/citys",
     "pages/city/list"

@@ -61,10 +61,10 @@ Page({
   onLoad: function (options) { // options 为 board页传来的参数
     const _this = this;
     // 拼接请求url
-    const url = 'http://www.potucs.com:9999/wxMessage/findAllWxMessage' ;
+    //const url = 'http://www.potucs.com:9999/wxMessage/findAllWxMessage' ;
     // 请求数据
     wx.request({
-      url: url,
+      //url: url,
       method: 'post',
       header: {
         'content-type': 'application/json;charset=utf-8' // 默认值
@@ -77,6 +77,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
+        /** 
         console.log(res.data.data);
         // 赋值
         _this.setData({
@@ -84,6 +85,7 @@ Page({
           list: res.data.data,
           loading: false // 关闭等待框
         })
+        */
       }
     })
   }

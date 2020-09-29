@@ -41,7 +41,7 @@ Page({
     })
   },
   toItem3: function () {
-    wx.navigateTo({url: "../flightsmap/flightsplan"
+    wx.navigateTo({url: "../flightsroute/flightsplan"
     })
   },
   onLoad: function () {
