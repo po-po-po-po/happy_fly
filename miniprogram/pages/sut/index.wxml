@@ -19,10 +19,7 @@
   
 
   <view class="navs">
-    <view class="nav-item" catchtap="toItem1" data-type="{{item1.name}}" data-typeid="{{item1.typeId}}">
-      <image src="{{item1.imageurl}}" class="nav-image" />
-      <text>{{item1.name}}</text>
-    </view>
+   
        <view class="nav-item" catchtap="toItem2" data-type="{{item2.name}}" data-typeid="{{item2.typeId}}">
       <image src="{{item2.imageurl}}" class="nav-image" />
       <text>{{item2.name}}</text>
@@ -31,7 +28,14 @@
       <image src="{{item3.imageurl}}" class="nav-image" />
       <text>{{item3.name}}</text>
     </view>
-
+  <view class="nav-item" catchtap="toItem4" data-type="{{item4.name}}" data-typeid="{{item4.typeId}}">
+      <image src="{{item4.imageurl}}" class="nav-image" />
+      <text>{{item4.name}}</text>
+    </view>
+     <view class="nav-item" catchtap="toItem1" data-type="{{item1.name}}" data-typeid="{{item1.typeId}}">
+      <image src="{{item1.imageurl}}" class="nav-image" />
+      <text>{{item1.name}}</text>
+    </view>
   </view><view class="separate"></view><view class="person-list">
     <!--
    <view class="list-item">

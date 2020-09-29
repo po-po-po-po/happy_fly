@@ -28,6 +28,13 @@ Page({
         name: '我的足迹',        
         url: '../flightsplan/flightsplan',        
         imageurl: 'http://www.potucs.com:9998/wechat/logo/zuji.png',
+      },
+      item4: 
+      {        
+        typeId: 3,        
+        name: '更新说明',        
+        url: '../updaes/activitydetail',        
+        imageurl: 'http://www.potucs.com:9998/wechat/logo/updaes.png',
       }
     
   },  
@@ -42,6 +49,10 @@ Page({
   },
   toItem3: function () {
     wx.navigateTo({url: "../flightsroute/flightsplan"
+    })
+  },
+  toItem4: function () {
+    wx.navigateTo({url: "../updaes/activitydetail"
     })
   },
   onLoad: function () {
