@@ -2,7 +2,7 @@
 
   <view class="lia-lianxi">
     <text class="lia-title"></text>
-    <text class="lia-text">{{userflight.flightNameStart}}-{{userflight.flightNameEnd}}</text>
+    <text class="lia-text2">{{userflight.flightNameStart}}-{{userflight.flightNameEnd}}</text>
     <view style="clear:both;"></view>
   </view>
 
@@ -13,7 +13,7 @@
   <view class="lia-lianxi">
  
     <text class="lia-title1">{{userflight.flightDate}}</text>
-    <text class="lia-text1"> {{userflight.airlinesName}}|{{userflight.flightNo}}</text>
+    <text class="lia-text1"> {{userflight.airlinesName}}  {{userflight.flightNo}}</text>
     <view style="clear:both;"></view>
   </view>
     <view style="clear:both;"></view>
@@ -48,7 +48,7 @@
 
 <view class="entry-view">
  
-  <text class="ent-text">{{userflight.nickName}}:{{userflight.createTimes}}</text>
+  <text class="ent-text">{{userflight.nickName}}  {{userflight.createTimes}}</text>
   <view style="clear:both;"></view> 
    <!--
   <view class="entry-image" style="height:auto;">

@@ -45,7 +45,7 @@
              {{item.flightNameEnd}}
           </view>
           <view class="headLineSource">
-           {{item.flightDate}} {{item.flightEndTime}}
+           {{item.flightDateArrive}} {{item.flightEndTime}}
           </view>
         </view>
 

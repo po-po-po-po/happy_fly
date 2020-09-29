@@ -449,6 +449,20 @@ page {
   margin-left: 60rpx;
 }
 
+.lia-text2 {
+    padding-bottom: 50rpx;
+    display: block;
+    width: 100%;
+    align-items: center;
+    font-size: 30rpx;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    font-weight: bold;
+    margin-left: 120rpx;
+  }
 .wise-fuzhi {
     display: inline-block;
     width: auto;
