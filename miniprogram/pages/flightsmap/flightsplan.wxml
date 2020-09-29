@@ -7,9 +7,7 @@
     <cover-view class='index_bt1'>
       <cover-image class='xiaoer' bindtap="login" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIUL09akUEgCic0M8neA41OgSI5ZCLbSHxvdmxlMf8Bia5SibvIDGlbxZT7ib2qdyacPAhqUcek9CLd5Q/132" />
     </cover-view>
-    <cover-view class='index_shuaxin'>
-      <cover-image class='shuaxin' src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIUL09akUEgCic0M8neA41OgSI5ZCLbSHxvdmxlMf8Bia5SibvIDGlbxZT7ib2qdyacPAhqUcek9CLd5Q/132" />
-    </cover-view>
+
  
     <!--屏幕背景变暗的背景  -->
     <cover-view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></cover-view>
