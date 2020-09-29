@@ -1,7 +1,7 @@
 <map id="myMap"  scale="9" bindcontroltap="controltap" latitude="{{centerY}}" longitude="{{centerX}}" markers="{{markers}}" bindlabeltap="markertap" bindregionchange="regionchange" show-location style="width: 100%; height:100%;" >
 
 <view class="viewlittle" bindtap="moveTolocation" >
-    <image src="../../image/huidaoyuandian.png" ></image>
+    <image src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIUL09akUEgCic0M8neA41OgSI5ZCLbSHxvdmxlMf8Bia5SibvIDGlbxZT7ib2qdyacPAhqUcek9CLd5Q/132" ></image>
 </view>
 
 

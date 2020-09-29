@@ -82,7 +82,7 @@ Page({
     let latitude = point.latitude;
     let longitude = point.longitude;
     let marker = {
-      iconPath: "/image/location.png",
+      iconPath: "https://www.potucs.com/wechat/logo/hongqi.png",
       id: point.id || 0,
       name: point.name || '',
       latitude: latitude,
