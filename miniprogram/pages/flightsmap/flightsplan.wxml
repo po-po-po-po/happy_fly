@@ -5,10 +5,10 @@
  
  
     <cover-view class='index_bt1'>
-      <cover-image class='xiaoer' bindtap="login" src="/images/mk.png" />
+      <cover-image class='xiaoer' bindtap="login" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIUL09akUEgCic0M8neA41OgSI5ZCLbSHxvdmxlMf8Bia5SibvIDGlbxZT7ib2qdyacPAhqUcek9CLd5Q/132" />
     </cover-view>
     <cover-view class='index_shuaxin'>
-      <cover-image class='shuaxin' src="/images/mk.png" />
+      <cover-image class='shuaxin' src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIUL09akUEgCic0M8neA41OgSI5ZCLbSHxvdmxlMf8Bia5SibvIDGlbxZT7ib2qdyacPAhqUcek9CLd5Q/132" />
     </cover-view>
  
     <!--屏幕背景变暗的背景  -->
@@ -24,7 +24,7 @@
           <cover-view class='viewAddr'>{{myall.adr}}</cover-view>
         </cover-view>
         <cover-view class='placeViewRt'>
-          <cover-image data-id="{{myall.id}}" bindtap="opendetail" src='/images/mk.png'></cover-image>
+          <cover-image data-id="{{myall.id}}" bindtap="opendetail" src='https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIUL09akUEgCic0M8neA41OgSI5ZCLbSHxvdmxlMf8Bia5SibvIDGlbxZT7ib2qdyacPAhqUcek9CLd5Q/132'></cover-image>
         </cover-view>
  
       </cover-view>

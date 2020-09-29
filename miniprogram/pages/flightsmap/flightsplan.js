@@ -20,7 +20,7 @@ Page({
     }],
     controls: [{
       id: 1,
-      iconPath: '/images/mk.png',
+      iconPath: 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIUL09akUEgCic0M8neA41OgSI5ZCLbSHxvdmxlMf8Bia5SibvIDGlbxZT7ib2qdyacPAhqUcek9CLd5Q/132',
       position: {
         left: 0,
         top: 300 - 1,
