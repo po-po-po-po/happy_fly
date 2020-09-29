@@ -1,157 +1,169 @@
-// pages/flight/index.js
 
-const utils = require('../utils/sutil.js')
-const App = getApp()
-
+// map.js
+var app = getApp()
+var mymap = '';
+var lat = '';
+var long = '';
 Page({
-  data:{
-    dcity: '',
-    dcityName: '',
-    acity: '',
-    acityName: '',
-    airlineCode:'',
-    irlineName:'',
-    ddate: '',
-    ddate1: ''
+  data: {
+    polyline: [{
+      points: [{
+        longitude: 113.3245211,
+        latitude: 23.10229
+      }, {
+        longitude: 113.324520,
+        latitude: 23.21229
+      }],
+      color: '#FF0000DD',
+      width: 2,
+      dottedLine: true
+    }],
+    controls: [{
+      id: 1,
+      iconPath: '/images/mk.png',
+      position: {
+        left: 0,
+        top: 300 - 1,
+        width: 50,
+        height: 50
+      },
+      clickable: true
+    }]
   },
-  bindKeyInput: function(e) {
-    const inputId = e.currentTarget.id
-    if (inputId === 'dcity') {  
-      App.setDcity1(e.detail.value)
-    } else if (inputId === 'acity') {
-      App.setAcity1(e.detail.value)
-    } else if (inputId === 'ddate') {
-      App.setDdate2(e.detail.value)
-    }else if (inputId === 'airlineCode') {
-      App.setDdate2(e.detail.value)
-    }else if (inputId === 'ddate1') {
-      App.setDdate2(e.detail.value)
-    }
-    
-    this.getSearchParams1()
-  },
-  dcityfocusEvent: function(e) {
-    App.setCityTarget1(e.currentTarget.id)
-    wx.navigateTo({
-      url: '/components/plancitypicker/index'
-    })
-  },
-  acityfocusEvent: function(e) {
-    App.setCityTarget1(e.currentTarget.id)
-    //console.log(e.currentTarget)
-    wx.navigateTo({
-      url: '/components/plancitypicker/index'
-    })
-  },
-  airlineCodefocusEvent: function(e) {
-    App.setCityTarget1(e.currentTarget.id)
-    console.log(e.currentTarget.id)
-    wx.navigateTo({
-      url: '/components/planairlinepicker/index'
-    })
-  },
-  getSearchParams1: function() {
+  //引入数据库
+  onLoad: function(option) {
+    var url = app.url + 'Api/Api/get_shop_dp&PHPSESSID=' + wx.getStorageSync('PHPSESSID')
     var that = this
-    //调用应用实例的方法获取全局数据
-    App.getSearchParams1(function(params){
-      //更新数据
-       console.log(params)
-      that.setData({
-        dcity:params.dcity,
-        dcityName: params.dcityName,
-        acity:params.acity,
-        acityName: params.acityName,
-        airlineCode:params.airlineCode,
-        airlineName: params.airlineName,
-        ddate: params.ddate,
-        ddate1: params.ddate1
+    console.log(option)
+    if (option.scene) {
+      this.setData({
+        isshow: false
       })
-    })
-  },
-
-   // 获取富文本中的内容，并提交留言
- bindFormSubmit: function(e) {
-  var that = this;
-  this.getSearchParams1();
-  // 获取输入的内容
-  var airlinesCode=that.data.airlineCode;
-  var flightNo=e.detail.value.flightNo;
-  var userplan=e.detail.value.userplan;
-  var flightNameStart=that.data.dcityName;
-  var flightNameEnd=that.data.acityName;
-  var flightDate=that.data.ddate;
-  if (flightNameStart=="" || flightNameEnd=="" || airlinesCode =='' || flightNo=='' || flightDate=='' ) { 
-    wx.showModal({
-      title: '提示',
-      content: '添加数据不能为空',
-    })
-  }
-   else {
-    // 提交留言
-        // 提交留言
-        wx.login({
-          success: function (res) {
-            var code = res.code;
-            if (code) {
-              console.log('获取用户登录凭证：' + code);
-              console.log(res);
-              // --------- 发送凭证 ------------------
-                  // 将这个数据发送给后端
-    wx.request({
-      // 传到自己的服务器上
-      url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/saveUserflight',
-      method: 'POST',  
+      wx.navigateTo({
+        url: '../chat/chat?scene=' + option.scene,
+      })
+    } else {
+      this.setData({
+        isshow: true
+      })
+    }
+    wx.request({ //让服务器端统一下单，并返回小程序支付的参数
+      url: url,
       data: {
-        code:code,
-        airlinesCode:that.data.airlineCode,
-        flightNo:e.detail.value.flightNo,
-        userplan:e.detail.value.userplan,
-        flightNameStart:that.data.dcityName,
-        airportNameStart:that.data.dcityName,
-        airportNameEnd:that.data.acityName,
-        flightNameEnd:that.data.acityName,
-        flightDate:that.data.ddate
+        openid: wx.getStorageSync('openid')
+      },
+      success: function(res) {
+        console.log(res);
+        that.setData({
+          markers: res.data.data
+        });
+        wx.getLocation({
+          type: 'wgs84',
+          success(mres) {
+            var map_lat = mres.latitude;
+            var map_long = mres.longitude;
+            var map_speed = mres.speed;
+            var map_accuracy = mres.accuracy;
+            that.setData({
+              lat: map_lat
+            });
+            that.setData({
+              long: map_long
+            });
+          }
+        });
+      }
+    });
+  },
+ 
+  //显示对话框
+  showModal: function(event) {
+    //console.log(event.markerId);
+    var i = event.markerId;
+    var url = app.url + 'Api/Api/get_shop_dp_detail&PHPSESSID=' + wx.getStorageSync('PHPSESSID');
+    var that = this;
+    console.log('====get_detail====')
+    wx.request({ 
+      url: url,
+      data: {
+        id: i,
+        openid: wx.getStorageSync('openid')
+      },
+      success: function(res) {
+        console.log(res);
+        that.setData({
+          myall: res.data.data
+        });
+      }
+    });
+ 
+    // 显示遮罩层
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
+    })
+    this.animation = animation
+    animation.translateY(300).step()
+    this.setData({
+      animationData: animation.export(),
+      showModalStatus: true
+    })
+    setTimeout(function() {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 200)
+  },
+  //隐藏对话框
+  hideModal: function() {
+    // 隐藏遮罩层
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
+    })
+    this.animation = animation
+    animation.translateY(300).step()
+    this.setData({
+      animationData: animation.export(),
+    })
+    setTimeout(function() {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export(),
+        showModalStatus: false
+      })
+    }.bind(this), 200)
+  },
+ 
+  opendetail: function(event) {
+    console.log('-----跳转商品-----');
+    //console.log(event);
+    var id = event.currentTarget.dataset.id;
+    this.setData({
+      id: id
+    });
+    wx.navigateTo({
+        url: "/pages/detail/detail?id=" + id
+      }),
+      console.log(id);
+  },
+ 
+  calling: function(event) {
+    var tel = event.currentTarget.dataset.id.tel;
+    this.setData({
+      tel: tel
+    });
+    wx.makePhoneCall({
+      phoneNumber: tel,
+      success: function() {
+        console.log("拨打电话成功！")
+      },
+      fail: function() {
+        console.log("拨打电话失败！")
       }
     })
-    // 提交完成后的显示
-    wx.showToast({
-      title: '添加成功',
-      icon: 'success',
-      duration: 2000
-    })
-  }else {
-    console.log('获取用户登录态失败：' + res.errMsg);
-  }    
-}
-});
-}
-},
-  onLoad:function(options){    
-   // App.setDdate(utils.tomorrow())
-  },
-  onReady:function(){
-    // 页面渲染完成
-    console.log('onReady')
-  },
-  onShow:function(){
-    // 页面显示
-    console.log('onShow')
-    this.getSearchParams1()
-  },
-  onHide:function(){
-    // 页面隐藏
-    console.log('onHide')
-  },
-  onUnload:function(){
-    // 页面关闭
-    console.log('onUnload')
-  },
-  bindDateChange: function (e) {
-    App.setDdate2(e.detail.value)
-    this.getSearchParams1()
-  },
-  bindDateChange1: function (e) {
-    App.setDdate2(e.detail.value)
-    this.getSearchParams1()
   }
 })

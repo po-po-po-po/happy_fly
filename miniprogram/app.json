@@ -13,11 +13,8 @@
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room",
     "pages/sut/index",
     "pages/flight/flight",
-   
     "pages/airways/airways",
     "pages/message/message",
     "pages/airportsdetail/airportsdetail",
