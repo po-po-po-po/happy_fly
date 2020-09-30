@@ -220,7 +220,7 @@ citys[213] = new Array('ZHY','中卫沙坡头','中卫','宁夏');
 citys[214] = new Array('DQA','大庆萨尔图','大庆','黑龙江');
 citys[215] = new Array('JIU','九江庐山','九江','江西');
 citys[216] = new Array('LLF','永州零陵','永州','湖南');
-
+citys[217] = new Array('NAY','北京南苑','北京','北京');
 module.exports = {
 	hotCities, 
 	cities: citys
