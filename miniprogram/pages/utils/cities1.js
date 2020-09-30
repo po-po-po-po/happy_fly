@@ -236,7 +236,7 @@ citys[229] = new Array('JSJ','建三江','佳木斯','黑龙江');
 citys[230] = new Array('IQM','且末','巴音郭楞','新疆');
 citys[231] = new Array('HUO','霍林郭勒霍林河','霍林郭勒','内蒙古');
 citys[232] = new Array('HCJ','河池金城江','河池','广西');
-
+citys[233] = new Array('TCG','塔城','塔城','新疆');
 module.exports = {
 	hotCities, 
 	cities: citys
