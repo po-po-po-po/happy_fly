@@ -18,7 +18,12 @@
           <view class="flightDate">{{item.airlinesName}}</view>
             <view class="flightDate">{{item.flightNo}}</view>
               <view class="flightDate">{{item.flightDate}}</view>
-             <view class="flightDate">{{item.flightNameStart}}--{{item.flightNameEnd}} </view>
+             <view class="flightDate">{{item.flightNameStart}}--{{item.flightNameEnd}} 
+             <block wx:if="{{item.flightRequency !== ''}}">
+           (<font style="color:red">{{item.flightRequency}}</font>)
+             </block>
+             
+              </view>
             </view> </view>
     
 </view>
