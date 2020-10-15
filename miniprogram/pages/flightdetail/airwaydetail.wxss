@@ -46,16 +46,17 @@
 
   .title {
     font-size: 36rpx;
-    color: rgb(158, 10, 72);
+    color: rgb(14, 13, 13);
     align-items: center;
-    padding-left: 60rpx;
+    padding-left: 120rpx;
+    padding-right: 30rpx;
   }
 
   .title1 {
     font-size: 36rpx;
-    color: rgb(158, 10, 72);
+    color:  rgb(14, 13, 7);
     align-items: center;
-    padding-left: 20rpx;
+    padding-left: 40rpx;
   }
   .info {
     font-size: 18rpx;

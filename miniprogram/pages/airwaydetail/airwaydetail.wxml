@@ -29,12 +29,13 @@
     <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="从晚到早" bindtap="filter">从晚到早</text>
 </view>
 
-<!--航线头-->
+
   <view class='meta'>
     <text class='title'>{{airwayDetail.airwayNameStart}}</text>
      <image  class="plane" src="http://www.potucs.com:9998/wechat/logo/plane.png" background-size="cover"></image>
        <text class='title1'>{{airwayDetail.airwayNameEnd}}</text>
   </view>
+
 
 <!-- 每一行 -->
 <view class="row" wx:for="{{list}}" wx:key="id" bindtap="rowTapped" data-id="{{item.name}}">
