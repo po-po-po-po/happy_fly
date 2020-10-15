@@ -6,7 +6,7 @@
 <view class=' wh-padding search-top'>
   <view class='search-container'>
     <icon type="search" size='14' />
-    <input placeholder='请输入城市或省份或航司代码(比如CZ)' name="id"  bindconfirm='bindInput' value='{{inputValue}}'></input>
+    <input placeholder='请输入城市或省份或航司代码(比如MU)' name="id"  bindconfirm='bindInput' value='{{inputValue}}'></input>
   </view>
 </view>
 <!--滚动列表-->
