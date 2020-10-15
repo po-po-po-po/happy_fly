@@ -2,7 +2,7 @@
 
 <!--航线头-->
     <view class='meta'>
-      <text class='title'>{{airlines.airlinesName}}:航线列表</text>
+   <!--   <text class='title'>{{airlines.airlinesName}}:航线列表</text>-->
   </view>
 
 <!-- grid   画个重点-->
