@@ -41,7 +41,7 @@
 <!--航线头-->
 
     <view class='meta'>
-      <text class='title'>    {{airlines.airlinesName}}</text>
+      <text class='title'>  </text>
   </view>
 
 <!-- grid   画个重点-->
