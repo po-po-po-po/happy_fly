@@ -27,7 +27,7 @@
 }
 .label {
   font-size: 28rpx;
-  color: rgb(235, 11, 11);
+  color: rgb(12, 12, 12);
   display: block;
 }
 .content {
