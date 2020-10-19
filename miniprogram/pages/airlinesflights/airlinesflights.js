@@ -8,7 +8,7 @@ Page({
     list: [], // 数据列表
     type: '', // 数据类型
     loading: true, // 显示等待框
-    tabTxt: ['出发机场', '起飞时间', '排序','到达机场'],//分类
+    tabTxt: ['出发机场', '起飞时间', '航班周期','到达机场'],//分类
     tab: [true, true, true, true],
     airlinesList: [],
     airlinesCode: '',//航司id
