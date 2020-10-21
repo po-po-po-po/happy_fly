@@ -39,7 +39,7 @@
 
 <view class="tabLayer" hidden="{{tab[3]}}">
     <text class="{{flightNameEnd==''?'active':''}}" data-id="" data-index="3" data-txt="到达机场" bindtap="filter">不限</text>
-    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="3" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportLocation}}</text>
+    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportEndList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="3" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportLocation}}</text>
 </view>
 
 <!--航线头-->

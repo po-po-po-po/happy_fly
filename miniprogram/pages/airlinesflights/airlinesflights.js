@@ -44,6 +44,7 @@ Page({
         _this.setData({
           flightList: res.data.data.flightList,
           airportStartList: res.data.data.airportStartList,
+          airportEndList: res.data.data.airportEndList,
           airlines:res.data.data.airlines,
           airwayList: res.data.data.airwayList,
           airlinesCode:res.data.data.airlines.airlinesCode,
