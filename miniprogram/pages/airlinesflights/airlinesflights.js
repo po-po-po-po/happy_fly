@@ -18,7 +18,8 @@ Page({
     sort_id: 0,//销量
     xiaoliang_txt: '',
     flightNameStart: '',
-    flightNameEnd: ''
+    flightNameEnd: '',
+    flightList: []
   },
  
   /**
@@ -27,7 +28,7 @@ Page({
   onLoad: function (options) { // options 为 board页传来的参数
     const _this = this;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines' ;
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines' ;
     // 请求数据
     wx.request({
       url: url,
@@ -55,7 +56,8 @@ Page({
   },
     // 选项卡
     filterTab: function (e) {
-      var data = [true, true, true, true], index = e.currentTarget.dataset.index;
+      var data = [true, true, true, true], 
+      index = e.currentTarget.dataset.index;
       data[index] = !this.data.tab[index];
       this.setData({
         tab: data
@@ -91,8 +93,8 @@ Page({
         self.setData({
           tab: [true, true, true, true],
           tabTxt: tabTxt,
-          sort_id: id,
-          xiaoliang_txt: txt
+          sort_id: id
+          //xiaoliang_txt: txt
         });
         break;
         case '3':
@@ -111,12 +113,12 @@ Page({
     //调用数据接口，获取数据
     getDataList:function(){
       let that = this;
-      console.log("flightNameStart::::"+that.data.flightNameStart);
-      console.log("airlinesCode::::"+that.data.airlinesCode);
-      console.log("sortId::::"+that.data.sort_id);
-      console.log("flightDate::::"+that.data.flight_date_start);
+      //console.log("flightNameStart::::"+that.data.flightNameStart);
+      //console.log("airlinesCode::::"+that.data.airlinesCode);
+      //console.log("sortId::::"+that.data.sort_id);
+      //console.log("flightDate::::"+that.data.flight_date_start);
       wx.request({
-       url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines',
+       url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines',
        method: 'post',
        data: {
         flightNameStart:that.data.flightNameStart,
@@ -129,10 +131,11 @@ Page({
        header: { 'Content-Type': 'application/json' },
        success: function (res) {
         wx.hideLoading()
-        console.log(res.data.data)
+        console.log(res.data.data.airwayList)
         that.setData({
           flightList: res.data.data.flightList,
           airportStartList: res.data.data.airportStartList,
+          airportEndList: res.data.data.airportEndList,
           airlines:res.data.data.airlines,
           airwayList: res.data.data.airwayList,
           airlinesCode:res.data.data.airlines.airlinesCode,
