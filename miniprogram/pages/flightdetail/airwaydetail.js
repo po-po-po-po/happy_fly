@@ -21,7 +21,7 @@ Page({
   onLoad: function (options) { // options 为 board页传来的参数
     const _this = this;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/flight/findAllFlightsByAirline' ;
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findAllFlightsByAirline' ;
     // 请求数据
     wx.request({
       url: url,
@@ -104,7 +104,7 @@ Page({
         console.log("flightNameStart::::"+this.data.flightNameStart);
         console.log("flightNameEnd::::"+this.data.flightNameEnd);
         wx.request({
-         url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/flight/findAllFlightsByAirline',
+         url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findAllFlightsByAirline',
          method: 'post',
          data: {
        

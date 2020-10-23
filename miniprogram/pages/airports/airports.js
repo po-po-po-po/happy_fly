@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) { // options 为 board页传来的参数
     const _this = this;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAllAirport' ;
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airport/findAllAirport' ;
     // 请求数据
     wx.request({
       url: url,
