@@ -35,7 +35,8 @@ Page({
         acity:params.acity,
         flightNameEnd: params.acityName,
         airlinesCode:params.airlineCode,
-        flightDate: ddate+"-"+ ddate1
+        flightDate: ddate+"-"+ ddate1,
+        flightRequency:params.weekCode
         //ddate: params.ddate,
         //ddate1: params.ddate1
       })
@@ -54,7 +55,8 @@ Page({
       flightNameStart: this.data.flightNameStart,
       flightNameEnd: this.data.flightNameEnd,
       airlinesCode:this.data.airlinesCode,
-      flightDate: this.data.flightDate
+      flightDate: this.data.flightDate,
+      flightRequency: this.data.flightRequency,
       //ddate: this.data.ddate,
       //startPosition: this.data.startPosition
     }

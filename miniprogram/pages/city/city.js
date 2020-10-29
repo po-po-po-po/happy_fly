@@ -10,7 +10,9 @@ Page({
     acity: '',
     acityName: '',
     airlineCode:'',
-    irlineName:'',
+    airlineName:'',
+    weekCode:'',
+    weekName:'',
     ddate: '',
     ddate1: ''
   },
@@ -26,6 +28,9 @@ Page({
       App.setDdate(e.detail.value)
     }else if (inputId === 'ddate1') {
       App.setDdate1(e.detail.value)
+    }
+    else if (inputId === 'weekCode') {
+      App.setWeekCode(e.detail.value)
     }
     
     this.getSearchParams()
@@ -50,6 +55,13 @@ Page({
       url: '/components/airlinepicker/index'
     })
   },
+  weekfocusEvent: function(e) {
+    App.setCityTarget(e.currentTarget.id)
+    //console.log(e.currentTarget)
+    wx.navigateTo({
+      url: '/components/weekpicker/index'
+    })
+  },
   getSearchParams: function() {
     var that = this
     //调用应用实例的方法获取全局数据
@@ -63,6 +75,8 @@ Page({
         acityName: params.acityName,
         airlineCode:params.airlineCode,
         airlineName: params.airlineName,
+        weekCode:params.weekCode,
+        weekName: params.weekName,
         ddate: params.ddate,
         ddate1: params.ddate1
       })

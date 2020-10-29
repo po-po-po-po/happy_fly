@@ -11,6 +11,8 @@ App({
       acityName: '不限',
       airlineCode: 'MU',
       airlineName: '东方航空',
+      weekName: '周日',
+      weekCode: '7',
       ddate: '',
       ddate1: ''
     },
@@ -21,6 +23,8 @@ App({
       acityName: '',
       airlineCode: '',
       airlineName: '',
+      weekName: '',
+      weekCode: '',
       ddate: '',
       ddate1: ''
     },
@@ -39,6 +43,9 @@ App({
       cb(this.globalData.searchParams.acityName)
     } else if (this.globalData.cityTarget === 'airlineCode') {
       cb(this.globalData.searchParams.airlineName)
+    }
+    else if (this.globalData.cityTarget === 'weekCode') {
+      cb(this.globalData.searchParams.weekName)
     }
   },
   getCityName1: function (cb) {
@@ -70,6 +77,9 @@ App({
     }else if (this.globalData.cityTarget === 'airlineCode') {
       this.globalData.searchParams.airlineName = cityInfo.airlineName
       this.globalData.searchParams.airlineCode = cityInfo.airlineCode
+    }else if (this.globalData.cityTarget === 'weekCode') {
+      this.globalData.searchParams.weekName = cityInfo.weekName
+      this.globalData.searchParams.weekCode = cityInfo.weekCode
     }
   },
   setCityInfo1: function (cityInfo) {
@@ -120,6 +130,10 @@ App({
   },
   setDdate2 : function (newValue) {
     this.globalData.searchParams1.ddate = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setWeekCode : function (newValue) {
+    this.globalData.searchParams1.weekCode = newValue.toUpperCase()
     //console.log(this.globalData)
   },
   getSearchParams: function(cb) {
