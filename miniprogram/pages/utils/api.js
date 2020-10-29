@@ -1,4 +1,4 @@
-const DOMAIN_URL = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT'
+const DOMAIN_URL = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT'
 
 const RAV_URL = DOMAIN_URL + '/airlines/findFlightsAndAirportsByAirlines' 
 

@@ -17,7 +17,7 @@ Page({
   onLoad: function (options) {
     const _this = this;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAirportDetail/' + options.id;
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airport/findAirportDetail/' + options.id;
     console.log(url);
     // 请求数据
     wx.request({
@@ -54,7 +54,7 @@ Page({
     let inputValue =e.detail.value; //获取表单所有name=id的值 
     wx.showLoading({ title: '正在搜索' })
     wx.request({
-     url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAirwaysDestination',
+     url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airport/findAirwaysDestination',
      method: 'post',
      data: {
       "pageSize": 250  ,

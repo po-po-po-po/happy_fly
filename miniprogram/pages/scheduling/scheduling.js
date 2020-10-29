@@ -17,7 +17,7 @@ Page({
     const _this = this;
         wx.request({
           // 传到自己的服务器上
-          url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/findUserFlightById',
+          url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/userflight/findUserFlightById',
           method: 'POST',  
           data: {
             id:id

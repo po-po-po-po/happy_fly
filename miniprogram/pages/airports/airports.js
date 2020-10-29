@@ -46,7 +46,7 @@ Page({
     wx.showLoading({ title: '正在搜索' })
     console.log(inputValue)
     wx.request({
-     url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/airport/findAllAirport',
+     url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airport/findAllAirport',
      method: 'post',
      data: {
       "pageSize": 250  ,

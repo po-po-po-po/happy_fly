@@ -50,7 +50,7 @@ Page({
                 // 将这个数据发送给后端
         wx.request({
           // 传到自己的服务器上
-          url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/findUserFlightsByCondition',
+          url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/userflight/findUserFlightsByCondition',
           method: 'POST',  
           data: {
             code:code
@@ -93,7 +93,7 @@ Page({
           var id=e.currentTarget.dataset.index;
           const _this = this;
           // 拼接请求url
-          const url = 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/userflight/deleteUserflight' ;
+          const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/userflight/deleteUserflight' ;
           // 请求数据
           wx.request({
             url: url,

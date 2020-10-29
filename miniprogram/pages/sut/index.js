@@ -94,7 +94,7 @@ Page({
           // --------- 发送凭证 ------------------
               // 将这个数据发送给后端
       wx.request({
-        url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/wxUser/saveWxUser',
+        url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/wxUser/saveWxUser',
         method:"POST",
         data:{
           code: code,

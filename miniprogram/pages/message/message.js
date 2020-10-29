@@ -32,7 +32,7 @@ Page({
               // 将这个数据发送给后端
       wx.request({
         // 传到自己的服务器上
-        url: 'https://www.potucs.com/flytosky-1.0-SNAPSHOT/wxMessage/saveWxMessage',
+        url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/wxMessage/saveWxMessage',
         method: 'POST',  
         data: {
           code:code,
