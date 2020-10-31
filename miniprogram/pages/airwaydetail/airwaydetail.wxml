@@ -25,13 +25,13 @@
 
 <view class="tabLayer" hidden="{{tab[2]}}">
 
-    <text class="{{sort_id==1?'active':''}}" data-id="1" data-index="2" data-txt="从早到晚" bindtap="filter">周一</text>
-    <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="从晚到早" bindtap="filter">周二</text>
-        <text class="{{sort_id==3?'active':''}}" data-id="3" data-index="2" data-txt="从晚到早" bindtap="filter">周三</text>
-            <text class="{{sort_id==4?'active':''}}" data-id="4" data-index="2" data-txt="从晚到早" bindtap="filter">周四</text>
-                <text class="{{sort_id==5?'active':''}}" data-id="5" data-index="2" data-txt="从晚到早" bindtap="filter">周五</text>
-                    <text class="{{sort_id==6?'active':''}}" data-id="6" data-index="2" data-txt="从晚到早" bindtap="filter">周六</text>
-                        <text class="{{sort_id==7?'active':''}}" data-id="7" data-index="2" data-txt="从晚到早" bindtap="filter">周日</text>
+    <text class="{{sort_id==1?'active':''}}" data-id="1" data-index="2" data-txt="周一" bindtap="filter">周一</text>
+    <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="周二" bindtap="filter">周二</text>
+        <text class="{{sort_id==3?'active':''}}" data-id="3" data-index="2" data-txt="周三" bindtap="filter">周三</text>
+            <text class="{{sort_id==4?'active':''}}" data-id="4" data-index="2" data-txt="周四" bindtap="filter">周四</text>
+                <text class="{{sort_id==5?'active':''}}" data-id="5" data-index="2" data-txt="周五" bindtap="filter">周五</text>
+                    <text class="{{sort_id==6?'active':''}}" data-id="6" data-index="2" data-txt="周六" bindtap="filter">周六</text>
+                        <text class="{{sort_id==7?'active':''}}" data-id="7" data-index="2" data-txt="周日" bindtap="filter">周日</text>
 </view>
 
 
