@@ -40,7 +40,6 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-        console.log(res.data.data);
         // 赋值
         _this.setData({
           flightList: res.data.data.flightList,
@@ -131,7 +130,7 @@ Page({
        header: { 'Content-Type': 'application/json' },
        success: function (res) {
         wx.hideLoading()
-        console.log(res.data.data.airwayList)
+        console.log(res.data.data.flightCondition)
         that.setData({
           flightList: res.data.data.flightList,
           airportStartList: res.data.data.airportStartList,

@@ -30,13 +30,14 @@ Page({
         airlinesCode:options.airlinesCode,
         flightNameStart:options.flightNameStart,
         flightNameEnd:options.flightNameEnd,
-        flightDate:options.flightDate
+        flightDate:options.flightDate,
+        flightRequency:options.flightRequency
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-        console.log(res.data.data);
+       // console.log(options.flightRequency);
         // 赋值
         _this.setData({
           airlinesCode:'',
