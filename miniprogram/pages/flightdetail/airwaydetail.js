@@ -12,7 +12,8 @@ Page({
     tab: [true, true, true],
     airlinesCode: '',//航司id,
     flightNameStart: '',
-    flightNameEnd: ''
+    flightNameEnd: '',
+    sortId: ''
   },
  
   /**
@@ -31,7 +32,7 @@ Page({
         flightNameStart:options.flightNameStart,
         flightNameEnd:options.flightNameEnd,
         flightDate:options.flightDate,
-        flightRequency:options.flightRequency
+        flightRequency:options.flightRequency,
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -90,7 +91,7 @@ Page({
           self.setData({
             tab: [true, true, true],
             tabTxt: tabTxt,
-            sort_id: id,
+            sortId: id,
             xiaoliang_txt: txt
           });
           break;
@@ -112,7 +113,7 @@ Page({
           airlinesCode:that.data.airlinesCode,
           flightNameStart: this.data.flightNameStart,
           flightNameEnd: this.data.flightNameEnd,
-          sortId:that.data.sort_id,
+          flightRequency:this.data.sortId,
           flightDate:that.data.flight_date_start
         },
         dataType: 'json',

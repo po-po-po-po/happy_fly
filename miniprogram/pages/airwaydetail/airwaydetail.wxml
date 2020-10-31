@@ -24,9 +24,14 @@
 </view>
 
 <view class="tabLayer" hidden="{{tab[2]}}">
-    <text class="{{sort_id==0?'active':''}}" data-id="0" data-index="2" data-txt="时间排序" bindtap="filter">不限</text>
-    <text class="{{sort_id==1?'active':''}}" data-id="1" data-index="2" data-txt="从早到晚" bindtap="filter">从早到晚</text>
-    <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="从晚到早" bindtap="filter">从晚到早</text>
+
+    <text class="{{sort_id==1?'active':''}}" data-id="1" data-index="2" data-txt="从早到晚" bindtap="filter">周一</text>
+    <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="从晚到早" bindtap="filter">周二</text>
+        <text class="{{sort_id==3?'active':''}}" data-id="3" data-index="2" data-txt="从晚到早" bindtap="filter">周三</text>
+            <text class="{{sort_id==4?'active':''}}" data-id="4" data-index="2" data-txt="从晚到早" bindtap="filter">周四</text>
+                <text class="{{sort_id==5?'active':''}}" data-id="5" data-index="2" data-txt="从晚到早" bindtap="filter">周五</text>
+                    <text class="{{sort_id==6?'active':''}}" data-id="6" data-index="2" data-txt="从晚到早" bindtap="filter">周六</text>
+                        <text class="{{sort_id==7?'active':''}}" data-id="7" data-index="2" data-txt="从晚到早" bindtap="filter">周日</text>
 </view>
 
 

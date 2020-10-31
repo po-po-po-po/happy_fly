@@ -8,11 +8,12 @@ Page({
     list: [], // 数据列表
     type: '', // 数据类型
     loading: true, // 显示等待框
-    tabTxt: ['航空公司', '起飞时间', '排序'],//分类
+    tabTxt: ['航空公司', '起飞时间', '航班周期'],//分类
     tab: [true, true, true],
     airlinesCode: '',//航司id,
     flightNameStart: '',
-    flightNameEnd: ''
+    flightNameEnd: '',
+    sortId: ''
   },
  
   /**
@@ -29,7 +30,8 @@ Page({
       data: {
         airlinesCode:options.airlinesCode,
         flightNameStart:options.flightNameStart,
-        flightNameEnd:options.flightNameEnd
+        flightNameEnd:options.flightNameEnd,
+        flightRequency:7
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -88,7 +90,7 @@ Page({
           self.setData({
             tab: [true, true, true],
             tabTxt: tabTxt,
-            sort_id: id,
+            sortId: id,
             xiaoliang_txt: txt
           });
           break;
@@ -99,9 +101,10 @@ Page({
       //调用数据接口，获取数据
       getDataList:function(){
         let that = this;
-        console.log("airlinesCode::::"+that.data.airlinesCode);
-        console.log("flightNameStart::::"+this.data.flightNameStart);
-        console.log("flightNameEnd::::"+this.data.flightNameEnd);
+       // console.log("airlinesCode::::"+that.data.airlinesCode);
+       // console.log("flightNameStart::::"+this.data.flightNameStart);
+       // console.log("flightNameEnd::::"+this.data.flightNameEnd);
+       // console.log("flightNameEnd::::"+this.data.sortId);
         wx.request({
          url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findAllFlightsByAirline',
          method: 'post',
@@ -110,7 +113,7 @@ Page({
           airlinesCode:that.data.airlinesCode,
           flightNameStart: this.data.flightNameStart,
           flightNameEnd: this.data.flightNameEnd,
-          sortId:that.data.sort_id,
+          flightRequency:that.data.sortId,
           flightDate:that.data.flight_date_start
         },
         dataType: 'json',
