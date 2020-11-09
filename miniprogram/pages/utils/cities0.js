@@ -1,7 +1,7 @@
 //初始化常用机场城市
 var hotCities=[];
 hotCities[0] = new Array('','不限','buxian','不限'); 
-hotCities[1] = new Array('BJS','北京首都','BEIJING','北京'); 
+hotCities[1] = new Array('PEK','北京首都','BEIJING','北京'); 
 hotCities[2] = new Array('SHA','上海虹桥','SHANGHAI','上海'); 
 hotCities[3] = new Array('SZX','深圳宝安','SHENZHEN','广东'); 
 hotCities[4] = new Array('CAN','广州白云','GUANGZHOU','广东'); 
