@@ -117,12 +117,15 @@ Page(_page.initPage({
       header: {
         'content-type': 'application/json' // 默认值
       },
+    
       success: function(res) {
+       
         // 赋值
         _this.setData({
           list: res.data.data.data,
           loading: false // 关闭等待框
         })
+        console.log(res.data.data.data.length)
       }
     })
 

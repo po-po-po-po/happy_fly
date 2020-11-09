@@ -12,7 +12,7 @@
   </view>
   <view class="bus-list js_bus_list ">
 
-    <block wx:for="{{list}}" wx:key="k">
+         <block wx:for="{{list}}" wx:key="k">
       <view class="bus-list-item  ">
         <view class="bus-time">{{item.flightNo}}</view>
         
@@ -39,8 +39,9 @@
           </view>
         </view>
       </view>
-
     </block>
+
+ 
 
   </view>
 
