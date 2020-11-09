@@ -1,48 +1,31 @@
-<!--列表页-->
-<view class='container'>
-  <!--等待框-->
-  <loading hidden="{{!loading}}">加载中...</loading>
-  <!--顶部标题栏-->
-  <view class='page-header'>
-   <text class='page-title'>随心飞查询</text>
+<view class="page">
+ <view class="page__bd">
+ <view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+  <view class="weui-search-bar__box">
+   <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+   <input type="text" class="weui-search-bar__input" placeholder="搜索" maxlength='10' value="{{inputval}}" focus="{{inputshowed}}" bindinput="inputtyping" />
+   <view class="weui-icon-clear" wx:if="{{inputval.length > 0}}" bindtap="clearinput">
+   <icon type="clear" size="14"></icon>
+   </view>
   </view>
-  <!--列表-->
-  <view class='page-body' wx:for="{{list}}" wx:for-index="bindex"  wx:key="id">
-
-    <!--另一种情况-->
-    <!--类型判断,显示不同的数据-->
-        <view class='item'>
-          <!--     <navigator url='../airportsdetail/airportsdetail?id={{item.id}}'>-->
-       <image class='poster' src='{{item.flyIcon}}'></image>
-        <!--    </navigator>-->
-          <view class='meta'>
-            <text class='title'>{{item.flyName}}</text>
-       <block wx:if="{{item.id == 1}}">
-              <navigator url="../activity/activity?airline_code1={{item.airlinesCode}}" class="mod-item">
-                  <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-                周六航班查询
-                  </view>
-                      </navigator>
-              <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
-          <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-        周日航班查询
-          </view>
-              </navigator>
-              </block>
-       <block wx:if="{{item.id == 2}}">
-              <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
-                  <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-                早8前航班查询
-                  </view>
-                      </navigator>
-              <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
-          <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-        晚8后航班查询
-          </view>
-              </navigator>
-              </block>
-          </view>
-        </view>
+  <label class="weui-search-bar__label" hidden="{{inputshowed}}" bindtap="showinput">
+   <icon class="weui-icon-search" type="search" size="14"></icon>
+   <view class="weui-search-bar__text">搜索</view>
+  </label>
+  </view>
+  <view class="weui-search-bar__cancel-btn" hidden="{{!inputshowed}}" bindtap="hideinput">取消</view>
+ </view>
+ <view class="weui-cells searchbar-result" wx:if="{{inputval.length > 0}}">
+  <!-- 搜索列表 -->
+  <view class="weui-cell__bd" wx:for="{{list}}" wx:key="key">
+  <!-- 列表名称 -->
+  <view class='list_name' data-index='{{index}}' data-name='{{item.name}}' bindtap='btn_name'>
+   <!-- 昵称 -->
+   <label class='lab_name'>{{item.name}}</label>
+  </view>
+  </view>
+ </view>
   
-  </view>
+ </view>
 </view>
