@@ -16,7 +16,7 @@
       <view class="bus-list-item  ">
         <view class="bus-time">{{item.flightNo}}</view>
         
-        <view class="tobooking"> 1234567 </view>
+        <view class="tobooking">{{item.flightRequency}} </view>
         <view class="detail">
           <view class="detail1">
             <view class="start">

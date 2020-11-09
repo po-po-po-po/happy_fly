@@ -14,7 +14,9 @@ Page(_page.initPage({
   data: {
     listData: [],
     calendarSelectedDate: '东航周六航班',
-    calendarSelectedDateStr: '东航周六航班'
+    calendarSelectedDateStr: '东航周六航班',
+    flightNameStart:'上海虹桥',
+    flightNameEnd:''
   },
   // methods: uiUtil.getPageMethods(),
   methods: {
@@ -90,6 +92,16 @@ Page(_page.initPage({
   onLoad: function (data) {
 
     const _this = this;
+        //调用应用实例的方法获取全局数据
+        app.getSearchParams(function(params){      
+          //更新数据
+          _this.setData({
+            dcity:params.dcity,
+            flightNameStart: params.dcityName,
+            acity:params.acity,
+            flightNameEnd: params.acityName,
+          })
+        })
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findMUFlights7' ;
     // 请求数据
@@ -97,13 +109,14 @@ Page(_page.initPage({
       url: url,
       method: 'post',
       data: {
-        "pageSize": 2000
+        "pageSize": 500,
+        airportNameStartCode:this.data.dcity,
+        airportNameEndCode:this.data.acity
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-        let list=res.data.data;
         // 赋值
         _this.setData({
           list: res.data.data.data,

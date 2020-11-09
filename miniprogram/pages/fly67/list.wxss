@@ -13,9 +13,9 @@
 
 .bus-list .bus-list-item {
  position: relative;
- height: 160rpx;
+ height: 120rpx;
  background-color: #fff; 
- margin: 16rpx 0;
+ margin: 6rpx 0;
  border: 2rpx solid #e5e5e5;
  border-width: 2rpx 0;
 }
@@ -49,9 +49,9 @@
  height: 100rpx;
  line-height: 100rpx;
  margin: 30rpx 0;
- color: #f50707;
+ color: #c50535;
  text-align: center;
- font-size: 30rpx;
+ font-size: 26rpx;
  font-family: Arial;
  border-right: 2rpx dashed #e5e5e5;
 }
@@ -61,8 +61,8 @@
  position: absolute;
  right: 0;
  width: 120rpx;
- height: 160rpx;
- line-height: 160rpx;
+ height: 120rpx;
+ line-height: 120rpx;
  text-align: center;
  color: #fff;
  font-size: 30rpx;
@@ -91,8 +91,8 @@
 
 .bus-list .bus-list-item .price {
  font-family: Arial;
- color: #fd8f01;
- font-size: 32rpx;
+ color: #0270af;
+ font-size: 24rpx;
  font-weight: 600;
 }
 
