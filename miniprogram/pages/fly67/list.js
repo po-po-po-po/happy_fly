@@ -4,8 +4,7 @@ let modCalendar = require('../utils/calendar.js');
 const models = require('../utils/demo-model.js')
 const util = require('../utils/uti1l.js')
 let selectedDate = new Date().toString();
-
-console.log('list');
+const App = getApp()
 
 //获取应用实例
 const app = getApp()
@@ -90,20 +89,20 @@ Page(_page.initPage({
 
     });
   },
-  onLoad: function (data) {
-
+  onLoad: function (options) {
     const _this = this;
+    console.log("1111")
         //调用应用实例的方法获取全局数据
-        app.getSearchParams(function(params){      
+        app.getSearchParams(function(params){    
           //更新数据
           _this.setData({
             dcity:params.dcity,
             flightNameStart: params.dcityName,
-            day:params.day,
             acity:params.acity,
             flightNameEnd: params.acityName,
           })
         })
+        var day=App.globalData.searchParams.day;
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findMUFlights'+day;
     // 请求数据

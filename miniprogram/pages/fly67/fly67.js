@@ -14,7 +14,8 @@ Page({
     weekCode:'',
     weekName:'',
     ddate: '',
-    ddate1: ''
+    ddate1: '',
+    day:''
   },
   bindKeyInput: function(e) {
     const inputId = e.currentTarget.id
@@ -70,11 +71,10 @@ Page({
   },
   searchFlight: function () {
     wx.navigateTo({
-      url: 'list'
+      url: 'list?day='+App.globalData.searchParams.day
     })
   },
   onLoad:function(options){
-    console.log(options.day)
     App.setDay(options.day)
   },
   onReady:function(){
