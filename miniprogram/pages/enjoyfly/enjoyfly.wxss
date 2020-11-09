@@ -118,7 +118,7 @@
   text-align: center;
   line-height: 40rpx;
   border-radius: 6rpx;
-  background-color: #db0719;
+  background-color: #0270af;
 }
 
 .follows {
