@@ -41,18 +41,42 @@
               </block>
 
                   <block wx:if="{{item.id == 3}}">
+
+                  <view class='zhe'>
               <navigator url="../flycq/flycq?airportCode=NGB" class="mod-item">
-                  <view class="follow3_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                  <view class="follow3 {{item.follow3 ? 'follow3' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
                 宁波
                   </view>
                       </navigator>
                       
               <navigator url="../flycq/flycq?airportCode=HGH" class="mod-item">
-          <view class="follow3_2 {{item.follow3 ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+          <view class="follow3 {{item.follow3 ? 'follow3' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
         杭州
           </view>
               </navigator>
+</view>
+
+
+
+<view class='zhe'>
+
+                   <navigator url="../flycq/flycq?airportCode=HSN" class="mod-item">
+          <view class="follow3 {{item.follow3 ? 'follow3' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        舟山
+          </view>
+              </navigator>
+
+
+                   <navigator url="../flycq/flycq?airportCode=WNZ" class="mod-item">
+          <view class="follow3 {{item.follow3 ? 'follow3' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        温州
+          </view>
+              </navigator>
+
+           </view>   
+
               
+               
               </block>
 
 
