@@ -111,8 +111,8 @@ Page(_page.initPage({
       method: 'post',
       data: {
         "pageSize": 500,
-        airportNameStartCode:this.data.dcity,
-        airportNameEndCode:this.data.acity
+        airportNameStartCode:options.airportCode,
+        airportNameEndCode:options.airportCode
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -120,7 +120,7 @@ Page(_page.initPage({
       success: function(res) {
         // 赋值
         _this.setData({
-          list: res.data.data.data,
+          list: res.data.data,
           loading: false // 关闭等待框
         })
       }
