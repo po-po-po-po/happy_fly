@@ -16,7 +16,8 @@ Page(_page.initPage({
     calendarSelectedDate: '东航周六航班',
     calendarSelectedDateStr: '东航周六航班',
     flightNameStart:'上海虹桥',
-    flightNameEnd:''
+    flightNameEnd:'',
+    day:''
   },
   // methods: uiUtil.getPageMethods(),
   methods: {
@@ -98,12 +99,13 @@ Page(_page.initPage({
           _this.setData({
             dcity:params.dcity,
             flightNameStart: params.dcityName,
+            day:params.day,
             acity:params.acity,
             flightNameEnd: params.acityName,
           })
         })
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findMUFlights7' ;
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findMUFlights'+day;
     // 请求数据
     wx.request({
       url: url,

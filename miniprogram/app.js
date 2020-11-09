@@ -14,7 +14,8 @@ App({
       weekName: '周日',
       weekCode: '7',
       ddate: '',
-      ddate1: ''
+      ddate1: '',
+      day:''
     },
     searchParams1: {
       dcity: '',
@@ -134,6 +135,10 @@ App({
   },
   setWeekCode : function (newValue) {
     this.globalData.searchParams1.weekCode = newValue.toUpperCase()
+    //console.log(this.globalData)
+  },
+  setDay : function (newValue) {
+    this.globalData.searchParams.day = newValue
     //console.log(this.globalData)
   },
   getSearchParams: function(cb) {

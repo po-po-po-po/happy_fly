@@ -73,8 +73,9 @@ Page({
       url: 'list'
     })
   },
-  onLoad:function(options){    
-   // App.setDdate(utils.tomorrow())
+  onLoad:function(options){
+    console.log(options.day)
+    App.setDay(options.day)
   },
   onReady:function(){
     // 页面渲染完成
