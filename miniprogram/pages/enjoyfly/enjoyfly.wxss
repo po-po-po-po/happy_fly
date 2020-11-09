@@ -109,8 +109,9 @@
 
 .follow {
   flex-shrink: 0;
-  width:120%;
+  width:40%;
   height: 40rpx;
+  margin-top: 20rpx;
   font-size: 24rpx;
   color: #fff;
   text-align: center;
