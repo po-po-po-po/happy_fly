@@ -25,7 +25,7 @@
     "pages/flightsroute/flightsplan",
     "pages/info/info",
     "pages/citys/citys",
-
+    "pages/fly67/fly67",
     "pages/city/list"
   ],
   "permission": {
