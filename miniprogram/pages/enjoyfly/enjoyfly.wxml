@@ -16,13 +16,13 @@
             <text class='title'>{{item.flyName}}</text>
        <block wx:if="{{item.id == 1}}">
               <navigator url="../fly67/fly67?day=6" class="mod-item">
-                  <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-                周六航班查询
+                  <view class="follow1_2 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                周六
                   </view>
                       </navigator>
               <navigator url="../fly67/fly67?day=7" class="mod-item">
-          <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-        周日航班查询
+          <view class="follow1_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        周日
           </view>
               </navigator>
               </block>
@@ -38,6 +38,21 @@
           </view>
               </navigator>
               </block>
+
+                  <block wx:if="{{item.id == 3}}">
+              <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
+                  <view class="follow3_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                宁波
+                  </view>
+                      </navigator>
+              <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
+          <view class="follow3_2 {{item.follow3 ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        杭州
+          </view>
+              </navigator>
+              </block>
+
+
           </view>
         </view>
   

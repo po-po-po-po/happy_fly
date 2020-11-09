@@ -108,7 +108,7 @@
 }
 
 
-.follow {
+.follow1_1 {
   flex-shrink: 0;
   width:40%;
   height: 40rpx;
@@ -120,7 +120,45 @@
   border-radius: 6rpx;
   background-color: #0270af;
 }
+.follow1_2 {
+  flex-shrink: 0;
+  width:40%;
+  height: 40rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 6rpx;
+  background-color: #02afa1;
+}
 
 .follows {
   background-color: #eee;
+}
+
+.follow3_1 {
+  flex-shrink: 0;
+  width:20%;
+  height: 40rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 6rpx;
+  background-color: #02afa1;
+}
+
+.follow3_2 {
+  flex-shrink: 0;
+  width:20%;
+  height: 40rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 6rpx;
+  background-color: #02afa1;
 }
