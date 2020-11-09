@@ -24,6 +24,7 @@
             <view class="end">
               <text class="icon-circle s-icon2"></text>{{item.flightNameEnd}}</view>
           </view>
+
           <view class="tags">
             <view>
               <text class="price">{{util1.sub(item.flightDate)}}</text>
@@ -77,4 +78,3 @@
 
 
 
-<view>{{util.sub(gatewayIeee.name)}}</view>

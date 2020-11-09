@@ -47,7 +47,7 @@
  left: 0;
  width: 134rpx;
  height: 100rpx;
- line-height: 100rpx;
+ line-height: 80rpx;
  margin: 30rpx 0;
  color: #c50535;
  text-align: center;
