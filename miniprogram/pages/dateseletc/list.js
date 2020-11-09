@@ -13,27 +13,41 @@ const app = getApp()
 Page(_page.initPage({
   data: {
     listData: [],
-    calendarSelectedDate: '东航周六航班',
-    calendarSelectedDateStr: '东航周六航班'
+    calendarSelectedDate: selectedDate,
+    calendarSelectedDateStr: util.dateUtil.format(new Date(selectedDate), 'Y年M月D日')
   },
   // methods: uiUtil.getPageMethods(),
   methods: {
   },
 
   preDay: function () {
+    let date = util.dateUtil.preDay(this.data.calendarSelectedDate);
+
+    this.index = 0;
+    this.data.listData = [];
+
     this.setData({
-      calendarSelectedDate: '周六',
-      calendarSelectedDateStr: '东航周六航班'
+      calendarSelectedDate: date.toString(),
+      calendarSelectedDateStr: util.dateUtil.format(date, 'Y年M月D日')
     })
-  
+    this._initData({
+      date: date.getTime()
+    });
   },
 
   nextDay: function () {
-   // let date = util.dateUtil.nextDay(this.data.calendarSelectedDate);
+    let date = util.dateUtil.nextDay(this.data.calendarSelectedDate);
+
+    this.index = 0;
+    this.data.listData = [];
+
     this.setData({
-      calendarSelectedDate: '周日',
-      calendarSelectedDateStr: '东航周日航班'
+      calendarSelectedDate: date.toString(),
+      calendarSelectedDateStr: util.dateUtil.format(date, 'Y年M月D日')
     })
+    this._initData({
+      date: date.getTime()
+    });
   },
 
   calendarHook: function (date) {
