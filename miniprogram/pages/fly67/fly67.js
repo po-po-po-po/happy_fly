@@ -48,20 +48,6 @@ Page({
       url: '/components/citypicker/index'
     })
   },
-  airlineCodefocusEvent: function(e) {
-    App.setCityTarget(e.currentTarget.id)
-    //console.log(e.currentTarget)
-    wx.navigateTo({
-      url: '/components/airlinepicker/index'
-    })
-  },
-  weekfocusEvent: function(e) {
-    App.setCityTarget(e.currentTarget.id)
-    //console.log(e.currentTarget)
-    wx.navigateTo({
-      url: '/components/weekpicker/index'
-    })
-  },
   getSearchParams: function() {
     var that = this
     //调用应用实例的方法获取全局数据

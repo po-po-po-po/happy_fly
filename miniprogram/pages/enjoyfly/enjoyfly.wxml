@@ -1,20 +1,17 @@
 <!--列表页-->
 <view class='container'>
   <!--等待框-->
-  <loading hidden="{{!loading}}">加载中...</loading>
   <!--顶部标题栏-->
   <view class='page-header'>
    <text class='page-title'>随心飞查询</text>
   </view>
   <!--列表-->
-  <view class='page-body' wx:for="{{list}}" wx:for-index="bindex"  wx:key="id">
-
+  <view  wx:for="{{list}}" wx:for-index="bindex"  wx:key="id">
     <!--另一种情况-->
     <!--类型判断,显示不同的数据-->
         <view class='item'>
-          <!--     <navigator url='../airportsdetail/airportsdetail?id={{item.id}}'>-->
+      
        <image class='poster' src='{{item.flyIcon}}'></image>
-        <!--    </navigator>-->
           <view class='meta'>
             <text class='title'>{{item.flyName}}</text>
        <block wx:if="{{item.id == 1}}">

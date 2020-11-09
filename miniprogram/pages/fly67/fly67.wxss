@@ -5,7 +5,6 @@
   margin: 1.17647059em 15px 0.3em;
 }
 .weui-btn1 {
-    margin-top: 10px;
     font-size: 34rpx;
   }
   .weui-btn1:first-child {
