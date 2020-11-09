@@ -1,0 +1,253 @@
+/*首页样式*/
+
+/*单元行*/
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+}
+.top, .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*航班时间*/
+.flightDate {
+    color: #4d4d4d;
+    font-size: 23rpx;
+    margin: 5rpx;
+}
+
+/*日期*/
+.flight {
+    width: 100%;
+    font-size: 24rpx;
+    color: #b2b2b2;
+}
+
+  
+  .meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 100rpx, 200rpx;
+    padding-left: 60rpx;
+  }
+
+  .title {
+    font-size: 32rpx;
+    margin-top: 20rpx;
+    color: rgb(158, 10, 72);
+    align-items: center;
+    padding-left: 100rpx;
+  }
+  .title1 {
+    font-size: 22rpx;
+    color: rgb(158, 10, 72);
+    align-items: center;
+  }
+  .info {
+    font-size: 18rpx;
+    color: #888;
+    margin-top: 20rpx;
+    margin: 20rpx 20rpx 20rpx 0rpx;
+    padding: 0px,50px;
+    width: 80%;
+  }
+
+  .plane {
+    width: 40rpx;
+    height:40rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+
+
+/*筛选框*/
+
+ 
+.tabTit{
+  height:90rpx;
+  line-height: 90rpx;
+  border-bottom: solid 1px #eee;
+  position:fixed;
+  top:0;
+  width: 750rpx;
+  z-index: 1;
+  background: #fff;
+  font-size:15px;
+  text-align: center;
+}
+ 
+ 
+ 
+.tabTit .active{
+  color:#e64340;
+  background: #fff;
+}
+ 
+.tabTit .active image{
+  transform: rotate(180deg);
+  background: none;
+}
+ 
+.tabTit image{
+  width:26rpx;
+  height:26rpx;
+  vertical-align: middle;
+  margin-left: 5px;
+ 
+}
+ 
+.tabLayer{
+  box-shadow: 0 5px 5px #00000026;
+  width:750rpx;
+  overflow: hidden;
+  position: fixed;
+  top:60rpx;
+  z-index: 1;
+  background: #fff;
+  padding-bottom: 40rpx;
+  border-bottom: solid 1px #eee;
+  text-align: center;
+}
+.tabLayer text{
+  width:150rpx;
+  height:40rpx;
+  line-height:40rpx;
+  float:left;
+  border: solid 1px #eee;
+  margin:20rpx 0 0 26rpx;
+  font-size:10px;
+}
+.tabLayer .active{
+  color:#e64340;
+  border-color:#e64340;
+  }
+ 
+.flex1 {
+    flex: 1;
+    overflow: hidden;
+    display: block;
+}
+ 
+/*弹性盒模型*/
+.box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+/******多列展示****/
+.grids {
+  position: relative;
+  overflow: hidden;
+}
+
+.grids:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+} 
+
+.grids:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+} 
+
+/* 睁大眼睛看这里，尤其下面的width，50%是两列，33.3333%是三列，25%是四列 */
+
+.grid {
+  position: relative;
+  float: left;
+
+  width:33.3%;              
+  box-sizing: border-box;
+}
+
+.grid:before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+} 
+
+.grid:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+} 
+
+.grid-bg {
+  position: relative;
+  float: left;
+  padding: 0px 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.grid-label2{
+display: flex;
+justify-content: center;
+margin: 10rpx auto;
+font-size: 10px;
+color: rgb(187, 184, 184)
+  
+}
+
+.grid-label {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(116, 117, 116);
+  font-size: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

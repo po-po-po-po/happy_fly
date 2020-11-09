@@ -5,8 +5,8 @@ App({
   globalData:{
     userInfo:null,
     searchParams: {
-      dcity: 'CTU',
-      dcityName: '成都双流',
+      dcity: 'SHA',
+      dcityName: '上海虹桥',
       acity: '',
       acityName: '不限',
       airlineCode: 'MU',

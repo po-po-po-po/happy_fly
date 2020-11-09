@@ -52,12 +52,7 @@
       {
         "pagePath": "pages/index/index",
         "text": "航空公司"
-      },
-         {
-        "pagePath": "pages/city/city",
-        "text": "航班航线"
       }
-      
     ]
   }
 }
