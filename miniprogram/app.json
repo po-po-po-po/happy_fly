@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/enjoyfly/enjoyfly",
     "pages/airports/airports",
+    "pages/index/index",
     "pages/city/city",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -24,6 +25,7 @@
     "pages/flightsroute/flightsplan",
     "pages/info/info",
     "pages/citys/citys",
+
     "pages/city/list"
   ],
   "permission": {
@@ -44,21 +46,16 @@
   "tabBar": {
     "list": [
       {
+        "pagePath": "pages/enjoyfly/enjoyfly",
+        "text": "随心飞"
+      },
+      {
         "pagePath": "pages/index/index",
         "text": "航空公司"
       },
-      
-      {
-        "pagePath": "pages/airports/airports",
-        "text": "民用机场"
-      },
-     
          {
         "pagePath": "pages/city/city",
         "text": "航班航线"
-      }, {
-        "pagePath": "pages/sut/index",
-        "text": "个人中心"
       }
       
     ]
