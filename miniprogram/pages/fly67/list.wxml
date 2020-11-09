@@ -12,26 +12,28 @@
   </view>
   <view class="bus-list js_bus_list ">
 
-    <block wx:for="{{listData}}" wx:key="k">
+    <block wx:for="{{list}}" wx:key="k">
       <view class="bus-list-item  ">
-        <view class="bus-time">{{item.dateStr}}</view>
-        <view class="tobooking"> 预订 </view>
+        <view class="bus-time">{{item.flightNo}}</view>
+        
+        <view class="tobooking"> 1234567 </view>
         <view class="detail">
           <view class="detail1">
             <view class="start">
-              <text class="icon-circle s-icon1"></text>{{item.startstationname}}</view>
+              <text class="icon-circle s-icon1"></text>{{item.flightNameStart}}</view>
             <view class="end">
-              <text class="icon-circle s-icon2"></text>{{item.arrivalstationname}}</view>
+              <text class="icon-circle s-icon2"></text>{{item.flightNameEnd}}</view>
           </view>
           <view class="tags">
             <view>
-              <text class="price">￥{{item.price / 100}}</text>
+              <text class="price">{{util1.sub(item.flightDate)}}</text>
             </view>
             <view>
-              <text class="countleft">{{item.cansellcountamount}}张</text>
+              <text class="price">{{util2.sub(item.flightDate)}}</text>
             </view>
             <view>
-              <text class="b-tags js_tags"></text>
+            <!--
+              <text class="b-tags js_tags"></text>-->
             </view>
           </view>
         </view>
@@ -57,3 +59,22 @@
         }
   }
 </wxs>
+
+<!--截取字符串工具类-->
+<wxs module="util1">
+    var sub = function(val) {
+        return val.substring(0, 5)
+    }
+    module.exports.sub = sub;
+</wxs>
+
+<wxs module="util2">
+    var sub = function(val) {
+        return val.substring(6)
+    }
+    module.exports.sub = sub;
+</wxs>
+
+
+
+<view>{{util.sub(gatewayIeee.name)}}</view>

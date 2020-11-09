@@ -89,16 +89,28 @@ Page(_page.initPage({
   },
   onLoad: function (data) {
 
-    if(!data || !data.sid || !data.aid || !data.date) {
-      this.showToast('参数错误');
-      return
-    }
-    this.index = 0;
-    this._aid = data.aid;
-    this._sid = data.sid;
-
-    this._setDateInfo(data.date);
-    this._initData(data);
+    const _this = this;
+    // 拼接请求url
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findMUFlights7' ;
+    // 请求数据
+    wx.request({
+      url: url,
+      method: 'post',
+      data: {
+        "pageSize": 2000
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function(res) {
+        let list=res.data.data;
+        // 赋值
+        _this.setData({
+          list: res.data.data.data,
+          loading: false // 关闭等待框
+        })
+      }
+    })
 
   },
 
