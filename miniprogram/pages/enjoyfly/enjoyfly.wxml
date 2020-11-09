@@ -41,16 +41,18 @@
               </block>
 
                   <block wx:if="{{item.id == 3}}">
-              <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
+              <navigator url="../flycq/flycq?airportStartCode=NGB" class="mod-item">
                   <view class="follow3_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
                 宁波
                   </view>
                       </navigator>
-              <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
+                      
+              <navigator url="../flycq/flycq?airportStartCode=HGH" class="mod-item">
           <view class="follow3_2 {{item.follow3 ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
         杭州
           </view>
               </navigator>
+              
               </block>
 
 
