@@ -9,7 +9,7 @@
 
 
      <view class='item'>
-       <image class='poster' src='https://www.potucs.com/wechat/fly/hb.png'></image>
+       <image class='poster' src='https://www.potucs.com/wechat/fly/1.jpg'></image>
           <view class='meta'>
             <text class='title'>随心飞航班查询</text>
               <navigator url="../city/city" class="mod-item">
@@ -38,11 +38,43 @@
                   </view>
                       </navigator>
 -->
-              <navigator url="../fly67/fly67?day=7" class="mod-item">
+   
+               <view class='zhe'>
+                 <navigator url="../fly67/fly67?day=7" class="mod-item">
           <view class="follow1_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-        周日
+        周末
           </view>
               </navigator>
+                      
+     <navigator url="../fly67/fly67?day=7" class="mod-item">
+          <view class="follow1_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        早晚
+          </view>
+              </navigator>
+
+                   <navigator url="../fly67/fly67?day=7" class="mod-item">
+          <view class="follow1_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        大兴
+          </view>
+              </navigator>
+</view>
+
+
+               <view class='zhe'>
+                 <navigator url="../fly67/fly67?day=7" class="mod-item">
+          <view class="follow1_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        西域
+          </view>
+              </navigator>
+                      
+     <navigator url="../fly67/fly67?day=7" class="mod-item">
+          <view class="follow1_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        大湾区
+          </view>
+              </navigator>
+
+</view>
+
               </block>
        <block wx:if="{{item.id == 2}}">
               <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
