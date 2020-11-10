@@ -9,7 +9,7 @@
 
 
      <view class='item'>
-       <image class='poster' src='{{item.flyIcon}}'></image>
+       <image class='poster' src='https://www.potucs.com/wechat/fly/hb.png'></image>
           <view class='meta'>
             <text class='title'>随心飞航班查询</text>
               <navigator url="../city/city" class="mod-item">
