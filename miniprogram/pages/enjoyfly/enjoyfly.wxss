@@ -24,7 +24,7 @@
   flex-direction: row ;
 }
 .item .poster {
-  width: 160rpx;
+  width: 180rpx;
   height: 160rpx;
   margin-right: 30rpx;
 }
