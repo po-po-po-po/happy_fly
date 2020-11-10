@@ -84,7 +84,7 @@ Page({
   },
   searchFlight: function () {
     wx.navigateTo({
-      url: 'list'
+      url: 'list1'
     })
   },
   onLoad:function(options){    
