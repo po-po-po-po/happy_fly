@@ -22,11 +22,20 @@ Page(_page.initPage({
   methods: {
   },
 
-  preDay: function () {
-    this.setData({
-      calendarSelectedDate: '周六',
-      calendarSelectedDateStr: '东航周六航班'
+  preDay1: function () {
+    App.setDay(6)
+    wx.navigateTo({
+      url: '/pages/fly67/list'
     })
+  
+  },
+  
+  preDay2: function () {
+    App.setDay(7)
+    wx.navigateTo({
+      url: '/pages/fly67/list'
+    })
+    
   
   },
 
