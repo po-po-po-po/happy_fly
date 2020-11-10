@@ -26,6 +26,8 @@
     "pages/info/info",
     "pages/citys/citys",
     "pages/fly67/fly67",
+    "pages/fly67/list",
+    "pages/fly67/list4",
     "pages/city/list"
   ],
   "permission": {
