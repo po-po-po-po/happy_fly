@@ -91,19 +91,6 @@ Page(_page.initPage({
   },
   onLoad: function (options) {
     const _this = this;
-    console.log("1111")
-        //调用应用实例的方法获取全局数据
-        app.getSearchParams(function(params){    
-          //更新数据
-          _this.setData({
-            dcity:params.dcity,
-            flightNameStart: params.dcityName,
-            acity:params.acity,
-            flightNameEnd: params.acityName,
-            airlinesCode: params.airlineCode,
-            flightRequency: params.weekCode
-          })
-        })
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEI';
     // 请求数据
@@ -111,11 +98,11 @@ Page(_page.initPage({
       url: url,
       method: 'post',
       data: {
-        "pageSize": 500,
-        airportNameStartCode:this.data.dcity,
-        airportNameEndCode:this.data.acity,
-        airlinesCode:this.data.airlinesCode,
-        flightRequency:this.data.flightRequency
+        airlinesCode: options.airlinesCode,
+        airportNameStartCode: options.airportNameStartCode,
+        airportNameEndCode: options.airportNameEndCode,
+        flightRequency: options.flightRequency,
+        "pageSize": 500
       },
       header: {
         'content-type': 'application/json' // 默认值

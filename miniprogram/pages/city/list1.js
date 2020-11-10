@@ -122,7 +122,7 @@ Page(_page.initPage({
       },
     
       success: function(res) {
-       
+        console.log(res.data.data.data);
         // 赋值
         _this.setData({
           list: res.data.data.data,
