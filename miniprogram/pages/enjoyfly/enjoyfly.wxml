@@ -80,6 +80,102 @@
               </block>
 
 
+
+
+                <block wx:if="{{item.id == 4}}">
+
+                  <view class='zhe'>
+              <navigator url="../flycq/flycq?airportCode=NKG" class="mod-item">
+                  <view class="follow4 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                南京
+                  </view>
+                      </navigator>
+                      
+              <navigator url="../flycq/flycq?airportCode=CZX" class="mod-item">
+          <view class="follow4 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        常州
+          </view>
+              </navigator>
+
+                 <navigator url="../flycq/flycq?airportCode=YNZ" class="mod-item">
+          <view class="follow4 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        盐城
+          </view>
+              </navigator>
+
+              
+</view>
+
+
+
+<view class='zhe'>
+
+                   <navigator url="../flycq/flycq?airportCode=NTG" class="mod-item">
+          <view class="follow4 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        南通
+          </view>
+              </navigator>
+
+
+                   <navigator url="../flycq/flycq?airportCode=HIA" class="mod-item">
+          <view class="follow4 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        淮安
+          </view>
+              </navigator>
+
+                   <navigator url="../flycq/flycq?airportCode=YTY" class="mod-item">
+          <view class="follow4 {{item.follow3 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+        扬州
+          </view>
+              </navigator>
+
+
+           </view>   
+
+              
+               
+              </block>
+
+
+
+
+
+
+              
+                <block wx:if="{{item.id == 5}}">
+                  <view class='zhe'>
+              <navigator url="../flycq/flycq?airportCode=SHE" class="mod-item">
+                  <view class="follow5 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                沈阳
+                  </view>
+                      </navigator>
+                      </view>
+              </block>
+
+
+          <block wx:if="{{item.id == 6}}">
+                  <view class='zhe'>
+              <navigator url="../flycq/flycq?airportCode=LHW" class="mod-item">
+                  <view class="follow6 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                兰州
+                  </view>
+                      </navigator>
+                      </view>
+              </block>
+
+
+                           <block wx:if="{{item.id == 7}}">
+                  <view class='zhe'>
+              <navigator url="../flycq/flycq?airportCode=SWA" class="mod-item">
+                  <view class="follow7 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                潮汕
+                  </view>
+                      </navigator>
+                      </view>
+              </block>
+
+
+
           </view>
         </view>
   
