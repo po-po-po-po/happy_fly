@@ -101,7 +101,7 @@
   text-align: center;
   line-height: 40rpx;
   border-radius: 6rpx;
-  background-color: #02afa1;
+  background-color: #fd0658;
 }
 
 .follows {
@@ -138,21 +138,6 @@
   margin-right: 20rpx;
 }
 
-.follow7 {
-  flex-shrink: 0;
-  flex-direction: row;
-  width:100rpx;
-  height: 40rpx;
-  margin-top: 20rpx;
-  font-size: 24rpx;
-  color: #fff;
-  text-align: center;
-  line-height: 40rpx;
-  border-radius: 6rpx;
-  background-color: #08e9e9;
-  margin-right: 20rpx;
-}
-
 .follow5 {
   flex-shrink: 0;
   flex-direction: row;
@@ -164,9 +149,10 @@
   text-align: center;
   line-height: 40rpx;
   border-radius: 6rpx;
-  background-color: #6ee202;
+  background-color: #e28af3;
   margin-right: 20rpx;
 }
+
 
 .follow6 {
   flex-shrink: 0;
@@ -175,13 +161,15 @@
   height: 40rpx;
   margin-top: 20rpx;
   font-size: 24rpx;
-  color: rgb(245, 3, 3);
+  color: #fff;
   text-align: center;
   line-height: 40rpx;
   border-radius: 6rpx;
-  background-color: #03e8f065;
+  background-color: #5c24f3;
   margin-right: 20rpx;
 }
+
+
 
 .zhe{
   display: flex;

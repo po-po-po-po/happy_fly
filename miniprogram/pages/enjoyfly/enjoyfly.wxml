@@ -5,6 +5,22 @@
   <view class='page-header'>
    <text class='page-title'>随心飞查询</text>
   </view>
+
+
+
+     <view class='item'>
+       <image class='poster' src='{{item.flyIcon}}'></image>
+          <view class='meta'>
+            <text class='title'>随心飞航班查询</text>
+              <navigator url="../city/city" class="mod-item">
+          <view class="follow1_2 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+           全部
+          </view>
+           </navigator>
+ </view>
+ </view>
+
+
   <!--列表-->
   <view  wx:for="{{list}}" wx:for-index="bindex"  wx:key="id">
     <!--另一种情况-->
@@ -13,6 +29,7 @@
        <image class='poster' src='{{item.flyIcon}}'></image>
           <view class='meta'>
             <text class='title'>{{item.flyName}}</text>
+
        <block wx:if="{{item.id == 1}}">
         <!--
               <navigator url="../fly67/fly67?day=6" class="mod-item">
@@ -149,33 +166,39 @@
                 沈阳
                   </view>
                       </navigator>
-                      </view>
-              </block>
-
-
-          <block wx:if="{{item.id == 6}}">
-                  <view class='zhe'>
-              <navigator url="../flycq/flycq?airportCode=LHW" class="mod-item">
-                  <view class="follow6 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                                <navigator url="../flycq/flycq?airportCode=LHW" class="mod-item">
+                  <view class="follow5 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
                 兰州
                   </view>
                       </navigator>
-                      </view>
-              </block>
-
-
-                           <block wx:if="{{item.id == 7}}">
-                  <view class='zhe'>
-              <navigator url="../flycq/flycq?airportCode=SWA" class="mod-item">
-                  <view class="follow7 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                   <navigator url="../flycq/flycq?airportCode=SWA" class="mod-item">
+                  <view class="follow5 {{item.follow ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
                 潮汕
                   </view>
-                      </navigator>
+                      </navigator>           
+
                       </view>
               </block>
 
-
-
+                <block wx:if="{{item.id == 6}}">
+                  <view class='zhe'>
+              <navigator url="../flycq/flycq?airportCode=SJW" class="mod-item">
+                  <view class="follow6 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                石家庄
+                  </view>
+                      </navigator>
+                                <navigator url="../flycq/flycq?airportCode=ZQZ" class="mod-item">
+                  <view class="follow6 {{item.follow4 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                张家口
+                  </view>
+                      </navigator>
+                   <navigator url="../flycq/flycq?airportCode=HDG" class="mod-item">
+                  <view class="follow6 {{item.follow ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                邯郸
+                  </view>
+                      </navigator>           
+                      </view>
+              </block>
           </view>
         </view>
   
