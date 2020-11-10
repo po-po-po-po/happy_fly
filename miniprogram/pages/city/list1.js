@@ -1,227 +1,148 @@
-// pages/flight/list.js
-const api = require('../utils/api.js')
+//获取公共ui操作类实例
+const _page = require('../utils/abstract-page.js');
+let modCalendar = require('../utils/calendar.js');
+const models = require('../utils/demo-model.js')
+const util = require('../utils/uti1l.js')
+let selectedDate = new Date().toString();
+const App = getApp()
+
+//获取应用实例
 const app = getApp()
 
-Page({
-  data:{
-    dcity: '',
-    dcityName: '',
-    acity: '',
-    acityName: '',
-    ddate: '',
-    ddate1: '',
-    startPosition: -1,
-    airlinesCode:'',
-    flightDate:'',
-    flightInfos: []
+Page(_page.initPage({
+  data: {
+    listData: [],
+    calendarSelectedDate: '东航周六航班',
+    calendarSelectedDateStr: '东航周六航班',
+    flightNameStart:'上海虹桥',
+    flightNameEnd:'',
+    day:''
   },
-  getSearchParams: function() {
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getSearchParams(function(params){      
-      //更新数据
-      console.log(params)
-      let ddate=params.ddate;
-      let ddate1=params.ddate1;
-      if(ddate===''){
-        ddate='00:00'
-      }
-      if(ddate1===''){
-        ddate1='24:00'
-      }
-      that.setData({
-        dcity:params.dcity,
-        flightNameStart: params.dcityName,
-        acity:params.acity,
-        flightNameEnd: params.acityName,
-        airlinesCode:params.airlineCode,
-        flightDate: ddate+"-"+ ddate1,
-        flightRequency:params.weekCode
-        //ddate: params.ddate,
-        //ddate1: params.ddate1
-      })
-    })
+  // methods: uiUtil.getPageMethods(),
+  methods: {
   },
-  searchFlight: function() {
-    // wx.showToast({
-    //   title: '查询中......',
-    //   icon: 'loading'
-    // })
-    wx.showLoading({
-      title: '查询中......'
-    })
 
-    const params = {
-      flightNameStart: this.data.flightNameStart,
-      flightNameEnd: this.data.flightNameEnd,
-      airlinesCode:this.data.airlinesCode,
-      flightDate: this.data.flightDate,
-      flightRequency: this.data.flightRequency,
-      //ddate: this.data.ddate,
-      //startPosition: this.data.startPosition
-    }
-    api.rav(params, this.ravDone)
-  },
-  ravDone: function (jsonResult) {
-    console.log(jsonResult)
+  preDay: function () {
     this.setData({
-      airwayList: jsonResult.data.airwayList,
-      airlines:jsonResult.data.airlines,
-      condition:jsonResult.data.flightCondition
+      calendarSelectedDate: '周六',
+      calendarSelectedDateStr: '东航周六航班'
     })
+  
+  },
 
-    if (jsonResult.data.flightList !== '') {
-      console.log('Searching is done.')
-      wx.hideLoading()
-    } else if (jsonResult.data.flightList === '') {
-      console.log('No direct flight.')
-      wx.hideLoading()
-    } else if (jsonResult.status === -1) {
-      console.log('error')
-      wx.hideLoading()
-    } else if (jsonResult.status === 0) {
-      //searching...
-      console.log('searching....')
-      setTimeout(this.searchFlight, 1500)
-      // wx.showToast({
-      //   title: '查询中......',
-      //   icon: 'loading'
-      // })
+  nextDay: function () {
+   // let date = util.dateUtil.nextDay(this.data.calendarSelectedDate);
+    this.setData({
+      calendarSelectedDate: '周日',
+      calendarSelectedDateStr: '东航周日航班'
+    })
+  },
+
+  calendarHook: function (date) {
+    this.index = 0;
+    this.data.listData = [];
+    this._initData({
+      date: date.getTime()
+    });
+  },
+
+  onShow: function () {
+    global.sss = this;
+    let scope = this;
+  },
+
+  _setDateInfo: function (date) {
+    let selectedDate = new Date(date * 1);
+    this.setData({
+      calendarSelectedDate: selectedDate.toString(),
+      calendarSelectedDateStr: util.dateUtil.format(selectedDate, 'Y年M月D日')
+    });
+  },
+
+  _appendList: function (data) {
+
+    for(let i = 0, len = data.length; i < len; i++) {
+      data[i].dateStr = util.dateUtil.format(new Date(data[i].datetime * 1000), 'H:F' )
     }
-  },
-  showFlightDetail: function (item) {
-    // console.log(item)
-    // console.log(item.currentTarget)
-    // console.log(item.currentTarget.dataset)
 
-    app.setFlightDetail(item.currentTarget.dataset.flightInfo)
+    this.setData({
+      listData: this.data.listData.concat(data)
+    });
+  },
+  _initData: function (data) {
+    let scope = this;
+    let listModel = models.listModel;
+
+    listModel.setParam({
+      startcityid: this._sid,
+      arrivalcityid: this._aid,
+      startdatetime: data.date / 1000,
+      page: this.index + 1
+    });
+
+    this.showLoading();
+    listModel.execute(function(data) {
+      scope.hideLoading();
+
+      if(!data.schedules) return;
+      scope._appendList(data.schedules);
+
+    });
+  },
+  onLoad: function (options) {
+    const _this = this;
+    console.log("1111")
+        //调用应用实例的方法获取全局数据
+        app.getSearchParams(function(params){    
+          //更新数据
+          _this.setData({
+            dcity:params.dcity,
+            flightNameStart: params.dcityName,
+            acity:params.acity,
+            flightNameEnd: params.acityName,
+            airlinesCode: params.airlineCode,
+            flightRequency: params.weekCode
+          })
+        })
+    // 拼接请求url
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEI';
+    // 请求数据
+    wx.request({
+      url: url,
+      method: 'post',
+      data: {
+        "pageSize": 500,
+        airportNameStartCode:this.data.dcity,
+        airportNameEndCode:this.data.acity,
+        airlinesCode:this.data.airlinesCode,
+        flightRequency:this.data.flightRequency
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
     
-    wx.navigateTo({
-      url: 'detail'
-    })
-  },
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
-    console.log('onLoad')
-    this.getSearchParams()
-    const that = this
-    wx.setNavigationBarTitle({
-      'title': that.data.dcityName + '-' + that.data.acityName + ' ' + this.data.ddate
+      success: function(res) {
+       
+        // 赋值
+        _this.setData({
+          list: res.data.data.data,
+          loading: false // 关闭等待框
+        })
+        console.log(res.data.data.data.length)
+      }
     })
 
-    this.searchFlight()
   },
-  onReady:function(){
-    // 页面渲染完成
-    console.log('onReady')
-  },
-  onShow:function(){
-    // 页面显示
-    console.log('onShow')
+
+  onReady: function () {
 
   },
-  onHide:function(){
-    // 页面隐藏
-    console.log('onHide')
-  },
-  onUnload:function(){
-    // 页面关闭
-    console.log('onUnload')
+  onShow: function () {
+
+    global.sss = this;
+    let scope = this;
   }
-})
-
-// Object
-// arrCity
-// :
-// "TAO"
-// arrCityName
-// :
-// "青岛"
-// arrDate
-// :
-// "2017-05-10"
-// arrPort
-// :
-// "TAO"
-// arrPortName
-// :
-// "青岛"
-// arrTerminal
-// :
-// ""
-// arrTime
-// :
-// "0830"
-// carrierCode
-// :
-// "FM"
-// carrierFlightNo
-// :
-// ""
-// carrierName
-// :
-// "上航"
-// codeShared
-// :
-// "0"
-// depCity
-// :
-// "SHA"
-// depCityName
-// :
-// "上海"
-// depDate
-// :
-// "2017-05-10"
-// depPort
-// :
-// "SHA"
-// depPortName
-// :
-// "上海虹桥"
-// depTerminal
-// :
-// "T2"
-// depTime
-// :
-// "0650"
-// dinner
-// :
-// "S"
-// flightNo
-// :
-// "FM9231"
-// freshness
-// :
-// 535
-// id
-// :
-// 24714
-// lowestPrice
-// :
-// Object
-// planeType
-// :
-// "73G"
-// shortSubClassDesc
-// :
-// "F5 P5 J2 C2 YA BA MA EA HA KA LA NA "
-// showArrTime
-// :
-// "08:30"
-// showDepTime
-// :
-// "06:50"
-// stopover
-// :
-// "0"
-// subClassList
-// :
-// Array[12]
-// subclassDesc
-// :
-// "UQ F5 P5 J2 C2 DQ IQ WQ YA BA MA EA HA KA LA NA RS SQ VQ TQ GQ ZQ QQ"
-// taxCN
-// :
-// 0
-// taxYQ
+  
+}, {
+  modCalendar: modCalendar
+}))
