@@ -82,7 +82,7 @@
   flex-direction: row;
   width:100rpx;
   height: 40rpx;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
   font-size: 24rpx;
   color: #fff;
   text-align: center;
@@ -95,7 +95,7 @@
   flex-shrink: 0;
   width:40%;
   height: 40rpx;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
   font-size: 24rpx;
   color: #fff;
   text-align: center;
@@ -111,67 +111,34 @@
 .follow3 {
   flex-shrink: 0;
   flex-direction: row;
-  width:100rpx;
+  width:80rpx;
   height: 40rpx;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
   font-size: 24rpx;
   color: #fff;
   text-align: center;
   line-height: 40rpx;
   border-radius: 6rpx;
   background-color: #02afa1;
-  margin-right: 20rpx;
-}
-
-.follow4 {
-  flex-shrink: 0;
-  flex-direction: row;
-  width:100rpx;
-  height: 40rpx;
-  margin-top: 20rpx;
-  font-size: 24rpx;
-  color: #fff;
-  text-align: center;
-  line-height: 40rpx;
-  border-radius: 6rpx;
-  background-color: #0709b6;
-  margin-right: 20rpx;
-}
-
-.follow5 {
-  flex-shrink: 0;
-  flex-direction: row;
-  width:100rpx;
-  height: 40rpx;
-  margin-top: 20rpx;
-  font-size: 24rpx;
-  color: #fff;
-  text-align: center;
-  line-height: 40rpx;
-  border-radius: 6rpx;
-  background-color: #e28af3;
-  margin-right: 20rpx;
+  margin-right: 10rpx;
 }
 
 
-.follow6 {
-  flex-shrink: 0;
-  flex-direction: row;
-  width:100rpx;
-  height: 40rpx;
-  margin-top: 20rpx;
-  font-size: 24rpx;
-  color: #fff;
-  text-align: center;
-  line-height: 40rpx;
-  border-radius: 6rpx;
-  background-color: #5c24f3;
-  margin-right: 20rpx;
-}
+
+
+
+
+
 
 
 
 .zhe{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.c9{
   display: flex;
   flex-direction: row;
 
