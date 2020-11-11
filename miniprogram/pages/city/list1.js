@@ -21,64 +21,6 @@ Page(_page.initPage({
   // methods: uiUtil.getPageMethods(),
   methods: {
   },
-
-  preDay: function () {
-    this.setData({
-      calendarSelectedDate: '周六',
-      calendarSelectedDateStr: '东航周六航班'
-    })
-  
-  },
-  preDay1: function () {
-    App.setDay(1)
-    wx.navigateTo({
-      url: '/pages/city/list1'
-    })
-  
-  },
-  preDay2: function () {
-    App.setDay(2)
-    wx.navigateTo({
-      url: '/pages/city/list1'
-    })
-  
-  },
-  preDay3: function () {
-    App.setDay(3)
-    wx.navigateTo({
-      url: '/pages/city/list1'
-    })
-  
-  },
-  preDay4: function () {
-    App.setDay(4)
-    wx.navigateTo({
-      url: '/pages/city/list1'
-    })
-  
-  },
-  preDay5: function () {
-    App.setDay(5)
-    wx.navigateTo({
-      url: '/pages/city/list1'
-    })
-  
-  },
-  preDay6: function () {
-    App.setDay(6)
-    wx.navigateTo({
-      url: '/pages/city/list1'
-    })
-  
-  },
-  preDay7: function () {
-    App.setDay(7)
-    wx.navigateTo({
-      url: '/pages/city/list1'
-    })
-  
-  },
-
   nextDay: function () {
    // let date = util.dateUtil.nextDay(this.data.calendarSelectedDate);
     this.setData({
@@ -191,7 +133,41 @@ Page(_page.initPage({
 
     global.sss = this;
     let scope = this;
-  }
+  },
+  
+  bindInput(e) { 
+    let that = this;
+    let day =e.currentTarget.id; //获取表单所有name=id的值 
+    wx.showLoading({ title: '搜索中...' })
+        // 拼接请求url
+        const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEI';
+        // 请求数据
+        wx.request({
+          url: url,
+          method: 'post',
+          data: {
+            "pageSize": 500,
+            airportNameStartCode:this.data.dcity,
+            airportNameEndCode:this.data.acity,
+            airlinesCode:this.data.airlinesCode,
+            flightRequency:day
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: function(res) {
+            wx.hideLoading()
+            console.log(res.data.data.data);
+            // 赋值
+            that.setData({
+              list: res.data.data.data,
+              loading: false // 关闭等待框
+            })
+          }
+        })
+
+
+   }
   
 }, {
   modCalendar: modCalendar

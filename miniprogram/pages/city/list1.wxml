@@ -4,13 +4,13 @@
     <!--
       <view class="tabs-item js_pre_day" ontap="preDay" >前一天</view>
       -->
-        <view class="tabs-item js_pre_day" ontap="preDay1" >周一</view>
-        <view class="tabs-item js_pre_day" ontap="preDay2" >周二</view>
-        <view class="tabs-item js_pre_day" ontap="preDay3" >周三</view>
-        <view class="tabs-item js_pre_day" ontap="preDay4" >周四</view>
-        <view class="tabs-item js_pre_day" ontap="preDay5" >周五</view>
-        <view class="tabs-item js_pre_day" ontap="preDay6" >周六</view>
-        <view class="tabs-item js_pre_day" ontap="preDay7" >周日</view>
+        <view class="tabs-item js_pre_day" ontap='bindInput' id="1" >周一</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="2">周二</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="3">周三</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="4">周四</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="5">周五</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="6">周六</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="7">周日</view>
     </view>
   </view>
   <view class="bus-list js_bus_list ">
