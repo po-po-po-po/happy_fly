@@ -1,0 +1,26 @@
+<view class="schoollist">
+
+  <block wx:for="{{airlines}}" wx:key="item">
+
+    <view class="school-list">
+
+      <navigator url="../activitydetail/activitydetail?id={{item.id}}">
+
+        <view class="school-list-info" index="{{index}}">
+
+<!---->
+          <image class="school-list-photo" src="{{item.airlinesImg}}"/>
+
+          <text class="school-list-desc">
+            {{item.airlinesName}}
+          </text>
+
+        </view>
+
+      </navigator>
+
+    </view>
+
+  </block>
+
+</view>
