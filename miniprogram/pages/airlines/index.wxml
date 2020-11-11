@@ -11,7 +11,7 @@
           <image class="school-list-photo" src="{{item.airlinesImg}}"/>
 
           <text class="school-list-desc">
-            {{item.airlinesName}}({{item.airlinesCode}})
+            {{item.airlinesName}}
           </text>
 
         </view>
