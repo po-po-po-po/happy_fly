@@ -3,10 +3,10 @@
   <!--等待框-->
   <!--顶部标题栏-->
   <view class='page-header'>
-   <text class='page-title'></text>
+   <text class='page-title'>航班查询</text>
   </view>
      <view class='item'>
-       <image class='poster' src='https://www.potucs.com/wechat/fly/1.jpg'></image>
+       <image class='poster' src='https://www.potucs.com/wechat/fly/6.jpg'></image>
           <view class='meta'>
             <text class='title'>随心飞航班</text>
               <navigator url="../city/city" class="mod-item">
