@@ -31,7 +31,7 @@ Page({
         console.log(res.data.data);
         // 赋值
         _this.setData({
-          title: '随心飞查询',
+          title: '随心飞',
           list: res.data.data,
           loading: false // 关闭等待框
         })

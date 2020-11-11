@@ -1,26 +1,74 @@
-<view class="schoollist">
-
-  <block wx:for="{{airlines}}" wx:key="item">
-
-    <view class="school-list">
-
-      <navigator url="../activitydetail/activitydetail?id={{item.id}}">
-
-        <view class="school-list-info" index="{{index}}">
-
-<!---->
-          <image class="school-list-photo" src="{{item.airlinesImg}}"/>
-
-          <text class="school-list-desc">
-            {{item.airlinesName}}
-          </text>
-
-        </view>
-
-      </navigator>
-
+<!--列表页-->
+<view class='container'>
+  <!--等待框-->
+  <loading hidden="{{!loading}}">加载中...</loading>
+  <!--顶部标题栏-->
+  <view class='page-header'>
+   <text class='page-title'>航空公司</text>
+  </view>
+  <!--列表-->
+  <view class='page-body' wx:for="{{list}}" wx:for-index="bindex"  wx:key="id">
+    <!--类型判断,显示不同的数据-->
+    <block wx:if="{{type === 'us_box'}}">
+      <!--类型判断,显示不同的数据-->
+    <navigator url="{{item.airlinesDescription }}" class="mod-item">
+        <view class='item'>
+       <image class='poster' src='{{item.airlinesImg}}'></image>
+          <view class='meta'>
+            <text class='title'>{{item.airlinesName}}</text>
+            <view class='artists'>
+             <text>{{item.airportCode}}</text>
+            </view>
+            <view class='rating'>
+              <text>执飞航线{{item.airwayNumber}}1条</text>
+            </view>
+            <view class='rating'>
+            
+                <block wx:if="{{item.airportCode !== ''}}">
+        <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
+    <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+    <!-- {{item.isFollow ? "已关注" : "关注"}} -->
+    {{item.airportCode}}
     </view>
-
-  </block>
-
+        </navigator>
+    </block>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <!--另一种情况-->
+    <block wx:else>
+    <!--类型判断,显示不同的数据-->
+        <view class='item'>
+              <navigator url='{{item.airlinesDescription }}'>
+       <image class='poster' src='{{item.airlinesImg}}'></image>
+           </navigator>
+          <view class='meta'>
+            <text class='title'>{{item.airlinesName}}({{item.airlinesCode}})</text>
+            <view class='rating1'>
+            <view class='rating'>
+               <text>执飞航线{{item.airwayNumber}}条</text>
+            </view>
+            <view class='rating'>
+              <text>执飞航班{{item.flightNumber}}次</text>
+            </view>
+          </view>
+            <view class='rating1'>
+         <view class='rating2'>
+                <block wx:if="{{item.isHot !== ''}}">
+        <navigator url="../activitydetail/activitydetail?airportCode={{item.airportCode}}" class="mod-item">
+    <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+    <!-- {{item.isFollow ? "已关注" : "关注"}} -->
+{{item.isHot}}
+    </view>
+        </navigator>
+    </block>
+      </view>   
+  </view>
+          </view>
+        </view>
+  
+    </block>
+  </view>
 </view>
