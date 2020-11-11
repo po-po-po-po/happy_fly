@@ -1,4 +1,6 @@
   <view class="selected">
+
+
  <view class="weui-cell">
      <view class="weui-cell__bd">
        <single-dropdown-select prop-array='{{selectArray}}'  bind:select='select' />
@@ -18,6 +20,11 @@
     </view>
  </view>
 
- 
 
   </view>
+
+
+  
+
+
+

@@ -4,3 +4,8 @@
   float: left;
   flex-direction: row;
 }
+
+.weui-cell {
+  color: #0d0d0e;
+  background-color: rgb(16, 240, 35);
+}
