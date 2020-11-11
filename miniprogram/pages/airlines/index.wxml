@@ -1,29 +1,25 @@
-<!--<view class="index-img">
- <image src="http://www.potucs.com:9998/wechat/index.jpg"></image> 
-</view>
--->
-<view class="box transition" >
-  <view class="title">内地航司</view>
-  <view class="user-panel" wx:for="{{airlines}}" wx:for-index="bindex" wx:key="index">
-    <navigator url="{{item.airlinesDescription }}" class="mod-item">
-    <image class="head" src="{{item.airlinesImg }}"></image>
-       </navigator>
-    <view class="center">
-      <view class="name">
-        <text class="name-text">{{item.airlinesName}}({{item.airlinesCode}})</text>
-        <i class="iconfont {{item.gender ? 'nv' : 'nan'}}"></i>
-      </view>
-      <view class="code">航班:{{item.flightNumber}}次|航线:{{item.airwayNumber}}条</view>
-    </view>
-  
-    <block wx:if="{{item.airlinesAlliance !== ''}}">
-        <navigator url="../activity/activity?airline_code={{item.airlinesCode}}" class="mod-item">
-    <view class="follow {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-    <!-- {{item.isFollow ? "已关注" : "关注"}} -->
-    {{item.airlinesAlliance}}
-    </view>
-        </navigator>
-    </block>
+<view class="schoollist">
 
-  </view>
+  <block wx:for="{{airlines}}" wx:key="item">
+
+    <view class="school-list">
+
+      <navigator url="../activitydetail/activitydetail?id={{item.id}}">
+
+        <view class="school-list-info" index="{{index}}">
+
+          <image class="school-list-photo" src="{{item.airlinesImg}}"/>
+
+          <text class="school-list-desc">
+            {{item.airlinesName}}({{item.airlinesCode}})
+          </text>
+
+        </view>
+
+      </navigator>
+
+    </view>
+
+  </block>
+
 </view>
