@@ -14,7 +14,7 @@
             <text class='title'>随心飞航班查询</text>
               <navigator url="../city/city" class="mod-item">
           <view class="follow1_2 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-           全部
+           全国
           </view>
            </navigator>
  </view>

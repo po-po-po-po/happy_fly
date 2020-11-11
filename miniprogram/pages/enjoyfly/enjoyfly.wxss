@@ -93,13 +93,13 @@
 }
 .follow1_2 {
   flex-shrink: 0;
-  width:40%;
-  height: 40rpx;
-  margin-top: 10rpx;
-  font-size: 24rpx;
+  width:50%;
+  height: 80rpx;
+  margin-top: 30rpx;
+  font-size: 44rpx;
   color: #fff;
   text-align: center;
-  line-height: 40rpx;
+  line-height: 80rpx;
   border-radius: 6rpx;
   background-color: #fd0658;
 }
