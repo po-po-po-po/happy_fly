@@ -1,7 +1,7 @@
 /* components/single-dropdown-select/index.wxss */
 
 .ms-content-box {
-  width: 33.33vw;
+  width: 50vw;
 }
 
 .ms-content {

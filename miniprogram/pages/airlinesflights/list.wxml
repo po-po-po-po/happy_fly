@@ -14,11 +14,6 @@
  </view>
 
 
-   <view class="weui-cell">
-     <view class="weui-cell__bd">
-       <single-dropdown-select prop-array='{{selectArray}}'  title='航班周期'  bind:select='select' />
-    </view>
- </view>
 
 
   </view>
