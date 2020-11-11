@@ -15,7 +15,7 @@ App({
       weekCode: '7',
       ddate: '',
       ddate1: '',
-      day:''
+      day:'7'
     },
     searchParams1: {
       dcity: '',

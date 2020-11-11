@@ -29,6 +29,55 @@ Page(_page.initPage({
     })
   
   },
+  preDay1: function () {
+    App.setDay(1)
+    wx.navigateTo({
+      url: '/pages/city/list1'
+    })
+  
+  },
+  preDay2: function () {
+    App.setDay(2)
+    wx.navigateTo({
+      url: '/pages/city/list1'
+    })
+  
+  },
+  preDay3: function () {
+    App.setDay(3)
+    wx.navigateTo({
+      url: '/pages/city/list1'
+    })
+  
+  },
+  preDay4: function () {
+    App.setDay(4)
+    wx.navigateTo({
+      url: '/pages/city/list1'
+    })
+  
+  },
+  preDay5: function () {
+    App.setDay(5)
+    wx.navigateTo({
+      url: '/pages/city/list1'
+    })
+  
+  },
+  preDay6: function () {
+    App.setDay(6)
+    wx.navigateTo({
+      url: '/pages/city/list1'
+    })
+  
+  },
+  preDay7: function () {
+    App.setDay(7)
+    wx.navigateTo({
+      url: '/pages/city/list1'
+    })
+  
+  },
 
   nextDay: function () {
    // let date = util.dateUtil.nextDay(this.data.calendarSelectedDate);
@@ -104,6 +153,7 @@ Page(_page.initPage({
             flightRequency: params.weekCode
           })
         })
+        var day=App.globalData.searchParams.day;
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEI';
     // 请求数据
@@ -115,7 +165,7 @@ Page(_page.initPage({
         airportNameStartCode:this.data.dcity,
         airportNameEndCode:this.data.acity,
         airlinesCode:this.data.airlinesCode,
-        flightRequency:this.data.flightRequency
+        flightRequency:day
       },
       header: {
         'content-type': 'application/json' // 默认值
