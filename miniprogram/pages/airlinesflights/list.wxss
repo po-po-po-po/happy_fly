@@ -1,11 +1,10 @@
 @import "/wxParse/wxParse.wxss";
 .selected {
   display: flex;
-  float: left;
   flex-direction: row;
 }
 
 .weui-cell {
+  flex: 1; /*分布按1*/
   color: #0d0d0e;
-  background-color: rgb(16, 240, 35);
 }
