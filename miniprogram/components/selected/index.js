@@ -38,7 +38,7 @@ Component({
       //再次执行动画，注意这里一定，一定，一定是this.animation来使用动画
       this.setData({
         selectShow: false,
-        selectText: nowText,
+        title: nowText,
       })
       this.triggerEvent('select', nowData[nowIdx])
     }
