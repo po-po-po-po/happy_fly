@@ -5,7 +5,6 @@
   <view class='page-header'>
    <text class='page-title'></text>
   </view>
-
      <view class='item'>
        <image class='poster' src='https://www.potucs.com/wechat/fly/1.jpg'></image>
           <view class='meta'>
