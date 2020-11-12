@@ -38,20 +38,41 @@ Page({
   ],
     airportStartList: [],
     airportEndList: [],
-    airlinesList: []
+    airlinesList: [],
+    airportNameStartCode:"",
+    airportNameEndCode:"",
+    flightDate:"",
+    airlinesCode:""
   },
 
   select1: function(e) {
-    console.log(e.detail)
+    var self = this
+    console.log(e.detail.airportCode)
+    self.setData({
+      airportNameStartCode: e.detail.airportCode
+    })
+    self.getDataList(e);
   },
   select2: function(e) {
-    console.log(e.detail)
+    var self = this
+    self.setData({
+      airlinesCode: e.detail.airlinesCode
+    })
+    self.getDataList(e);
   },
   select3: function(e) {
-    console.log(e.detail)
+    var self = this
+    self.setData({
+      flightDate: e.detail.id
+    })
+    self.getDataList(e);
   },
   select4: function(e) {
-    console.log(e.detail)
+    var self = this
+    self.setData({
+      airportNameEndCode: e.detail.airportCode
+    })
+    self.getDataList(e);
   },
   onLoad: function (options) {
     const _this = this;
@@ -82,6 +103,44 @@ Page({
       }
     })
 
-  }
+  },
+  //调用数据接口，获取数据
+  getDataList:function(e){
+    const _this = this;
+    // 请求url
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEIHX';
+    // 请求数据
+    wx.request({
+      url: url,
+      method: 'post',
+      data: {
+        "pageSize": 500,
+        airportNameStartCode:_this.data.airportNameStartCode,
+        airportNameEndCode:_this.data.airportNameEndCode,
+        airlinesCode:_this.data.airlinesCode,
+        flightDateStart:_this.data.flightDate,
+        flightDateEnd:_this.data.flightDate
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+
+      success: function(res) {
+        console.log(res.data.data);
+        // 赋值
+        _this.setData({
+          airlines: res.data.data.airlines,
+          airlinesList: res.data.data.airlinesList,
+          airwayList: res.data.data.airwayList,
+          airportStartList: res.data.data.airportStartList,
+          airportEndList: res.data.data.airportEndList,
+          loading: false // 关闭等待框
+        })
+      }
+    })
+
+         
+
+        }
 
 })
