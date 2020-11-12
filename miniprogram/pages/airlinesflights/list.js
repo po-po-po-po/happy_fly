@@ -113,45 +113,28 @@ Page({
   },
   onLoad: function (options) {
     const _this = this;
-    console.log("1111")
-    //调用应用实例的方法获取全局数据
-    app.getSearchParams(function(params){
-      //更新数据
-      _this.setData({
-        dcity:params.dcity,
-        flightNameStart: params.dcityName,
-        acity:params.acity,
-        flightNameEnd: params.acityName,
-        airlinesCode: params.airlineCode,
-        flightRequency: params.weekCode
-      })
-    })
-    var day=App.globalData.searchParams.day;
-    // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEI';
+    // 请求url
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEIHX';
     // 请求数据
     wx.request({
       url: url,
       method: 'post',
       data: {
-        "pageSize": 500,
-        airportNameStartCode:this.data.dcity,
-        airportNameEndCode:this.data.acity,
-        airlinesCode:this.data.airlinesCode,
-        flightRequency:day
+        "pageSize": 200
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
 
       success: function(res) {
-        console.log(res.data.data.data);
+        console.log(res.data.data);
         // 赋值
         _this.setData({
-          list: res.data.data.data,
+          airlines: res.data.data.airlines,
+          airlinesList: res.data.data.airlinesList,
+          airwayList: res.data.data.airwayList,
           loading: false // 关闭等待框
         })
-        console.log(res.data.data.data.length)
       }
     })
 

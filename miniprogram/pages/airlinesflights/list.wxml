@@ -19,7 +19,7 @@
 
  <view class="weui-cell">
      <view class="weui-cell__bd">
-       <single-dropdown-select prop-array='{{selectArray}}' title='出发机场'  bind:select='select' />
+       <single-dropdown-select prop-array='{{airportStartList}}' title='出发机场'  bind:select='select' />
     </view>
  </view>
 
@@ -58,23 +58,23 @@
 
   <view class="bus-list js_bus_list ">
 
-         <block wx:for="{{list}}" wx:key="k">
+         <block wx:for="{{airwayList}}" wx:key="k" wx:for-index="bindex">
 
 
       <view class="bus-list-item  ">
       
       <view class="bus-time">
-       1
+       {{bindex+1}}
         </view>
         <view class="tobooking">
-        2班
+        {{item.flightNumber}}
         </view>
         <view class="detail">
           <view class="detail1">
             <view class="start">
-              <text class="icon-circle s-icon1"></text>{{item.flightNameStart}}</view>
+              <text class="icon-circle s-icon1"></text>{{item.airportNameStart}}</view>
             <view class="end">
-              <text class="icon-circle s-icon2"></text>{{item.flightNameEnd}}</view>
+              <text class="icon-circle s-icon2"></text>{{item.airportNameEnd}}</view>
           </view>
 
          
