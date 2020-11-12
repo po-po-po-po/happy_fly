@@ -34,8 +34,8 @@
 }
 
 .ms-option {
-  height: 30px;
-  line-height: 30px;
+  height: 25px;
+  line-height: 25px;
   border-top: 1px solid #e2e2e2;
   padding: 0 6px;
   text-align: left;
