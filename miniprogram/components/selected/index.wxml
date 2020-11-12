@@ -6,4 +6,13 @@
     <view class='ms-options' wx:if="{{selectShow}}">
         <view wx:for="{{propArray}}" data-index="{{index}}" wx:key='index' class='ms-option' bindtap='setText'>{{item.text || item.value || item}}</view>
     </view>
+    <view class='ms-options' wx:if="{{selectShow}}">
+        <view wx:for="{{airportEndList}}" data-index="{{index}}" wx:key='index' class='ms-option' bindtap='setText'>{{item.airportAbbreviate || item.airportCode || item}}</view>
+    </view>
+        <view class='ms-options' wx:if="{{selectShow}}">
+        <view wx:for="{{airportStartList}}" data-index="{{index}}" wx:key='index' class='ms-option' bindtap='setText'>{{item.airportAbbreviate || item.airportCode || item}}</view>
+    </view>
+        <view class='ms-options' wx:if="{{selectShow}}">
+        <view wx:for="{{airlinesList}}" data-index="{{index}}" wx:key='index' class='ms-option' bindtap='setText'>{{item.airlinesAbbreviate || item.airlinesCode || item}}</view>
+    </view>
 </view>

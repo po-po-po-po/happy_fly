@@ -4,6 +4,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    airportEndList: {
+      type: Array,
+    },
+    airlinesList: {
+      type: Array,
+    },
+    airportStartList: {
+      type: Array,
+    },
     propArray: {
       type: Array,
     },
