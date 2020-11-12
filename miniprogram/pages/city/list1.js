@@ -81,6 +81,7 @@ Page(_page.initPage({
     });
   },
   onLoad: function (options) {
+    wx.showLoading({ title: '搜索中...' })
     const _this = this;
     console.log("1111")
         //调用应用实例的方法获取全局数据
@@ -115,6 +116,7 @@ Page(_page.initPage({
     
       success: function(res) {
         console.log(res.data.data.data);
+        wx.hideLoading()
         // 赋值
         _this.setData({
           list: res.data.data.data,

@@ -14,6 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) { // options 为 board页传来的参数
+    wx.showLoading({ title: '搜索中...' })
     const _this = this;
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/fly/flyList' ;
@@ -28,6 +29,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
+        wx.hideLoading()
         console.log(res.data.data);
         // 赋值
         _this.setData({
