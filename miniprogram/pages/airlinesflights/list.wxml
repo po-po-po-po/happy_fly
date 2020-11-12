@@ -67,7 +67,7 @@
        {{bindex+1}}
         </view>
         <view class="tobooking">
-        {{item.flightNumber}}
+        {{item.flightNumber}}班/周
         </view>
         <view class="detail">
           <view class="detail1">

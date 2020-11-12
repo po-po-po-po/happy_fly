@@ -133,6 +133,8 @@ Page({
           airlines: res.data.data.airlines,
           airlinesList: res.data.data.airlinesList,
           airwayList: res.data.data.airwayList,
+          airportStartList: res.data.data.airportStartList,
+          airportEndList: res.data.data.airportEndList,
           loading: false // 关闭等待框
         })
       }
