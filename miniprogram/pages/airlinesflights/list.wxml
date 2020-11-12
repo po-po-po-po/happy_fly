@@ -62,16 +62,12 @@
 
 
       <view class="bus-list-item  ">
-        <view class="bus-time">
-
-         <navigator url="../city/list2?airlinesCode={{item.airlinesCode}}&airportNameStartCode={{item.airportNameEndCode}}&airportNameEndCode={{item.airportNameStartCode}}&flightRequency={{item.flightRequency}}" class="mod-item">
-        {{item.flightNo}}
-         </navigator>
-
+      
+      <view class="bus-time">
+       1
         </view>
-
         <view class="tobooking">
-        {{item.flightRequency}}
+        2班
         </view>
         <view class="detail">
           <view class="detail1">
@@ -81,18 +77,7 @@
               <text class="icon-circle s-icon2"></text>{{item.flightNameEnd}}</view>
           </view>
 
-          <view class="tags">
-            <view>
-              <text class="price">{{util1.sub(item.flightDate)}}</text>
-            </view>
-            <view>
-              <text class="price">{{util2.sub(item.flightDate)}}</text>
-            </view>
-            <view>
-            <!--
-              <text class="b-tags js_tags"></text>-->
-            </view>
-          </view>
+         
         </view>
       </view>
     </block>

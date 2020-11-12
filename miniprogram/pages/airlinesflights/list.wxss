@@ -9,6 +9,16 @@
   color: #0d0d0e;
 }
 
+.detail1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;/*分布按1*/
+}
+
+.start{
+  margin-right: auto;
+}
+
 
 /*页面body*/
 .page-wrapper {
@@ -25,8 +35,8 @@
 
 .bus-list .bus-list-item {
 position: relative;
-height: 120rpx;
-background-color: #fff;
+height: 80rpx;
+background-color: rgba(87, 219, 75, 0.103);
 margin: 6rpx 0;
 border: 2rpx solid #e5e5e5;
 border-width: 2rpx 0;
@@ -60,10 +70,9 @@ left: 0;
 width: 134rpx;
 height: 100rpx;
 line-height: 100rpx;
-margin: 10rpx 0;
 color: #c50535;
 text-align: center;
-font-size: 26rpx;
+font-size: 30rpx;
 font-family: Arial;
 border-right: 2rpx dashed #e5e5e5;
 }
