@@ -110,7 +110,7 @@ Page(_page.initPage({
         // 赋值
         _this.setData({
           list: res.data.data.flightList,
-          airLines: res.data.data.airLines, //airlinesAbbreviate
+          airlines: res.data.data.airLines, //airlinesAbbreviate
           airway: res.data.data.airway,//airwayNameStartairwayNameEnd
           loading: false // 关闭等待框
         })
