@@ -89,7 +89,7 @@ Page(_page.initPage({
     const _this = this;
     console.log(options.airportNameStartCode)
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEI';
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findHX2HB';
     // 请求数据
     wx.request({
       url: url,
@@ -98,22 +98,22 @@ Page(_page.initPage({
         "pageSize": 500,
         airportNameStartCode:options.airportNameStartCode,
         airportNameEndCode:options.airportNameEndCode,
-        airlinesCode:options.airlinesCode,
-        flightRequency:options.flightRequency,
+        airlinesCode:options.airlinesCode
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
     
       success: function(res) {
-        console.log(res.data.data.data);
+        console.log(res.data.data);
         wx.hideLoading()
         // 赋值
         _this.setData({
-          list: res.data.data.data,
+          list: res.data.data.flightList,
+          airLines: res.data.data.airLines, //airlinesAbbreviate
+          airway: res.data.data.airway,//airwayNameStartairwayNameEnd
           loading: false // 关闭等待框
         })
-        console.log(res.data.data.data.length)
       }
     })
 
