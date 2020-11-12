@@ -20,6 +20,7 @@
 }
 
 
+
 /*页面body*/
 .page-wrapper {
   margin: 0;
@@ -36,10 +37,11 @@
 .bus-list .bus-list-item {
 position: relative;
 height: 80rpx;
-background-color: rgba(87, 219, 75, 0.103);
+background-color: #333; 
 margin: 6rpx 0;
 border: 2rpx solid #e5e5e5;
 border-width: 2rpx 0;
+overflow: hidden;
 }
 
 .bus-list .bus-list-item::before,.bus-list .bus-list-item::after {
@@ -70,7 +72,7 @@ left: 0;
 width: 134rpx;
 height: 100rpx;
 line-height: 100rpx;
-color: #c50535;
+color: #f7f3f4;
 text-align: center;
 font-size: 30rpx;
 font-family: Arial;
@@ -105,14 +107,14 @@ margin: 10rpx 140rpx 0 144rpx;
 
 
 .bus-list .bus-list-item .start, .bus-list .bus-list-item .end {
-color: #333333;
+color: #f7f3f4;
 font-size: 26rpx;
 
 }
 
 .bus-list .bus-list-item .price {
 font-family: Arial;
-color: #0270af;
+color: #f7f3f4;
 font-size: 24rpx;
 font-weight: 600;
 }

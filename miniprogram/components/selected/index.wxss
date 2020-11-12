@@ -5,8 +5,7 @@
 }
 
 .ms-content {
-  border: 1px solid #e2e2e2;
-  background: white;
+  background-color: #00B358;
   font-size: 16px;
   position: relative;
   height: 30px;
