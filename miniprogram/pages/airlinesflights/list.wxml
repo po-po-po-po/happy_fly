@@ -19,25 +19,25 @@
 
  <view class="weui-cell">
      <view class="weui-cell__bd">
-       <single-dropdown-select prop-array='{{airportStartList}}' title='出发机场'  bind:select='select' />
+       <single-dropdown-select prop-array='{{airportStartList}}' title='出发机场'  bind:select='select1' />
     </view>
  </view>
 
    <view class="weui-cell">
      <view class="weui-cell__bd">
-       <single-dropdown-select prop-array='{{selectArray}}' title='航空公司'   bind:select='select' />
+       <single-dropdown-select prop-array='{{airlinesList}}' title='航空公司'   bind:select='select2' />
     </view>
  </view>
 
    <view class="weui-cell">
      <view class="weui-cell__bd">
-       <single-dropdown-select prop-array='{{selectArray}}' title='航班时间'   bind:select='select' />
+       <single-dropdown-select prop-array='{{times}}' title='航班时间'   bind:select='select3' />
     </view>
  </view>
 
   <view class="weui-cell">
      <view class="weui-cell__bd">
-       <single-dropdown-select prop-array='{{selectArray}}' title='到达机场'   bind:select='select' />
+       <single-dropdown-select prop-array='{{airportEndList}}' title='到达机场'   bind:select='select4' />
     </view>
  </view>
 

@@ -13,102 +13,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    selectArray: [
+    times: [
       {
-      "id": "10",
-      "value": "会计类"
+      "id": "00:00-08:00",
+      "value": "00:00-08:00"
     }, 
     {
-      "id": "21",
-      "text": "工程类"
+      "id": "08:00-12:00",
+      "text": "08:00-12:00"
     }, 
     {
-      "id": "21",
-      "text": "工程类"
+      "id": "12:00-18:00",
+      "text": "12:00-18:00"
     }, 
     {
-      "id": "21",
-      "text": "工程类"
+      "id": "18:00-20:00",
+      "text": "18:00-20:00"
     }, 
     {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
-    }, 
-    {
-      "id": "21",
-      "text": "工程类"
+      "id": "20:00-24:00",
+      "text": "20:00-24:00"
     }
   
   ],
-    listData: [],
-    calendarSelectedDate: '东航周六航班',
-    calendarSelectedDateStr: '东航周六航班',
-    flightNameStart:'上海虹桥',
-    flightNameEnd:'',
-    day:''
+    airportStartList: [],
+    airportEndList: [],
+    airlinesList: []
   },
 
-  select: function(e) {
+  select1: function(e) {
+    console.log(e.detail)
+  },
+  select2: function(e) {
+    console.log(e.detail)
+  },
+  select3: function(e) {
+    console.log(e.detail)
+  },
+  select4: function(e) {
     console.log(e.detail)
   },
   onLoad: function (options) {
