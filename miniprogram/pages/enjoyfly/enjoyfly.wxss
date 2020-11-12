@@ -116,7 +116,7 @@
 .follow1_3 {
   flex-shrink: 0;
   flex-direction: row;
-  width:80rpx;
+  width:100rpx;
   height: 40rpx;
   margin-top: 10rpx;
   font-size: 24rpx;
