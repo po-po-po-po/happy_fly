@@ -50,6 +50,39 @@ Component({
         title: nowText,
       })
       this.triggerEvent('select', nowData[nowIdx])
+    },
+    setAirportEnd: function (e) {
+      var nowData = this.properties.airportEndList;//当前option的数据是引入组件的页面传过来的，所以这里获取数据只有通过this.properties
+      var nowIdx = e.target.dataset.index;//当前点击的索引
+      var nowText = nowData[nowIdx].airportAbbreviate || nowData[nowIdx].airportCode || nowData[nowIdx];//当前点击的内容
+      //再次执行动画，注意这里一定，一定，一定是this.animation来使用动画
+      this.setData({
+        selectShow: false,
+        title: nowText,
+      })
+      this.triggerEvent('select', nowData[nowIdx])
+    },
+    setAirportStart: function (e) {
+      var nowData = this.properties.airportStartList;//当前option的数据是引入组件的页面传过来的，所以这里获取数据只有通过this.properties
+      var nowIdx = e.target.dataset.index;//当前点击的索引
+      var nowText = nowData[nowIdx].airportAbbreviate || nowData[nowIdx].airportCode || nowData[nowIdx];//当前点击的内容
+      //再次执行动画，注意这里一定，一定，一定是this.animation来使用动画
+      this.setData({
+        selectShow: false,
+        title: nowText,
+      })
+      this.triggerEvent('select', nowData[nowIdx])
+    },
+    setAirlines: function (e) {
+      var nowData = this.properties.airlinesList;//当前option的数据是引入组件的页面传过来的，所以这里获取数据只有通过this.properties
+      var nowIdx = e.target.dataset.index;//当前点击的索引
+      var nowText = nowData[nowIdx].airlinesAbbreviate || nowData[nowIdx].airlinesCode || nowData[nowIdx];//当前点击的内容
+      //再次执行动画，注意这里一定，一定，一定是this.animation来使用动画
+      this.setData({
+        selectShow: false,
+        title: nowText,
+      })
+      this.triggerEvent('select', nowData[nowIdx])
     }
   }
 })
