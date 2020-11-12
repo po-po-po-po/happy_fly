@@ -76,19 +76,10 @@
                 
     <block wx:if="{{item.id == 2}}">
                   <view class='c9'>
-              <navigator url="../flycq/flycq?airportCode=SJW" class="mod-item">
-                  <view class="follow1_2 {{item.follow1_2 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-                  东航早8点
-                  </view>
-                      </navigator>
-                                <navigator url="../flycq/flycq?airportCode=ZQZ" class="mod-item">
-                  <view class="follow1_2 {{item.follow1_2 ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-                东航晚8点
-                  </view>
-                      </navigator>
+                           
                    <navigator url="../flycq/flycq?airportCode=HDG" class="mod-item">
                   <view class="follow1_3 {{item.follow ? 'follow4' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
-                全部
+                全国
                   </view>
                       </navigator> 
                                    
