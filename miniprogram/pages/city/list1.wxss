@@ -57,7 +57,7 @@ border-right: 2rpx dashed #e5e5e5;
 }
 
 .bus-list .bus-list-item .tobooking {
-background-color: #00B358;
+background-color: rgb(129, 129, 129); 
 position: absolute;
 right: 0;
 width: 120rpx;
