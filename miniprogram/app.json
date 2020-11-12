@@ -29,7 +29,8 @@
     "pages/fly67/list",
     "pages/fly67/list4",
     "pages/city/list",
-    "pages/airlines/index1"
+    "pages/airlines/index1",
+    "pages/my/index"
   ],
   "permission": {
     "scope.userLocation": {
@@ -53,8 +54,8 @@
         "text": "随心飞"
       },
       {
-        "pagePath": "pages/airlines/index1",
-        "text": "航空公司"
+        "pagePath": "pages/my/index",
+        "text": "我的"
       }
     ]
   }
