@@ -1,0 +1,94 @@
+<view class="page-wrapper ">
+  <view class="calendar-bar-wrapper js_calendar_wrapper">
+    <view class="bus-tabs calendar-bar">
+    <!--
+      <view class="tabs-item js_pre_day" ontap="preDay" >前一天</view>
+      -->
+        <view class="tabs-item js_pre_day" ontap='bindInput' id="1" >周一</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="2">周二</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="3">周三</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="4">周四</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="5">周五</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="6">周六</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="7">周日</view>
+    </view>
+  </view>
+  <view class="bus-list js_bus_list ">
+
+         <block wx:for="{{list}}" wx:key="k">
+
+
+      <view class="bus-list-item  ">
+        <view class="bus-time">
+        
+         <navigator url="../city/list2?airlinesCode={{item.airlinesCode}}&airportNameStartCode={{item.airportNameEndCode}}&airportNameEndCode={{item.airportNameStartCode}}&flightRequency={{item.flightRequency}}" class="mod-item">
+        {{item.flightNo}}
+         </navigator>
+        
+        </view>
+        
+        <view class="tobooking">
+        {{item.flightRequency}} 
+        </view>
+        <view class="detail">
+          <view class="detail1">
+            <view class="start">
+              <text class="icon-circle s-icon1"></text>{{item.flightNameStart}}</view>
+            <view class="end">
+              <text class="icon-circle s-icon2"></text>{{item.flightNameEnd}}</view>
+          </view>
+
+          <view class="tags">
+            <view>
+              <text class="price">{{util1.sub(item.flightDate)}}</text>
+            </view>
+            <view>
+              <text class="price">{{util2.sub(item.flightDate)}}</text>
+            </view>
+            <view>
+            <!--
+              <text class="b-tags js_tags"></text>-->
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+ 
+
+  </view>
+
+  <include src="../mod/calendar.wxml" />
+  <include src="../../utils/abstract-page.wxml" />
+
+</view>
+
+
+{{dateUtil.test()}}
+
+<wxs module="dateUtil">
+  console.log(111)
+  module.exports = {
+        test: function (zzz) {
+              console.log('test', zzz)
+        }
+  }
+</wxs>
+
+<!--截取字符串工具类-->
+<wxs module="util1">
+    var sub = function(val) {
+        return val.substring(0, 5)
+    }
+    module.exports.sub = sub;
+</wxs>
+
+<wxs module="util2">
+    var sub = function(val) {
+        return val.substring(6)
+    }
+    module.exports.sub = sub;
+</wxs>
+
+
+

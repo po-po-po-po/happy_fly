@@ -67,7 +67,9 @@
        {{bindex+1}}
         </view>
         <view class="tobooking">
+        <navigator url="../airlinesflights/list1">
         {{item.flightNumber}}班/周
+        </navigator>
         </view>
         <view class="detail">
           <view class="detail1">
