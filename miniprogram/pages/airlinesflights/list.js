@@ -42,7 +42,8 @@ Page({
     airportNameStartCode:"",
     airportNameEndCode:"",
     flightDate:"",
-    airlinesCode:""
+    airlinesCode:"",
+    flightCondition :[]
   },
 
   select1: function(e) {
@@ -98,6 +99,7 @@ Page({
           airwayList: res.data.data.airwayList,
           airportStartList: res.data.data.airportStartList,
           airportEndList: res.data.data.airportEndList,
+          flightCondition: res.data.data.flightCondition,
           loading: false // 关闭等待框
         })
       }
@@ -134,6 +136,7 @@ Page({
           airwayList: res.data.data.airwayList,
           airportStartList: res.data.data.airportStartList,
           airportEndList: res.data.data.airportEndList,
+          flightCondition: res.data.data.flightCondition,
           loading: false // 关闭等待框
         })
       }

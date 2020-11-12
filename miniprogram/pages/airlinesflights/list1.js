@@ -21,6 +21,8 @@ Page(_page.initPage({
     airportNameEndCode:'',
     airlinesCode:'',
     airlinesName:'',
+    flightDateStart:'',
+    flightDateStart:''
   },
   // methods: uiUtil.getPageMethods(),
   methods: {
@@ -87,7 +89,7 @@ Page(_page.initPage({
   onLoad: function (options) {
     wx.showLoading({ title: '搜索中...' })
     const _this = this;
-    console.log(options.airportNameStartCode)
+    console.log(options.flightDateStart)
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findHX2HB';
     // 请求数据
@@ -98,7 +100,9 @@ Page(_page.initPage({
         "pageSize": 500,
         airportNameStartCode:options.airportNameStartCode,
         airportNameEndCode:options.airportNameEndCode,
-        airlinesCode:options.airlinesCode
+        airlinesCode:options.airlinesCode,
+        flightDateEnd:options.flightDateEnd,
+        flightDateStart:options.flightDateStart
       },
       header: {
         'content-type': 'application/json' // 默认值
