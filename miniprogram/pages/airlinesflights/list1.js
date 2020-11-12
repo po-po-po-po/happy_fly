@@ -16,7 +16,11 @@ Page(_page.initPage({
     calendarSelectedDateStr: '东航周六航班',
     flightNameStart:'上海虹桥',
     flightNameEnd:'',
-    day:''
+    day:'',
+    airportNameStartCode:'',
+    airportNameEndCode:'',
+    airlinesCode:'',
+    airlinesName:'',
   },
   // methods: uiUtil.getPageMethods(),
   methods: {
@@ -83,20 +87,7 @@ Page(_page.initPage({
   onLoad: function (options) {
     wx.showLoading({ title: '搜索中...' })
     const _this = this;
-    console.log("1111")
-        //调用应用实例的方法获取全局数据
-        app.getSearchParams(function(params){    
-          //更新数据
-          _this.setData({
-            dcity:params.dcity,
-            flightNameStart: params.dcityName,
-            acity:params.acity,
-            flightNameEnd: params.acityName,
-            airlinesCode: params.airlineCode,
-            flightRequency: params.weekCode
-          })
-        })
-        var day=App.globalData.searchParams.day;
+    console.log(options.airportNameStartCode)
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEI';
     // 请求数据
@@ -105,10 +96,10 @@ Page(_page.initPage({
       method: 'post',
       data: {
         "pageSize": 500,
-        airportNameStartCode:this.data.dcity,
-        airportNameEndCode:this.data.acity,
-        airlinesCode:this.data.airlinesCode,
-        flightRequency:day
+        airportNameStartCode:options.airportNameStartCode,
+        airportNameEndCode:options.airportNameEndCode,
+        airlinesCode:options.airlinesCode,
+        flightRequency:options.flightRequency,
       },
       header: {
         'content-type': 'application/json' // 默认值

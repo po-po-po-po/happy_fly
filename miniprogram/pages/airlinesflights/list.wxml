@@ -67,7 +67,7 @@
        {{bindex+1}}
         </view>
         <view class="tobooking">
-        <navigator url="../airlinesflights/list1">
+        <navigator url="../airlinesflights/list1?airportNameStartCode={{item.airportNameStartCode}}&airportNameEndCode={{item.airportNameEndCode}}&airlinesCode={{airlines.airlinesCode}}">
         {{item.flightNumber}}班/周
         </navigator>
         </view>
