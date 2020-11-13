@@ -87,6 +87,10 @@ Page(_page.initPage({
     });
   },
   onLoad: function (options) {
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    });
     wx.showLoading({ title: '搜索中...' })
     const _this = this;
     // 拼接请求url

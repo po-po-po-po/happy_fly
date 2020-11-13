@@ -90,6 +90,10 @@ Page(_page.initPage({
     });
   },
   onLoad: function (options) {
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    });
     console.log(options.airportNameEndCode)
     wx.showLoading({ title: '搜索中...' })
   

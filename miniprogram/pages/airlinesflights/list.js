@@ -76,6 +76,10 @@ Page({
     self.getDataList(e);
   },
   onLoad: function (options) {
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    });
     wx.showLoading({ title: '搜索中...' })
     const _this = this;
     // 请求url

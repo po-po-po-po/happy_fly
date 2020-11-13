@@ -101,6 +101,10 @@ Page({
     })
   },
   onLoad:function(options){
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    });
     // 页面初始化 options为页面跳转所带来的参数
     console.log('onLoad')
     this.getSearchParams()

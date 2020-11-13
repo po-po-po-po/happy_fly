@@ -89,6 +89,10 @@ Page({
   },
   onLoad:function(options){    
    // App.setDdate(utils.tomorrow())
+   wx.showShareMenu({
+    withShareTicket: true,
+    menus: ['shareAppMessage', 'shareTimeline']
+  });
   },
   onReady:function(){
     // 页面渲染完成

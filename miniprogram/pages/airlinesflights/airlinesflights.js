@@ -26,6 +26,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) { // options 为 board页传来的参数
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    });
     const _this = this;
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines' ;
