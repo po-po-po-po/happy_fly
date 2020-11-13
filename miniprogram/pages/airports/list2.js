@@ -16,17 +16,20 @@ Page(_page.initPage({
     calendarSelectedDateStr: '东航周六航班',
     flightNameStart:'上海虹桥',
     flightNameEnd:'',
-    day:'',
-    airportNameStartCode:'',
-    airportNameEndCode:'',
-    airlinesCode:'',
-    airlinesName:'',
-    flightDateStart:'',
-    flightDateStart:''
+    day:''
   },
   // methods: uiUtil.getPageMethods(),
   methods: {
   },
+
+  preDay: function () {
+    this.setData({
+      calendarSelectedDate: '周六',
+      calendarSelectedDateStr: '东航周六航班'
+    })
+  
+  },
+
   nextDay: function () {
    // let date = util.dateUtil.nextDay(this.data.calendarSelectedDate);
     this.setData({
@@ -87,7 +90,9 @@ Page(_page.initPage({
     });
   },
   onLoad: function (options) {
+    console.log(options.airportNameEndCode)
     wx.showLoading({ title: '搜索中...' })
+  
     const _this = this;
     // 拼接请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findAIRPORTSHB';
@@ -97,7 +102,7 @@ Page(_page.initPage({
       method: 'post',
       data: {
         "pageSize": 500,
-        airportNameStartCode:options.airportNameStartCode,
+        airportNameEndCode:options.airportNameEndCode,
         flightRequency:7
       },
       header: {
@@ -111,7 +116,6 @@ Page(_page.initPage({
         _this.setData({
           list: res.data.data.flightDetailList,
           airport: res.data.data.airport, //airlinesAbbreviate
-          airportNameStartCode: res.data.data.airport.airportCode,
           airway: res.data.data.airway,//airwayNameStartairwayNameEnd
           loading: false // 关闭等待框
         })
@@ -127,41 +131,7 @@ Page(_page.initPage({
 
     global.sss = this;
     let scope = this;
-  },
-  
-  bindInput(e) { 
-    let that = this;
-    let day =e.currentTarget.id; //获取表单所有name=id的值 
-    wx.showLoading({ title: '搜索中...' })
-        // 拼接请求url
-        const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findAIRPORTSHB';
-        // 请求数据
-        wx.request({
-          url: url,
-          method: 'post',
-          data: {
-            "pageSize": 500,
-            airportNameStartCode:this.data.airportNameStartCode,
-            flightRequency:day
-          },
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          success: function(res) {
-            wx.hideLoading()
-            // 赋值
-            that.setData({
-              list: res.data.data.flightDetailList,
-              airport: res.data.data.airport, //airlinesAbbreviate
-              airportNameStartCode: res.data.data.airport.airportCode,
-              airway: res.data.data.airway,//airwayNameStartairwayNameEnd
-              loading: false // 关闭等待框
-            })
-          }
-        })
-
-
-   }
+  }
   
 }, {
   modCalendar: modCalendar
