@@ -76,6 +76,7 @@ Page({
     self.getDataList(e);
   },
   onLoad: function (options) {
+    wx.showLoading({ title: '搜索中...' })
     const _this = this;
     // 请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEIHX';
@@ -92,6 +93,7 @@ Page({
 
       success: function(res) {
         console.log(res.data.data);
+        wx.hideLoading()
         // 赋值
         _this.setData({
           airlines: res.data.data.airlines,
@@ -108,6 +110,7 @@ Page({
   },
   //调用数据接口，获取数据
   getDataList:function(e){
+    wx.showLoading({ title: '搜索中...' })
     const _this = this;
     // 请求url
     const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEIHX';
@@ -129,6 +132,7 @@ Page({
 
       success: function(res) {
         console.log(res.data.data);
+        wx.hideLoading()
         // 赋值
         _this.setData({
           airlines: res.data.data.airlines,
