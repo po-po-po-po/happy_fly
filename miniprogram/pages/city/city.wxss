@@ -1,2 +1,14 @@
 /* pages/flight/index.wxss */
 @import '../../style/weui.wxss';
+
+button:not([size='mini']){
+  min-height: 40rpx;
+  max-height: 100rpx;
+  width:100px;
+  color: rgb(243, 245, 245);
+  font-size: 32rpx;
+}
+.button-hover[type='primary']{
+  color:#fff;
+  background-color: #06ad56;
+}
