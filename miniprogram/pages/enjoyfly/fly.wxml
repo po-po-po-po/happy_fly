@@ -21,7 +21,9 @@
                     <view class="grid-label">
                      <image class='poster' src='{{item.flyIcon}}'></image>
                     </view>
-                         <text class="grid-label2">{{item.flyName}}</text>
+                       <view class="follow1_1 {{item.isFollow ? 'follows' : ''}}" data-id="{{item._id}}" bindtap="handleFollow">
+                       {{item.flyName}}
+                      </view>
                     </navigator>
                 </view>
             </view>

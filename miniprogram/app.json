@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/enjoyfly/enjoyfly",
+    "pages/enjoyfly/fly",
     "pages/airports/airports",
     "pages/index/index",
     "pages/city/city",
@@ -31,7 +31,7 @@
     "pages/city/list",
     "pages/airlines/index1",
     "pages/my/index",
-    "pages/enjoyfly/fly"
+    "pages/enjoyfly/enjoyfly"
   ],
   "permission": {
     "scope.userLocation": {
@@ -51,16 +51,12 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/enjoyfly/enjoyfly",
+        "pagePath": "pages/enjoyfly/fly",
         "text": "随心飞"
       },
       {
         "pagePath": "pages/my/index",
         "text": "我的"
-      },
-      {
-        "pagePath": "pages/enjoyfly/fly",
-        "text": "航班"
       }
     ]
   }
