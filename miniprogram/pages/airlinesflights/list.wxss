@@ -88,7 +88,7 @@ height: 120rpx;
 line-height: 100rpx;
 text-align: center;
 color: #fff;
-font-size: 30rpx;
+font-size: 20rpx;
 }
 
 .bus-list .bus-list-item.disabled .tobooking {
