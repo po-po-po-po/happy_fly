@@ -230,7 +230,7 @@
   width: 100%;
   height:250rpx;
   box-sizing: border-box;
-  background-color: rgb(62, 64, 66);
+  background-color:	#DCDCDC;
   margin-top: 20rpx;
 }
 .grid-label2{
