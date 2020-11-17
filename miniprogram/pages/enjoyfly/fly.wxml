@@ -1,0 +1,18 @@
+<scroll-view scroll-y="true" >
+
+<!-- grid   画个重点-->
+  <view class="grids">
+        <view class="grid" wx:for="{{airwayList}}" wx:key="index" wx:for-index="bindex">
+            <view>
+                <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
+                        <navigator url=''>
+                    <text class="grid-label">{{item.airportNameStart}}--{{item.airportNameEnd}}</text>
+                         <text class="grid-label2">{{item.flightNumber}}班</text>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+</scroll-view>
