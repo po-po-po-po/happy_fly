@@ -1,13 +1,27 @@
 <scroll-view scroll-y="true" >
+<view class="index-img">
+ <image src="http://www.potucs.com:9998/wechat/index.jpg"></image> 
+</view>
+
+
+<view class="container">
+  <view class="flyinfo">
+    随心飞
+  </view>
+  </view>
+
+
 
 <!-- grid   画个重点-->
   <view class="grids">
-        <view class="grid" wx:for="{{airwayList}}" wx:key="index" wx:for-index="bindex">
+        <view class="grid" wx:for="{{list}}" wx:key="index" wx:for-index="bindex">
             <view>
                 <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
-                        <navigator url=''>
-                    <text class="grid-label">{{item.airportNameStart}}--{{item.airportNameEnd}}</text>
-                         <text class="grid-label2">{{item.flightNumber}}班</text>
+                   <navigator url='{{item.url}}' class="mod-item">
+                    <view class="grid-label">
+                     <image class='poster' src='{{item.flyIcon}}'></image>
+                    </view>
+                         <text class="grid-label2">{{item.flyName}}</text>
                     </navigator>
                 </view>
             </view>

@@ -22,28 +22,26 @@ Page({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     });
+    wx.showLoading({ title: '搜索中...' })
     const _this = this;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines' ;
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/fly/flyList' ;
     // 请求数据
     wx.request({
       url: url,
       method: 'post',
       data: {
-        airlinesCode:'MU'
+      
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
+        wx.hideLoading()
         // 赋值
         _this.setData({
-          flightList: res.data.data.flightList,
-          airportStartList: res.data.data.airportStartList,
-          airportEndList: res.data.data.airportEndList,
-          airlines:res.data.data.airlines,
-          airwayList: res.data.data.airwayList,
-          airlinesCode:res.data.data.airlines.airlinesCode,
+          title: '随心飞',
+          list: res.data.data,
           loading: false // 关闭等待框
         })
       }
