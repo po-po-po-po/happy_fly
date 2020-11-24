@@ -40,13 +40,16 @@
         </navigator>
         </view>
         <view class="detail">
+            <navigator url="../airports/list1?airportNameStartCode={{item.airportCode}}&airportNameEndCode={{item.airportCode}}">
           <view class="detail1">
+         
             <view class="start">
               <text class="icon-circle s-icon1"></text>{{item.airportName}}</view>
+                  
             <view class="end">
               <text class="icon-circle s-icon2"></text></view>
           </view>
-
+</navigator>
          
         </view>
       </view>
