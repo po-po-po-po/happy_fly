@@ -26,6 +26,7 @@
 .item .poster {
   width: 60rpx;
   height: 64rpx;
+  padding-top: 20rpx;
   margin-right: 20rpx;
 }
 .item .meta {
