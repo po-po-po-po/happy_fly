@@ -145,9 +145,32 @@ Page({
         })
       }
     })
-
-         
-
-        }
+        },
+  bindInput(e) { 
+          let that = this;
+          let inputValue =e.detail.value; //获取表单所有name=id的值 
+          wx.showLoading({ title: '正在搜索' })
+          console.log(inputValue)
+          wx.request({
+           url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airport/findAllAirport',
+           method: 'post',
+           data: {
+            "pageSize": 250  ,
+            "search": inputValue            //搜索内容     
+          },
+          dataType: 'json',
+           header: { 'Content-Type': 'application/json' },
+           success: function (res) {
+            wx.hideLoading()
+            console.log(res.data.data.data);
+            // 赋值
+            that.setData({
+              list: res.data.data.data,
+              count: res.data.data.airlines,
+              loading: false // 关闭等待框
+            })
+           }
+          })
+         }
 
 })
