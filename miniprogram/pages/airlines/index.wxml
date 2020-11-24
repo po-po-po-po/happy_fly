@@ -1,3 +1,4 @@
+  <view class="title">内地航司</view>
 <view class="schoollist">
 
   <block wx:for="{{airlines}}" wx:key="item">
@@ -12,7 +13,7 @@
           <image class="school-list-photo" src="{{item.airlinesImg}}"/>
 
           <text class="school-list-desc">
-            {{item.airlinesName}}
+            {{item.airlinesAbbreviate}}
           </text>
 
         </view>
