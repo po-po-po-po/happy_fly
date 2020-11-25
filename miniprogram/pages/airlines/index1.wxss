@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 .item {
-  width: 600rpx;
+  width: 720rpx;
   display: flex;
   padding: 20rpx 40rpx;
   border-bottom: 1rpx solid rgb(24, 23, 23);
