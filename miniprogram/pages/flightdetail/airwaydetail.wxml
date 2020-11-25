@@ -21,7 +21,7 @@
               <view class="flightDate">{{item.flightDate}}</view>
              <view class="flightDate">{{item.flightNameStart}}--{{item.flightNameEnd}} 
              <block wx:if="{{item.flightRequency !== ''}}">
-           (<font style="color:red">{{item.flightRequency}}</font>)
+           (<font style="color:white">{{item.flightRequency}}</font>)
              </block>
              
               </view>

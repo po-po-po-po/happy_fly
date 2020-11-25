@@ -120,13 +120,13 @@
   text-align: center;
 }
 .tabLayer text{
-  width:77rpx;
-  height:30rpx;
-  line-height:30rpx;
+  width:110rpx;
+  height:26rpx;
+  line-height:26rpx;
   float:left;
   border: solid 1px rgb(235, 9, 9);
   margin:10rpx 0 0 10rpx;
-  font-size:8px;
+  font-size:11px;
 }
 .tabLayer .active{
   color:#e64340;
