@@ -38,7 +38,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-       // console.log(options.flightRequency);
+        console.log(res.data.data.flightList);
         // 赋值
         _this.setData({
           airlinesCode:'',

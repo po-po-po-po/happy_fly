@@ -10,9 +10,13 @@
 <view class="row" wx:for="{{list}}" wx:key="id" bindtap="rowTapped" data-id="{{item.name}}">
     <!-- 左侧 -->
      <view class="top">
+     
          <view>
+        
      <image  class="plane" src="{{item.airlinesIcon}}" background-size="cover"></image>
+      
        </view>
+      
     </view>
         <view class="content">
         <view class="top">
