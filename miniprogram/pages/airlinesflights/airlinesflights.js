@@ -44,6 +44,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
+        console.log(res.data.data.airwayList)
         // 赋值
         _this.setData({
           flightList: res.data.data.flightList,
