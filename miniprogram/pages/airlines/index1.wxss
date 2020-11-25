@@ -19,9 +19,10 @@
   width: 600rpx;
   display: flex;
   padding: 20rpx 40rpx;
-  border-bottom: 1rpx solid rgb(10, 10, 10);
+  border-bottom: 1rpx solid rgb(24, 23, 23);
   cursor: pointer;
   flex-direction: row ;
+  background-color: rgb(44, 43, 43);
 }
 .item .poster {
   width: 60rpx;
@@ -39,6 +40,7 @@
 }
 .item .meta .title {
   font-size: 28rpx;
+  color: rgb(250, 245, 245);
 }
 .item .meta .sub-title {
   font-size: 22rpx;
@@ -51,7 +53,7 @@
 .item .rating {
   font-size: 22rpx;
   font-weight:bold;
-  color: rgba(27, 34, 30, 0.979);
+  color: rgb(173, 169, 169);
 }
 .rating1 {
   float: left;
@@ -122,4 +124,8 @@
 
 .follows {
   background-color: #eee;
+}
+
+.navigator-hover{
+  background-color: #efefef;
 }
