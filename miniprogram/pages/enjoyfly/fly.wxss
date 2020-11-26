@@ -228,10 +228,9 @@
   float: left;
   padding: 0px 0px;
   width: 100%;
-  height:250rpx;
+  height:270rpx;
   box-sizing: border-box;
-  background-color:	#DCDCDC;
-  margin-top: 20rpx;
+  background-color:	#383636;
 }
 .grid-label2{
 display: flex;
