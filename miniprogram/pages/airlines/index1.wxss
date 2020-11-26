@@ -22,7 +22,7 @@
   border-bottom: 1rpx solid rgb(24, 23, 23);
   cursor: pointer;
   flex-direction: row ;
-  background-color: rgb(44, 43, 43);
+  background-color: rgb(206, 200, 200);
 }
 .item .poster {
   width: 60rpx;
@@ -40,20 +40,20 @@
 }
 .item .meta .title {
   font-size: 28rpx;
-  color: rgb(250, 245, 245);
+  color: rgb(7, 7, 7);
 }
 .item .meta .sub-title {
   font-size: 22rpx;
-  color: #c0c0c0;
+  color: rgb(9, 218, 138);
 }
 .item .meta .artists {
   font-size: 26rpx;
-  color: #999;
+  color: rgb(9, 218, 138);
 }
 .item .rating {
   font-size: 22rpx;
   font-weight:bold;
-  color: rgb(173, 169, 169);
+  color: rgb(117, 115, 115);
 }
 .rating1 {
   float: left;
