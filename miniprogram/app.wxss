@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  background-color: #0fdf3c;
+  background-color:  #02e5f5;  
 } 
 
 button {
