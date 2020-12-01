@@ -6,7 +6,7 @@
 }
 .page-title {
   padding: 20rpx 40rpx;
-  color: #999;
+  color: #fa0f0f;
   font-size: 38rpx;
   text-align: center;
 }
@@ -39,7 +39,7 @@
   margin-bottom: 15rpx;
 }
 .item .meta .title {
-  font-size: 28rpx;
+  font-size: 32rpx;
   color: rgb(7, 7, 7);
 }
 .item .meta .sub-title {
