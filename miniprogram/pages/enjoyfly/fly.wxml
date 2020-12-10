@@ -21,7 +21,13 @@
   </view>
   </view>
 
-
+  <view class="container">
+  <view class="flyinfo2">
+    <navigator url='../flyzw/airportslist?airline_id=MU' class="mod-item">
+    早晚随心飞
+  </navigator>
+  </view>
+  </view>
 
 
 <!-- grid   画个重点
