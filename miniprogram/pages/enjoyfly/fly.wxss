@@ -272,25 +272,36 @@ color: rgb(187, 184, 184);
       display: flex;  
       flex-direction: column;  
       align-items: center;  
-      background: #bee707;   
+      background: #0589e0;   
       padding-top: 50rpx;
       font-size: 20px;
       width: 100%; 
       height: 100rpx;
     }
-
 
     .flyinfo1 {  
       display: flex;  
       flex-direction: column;  
       align-items: center;  
-      background: #62e909;   
+      background: #05ce60;   
       padding-top: 50rpx;
       font-size: 20px;
       width: 100%; 
       height: 100rpx;
     }
 
+
+
+    .flyinfo2 {  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      background: #05d18d;   
+      padding-top: 50rpx;
+      font-size: 20px;
+      width: 100%; 
+      height: 100rpx;
+    }
     .follow1_1 {
       display: flex;
       justify-content: center;

@@ -7,12 +7,29 @@
 <view class="container">
   <view class="flyinfo">
     <navigator url='../airlines/index1' class="mod-item">
-    随心飞
+    随心飞(所有)
   </navigator>
   </view>
   </view>
 
 
+  <view class="container">
+  <view class="flyinfo1">
+    <navigator url='../fly67/airportslist?airline_id=mu' class="mod-item">
+    周末随心飞
+  </navigator>
+  </view>
+  </view>
+
+
+
+  <view class="container">
+  <view class="flyinfo2">
+    <navigator url='../airlines/index1' class="mod-item">
+    早晚随心飞
+  </navigator>
+  </view>
+  </view>
 
 <!-- grid   画个重点
   <view class="grids">
