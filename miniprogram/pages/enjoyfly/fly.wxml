@@ -23,13 +23,6 @@
 
 
 
-  <view class="container">
-  <view class="flyinfo2">
-    <navigator url='../airlines/index1' class="mod-item">
-    早晚随心飞
-  </navigator>
-  </view>
-  </view>
 
 <!-- grid   画个重点
   <view class="grids">
