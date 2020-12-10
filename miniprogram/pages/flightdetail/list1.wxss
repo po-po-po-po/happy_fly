@@ -13,7 +13,7 @@
 
 .bus-list .bus-list-item {
 position: relative;
-height: 120rpx;
+height: 80rpx;
 background-color: rgb(247, 241, 241); 
 margin: 6rpx 0;
 border: 2rpx solid #fa0202;
@@ -43,12 +43,12 @@ bottom: -2rpx;
 }
 
 .bus-list .bus-list-item .bus-time {
-  background-color: rgb(11, 143, 103); 
+background-color: rgb(11, 143, 103); 
 position: absolute;
 left: 0;
 width: 134rpx;
-height: 120rpx;
-line-height: 120rpx;
+height: 80rpx;
+line-height: 80rpx;
 color: #131212;
 text-align: center;
 font-size: 26rpx;
@@ -61,8 +61,8 @@ background-color: rgb(11, 143, 103);
 position: absolute;
 right: 0;
 width: 120rpx;
-height: 120rpx;
-line-height: 100rpx;
+height: 80rpx;
+line-height: 80rpx;
 text-align: center;
 color: #fff;
 font-size: 30rpx;
@@ -74,8 +74,7 @@ background-color: #c5c5c5;
 
 .bus-list .bus-list-item .detail {
 height: 80rpx;
-padding: 20rpx 0;
-margin: 10rpx 140rpx 0 144rpx;
+margin: 2rpx 140rpx 0 144rpx;
 }
 
 .bus-list .bus-list-item .detail  .sub-list{
@@ -129,7 +128,7 @@ border-color: #f06463;
   position: absolute;
   right: 0;
   margin-right: 138rpx;
-  margin-top: 24rpx;
+  margin-top: 2rpx;
   top: 0;
 }
 
