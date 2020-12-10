@@ -32,7 +32,7 @@ Page({
     });
     const _this = this;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines' ;
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlights67' ;
     // 请求数据
     wx.request({
       url: url,
@@ -105,7 +105,7 @@ Page({
       //console.log("sortId::::"+that.data.sort_id);
       //console.log("flightDate::::"+that.data.flight_date_start);
       wx.request({
-       url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines',
+       url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlights67',
        method: 'post',
        data: {
         flightNameStart:that.data.flightNameStart,
