@@ -92,12 +92,12 @@ Page(_page.initPage({
         app.getSearchParams(function(params){    
           //更新数据
           _this.setData({
-            dcity:params.dcity,
+            dcity:options.flightNameStart,
             flightNameStart: params.dcityName,
-            acity:params.acity,
+            acity:options.flightNameEnd,
             flightNameEnd: params.acityName,
-            airlinesCode: params.airlineCode,
-            flightRequency: params.weekCode
+            airlinesCode: options.airlinesCode,
+            flightRequency: options.flightRequency
           })
         })
         var day=App.globalData.searchParams.day;

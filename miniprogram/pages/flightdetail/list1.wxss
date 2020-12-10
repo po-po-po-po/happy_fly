@@ -14,10 +14,10 @@
 .bus-list .bus-list-item {
 position: relative;
 height: 120rpx;
-background-color: #333; 
+background-color: rgb(247, 241, 241); 
 margin: 6rpx 0;
-border: 2rpx solid #e5e5e5;
-border-width: 2rpx 0;
+border: 2rpx solid #fa0202;
+border-width: 1rpx 0;
 }
 
 .bus-list .bus-list-item::before,.bus-list .bus-list-item::after {
@@ -43,13 +43,13 @@ bottom: -2rpx;
 }
 
 .bus-list .bus-list-item .bus-time {
+  background-color: rgb(11, 143, 103); 
 position: absolute;
 left: 0;
 width: 134rpx;
-height: 100rpx;
-line-height: 100rpx;
-margin: 10rpx 0;
-color: #f7f3f4;
+height: 120rpx;
+line-height: 120rpx;
+color: #131212;
 text-align: center;
 font-size: 26rpx;
 font-family: Arial;
@@ -84,14 +84,14 @@ margin: 10rpx 140rpx 0 144rpx;
 
 
 .bus-list .bus-list-item .start, .bus-list .bus-list-item .end {
-color: #f7f3f4;
+color: #0c0c0c;
 font-size: 26rpx;
 
 }
 
 .bus-list .bus-list-item .price {
 font-family: Arial;
-color: #f7f3f4;
+color: #161516;
 font-size: 24rpx;
 font-weight: 600;
 }
