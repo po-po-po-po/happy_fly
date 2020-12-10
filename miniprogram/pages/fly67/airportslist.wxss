@@ -1,27 +1,4 @@
-@import "/wxParse/wxParse.wxss";
-.selected {
-  display: flex;
-  flex-direction: row;
-}
 
-.weui-cell {
-  flex: 1; /*分布按1*/
-  color: #0d0d0e;
-}
-
-.detail1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;/*分布按1*/
-}
-
-.start{
-  margin-right: auto;
-}
-
-
-
-/*页面body*/
 .page-wrapper {
   margin: 0;
   font-size: 28rpx;
@@ -37,11 +14,10 @@
 .bus-list .bus-list-item {
 position: relative;
 height: 80rpx;
-background-color: #333; 
+background-color: rgb(247, 241, 241); 
 margin: 6rpx 0;
-border: 2rpx solid #e5e5e5;
-border-width: 2rpx 0;
-overflow: hidden;
+border: 2rpx solid #fa0202;
+border-width: 1rpx 0;
 }
 
 .bus-list .bus-list-item::before,.bus-list .bus-list-item::after {
@@ -67,45 +43,38 @@ bottom: -2rpx;
 }
 
 .bus-list .bus-list-item .bus-time {
+background-color: rgb(11, 143, 103); 
 position: absolute;
 left: 0;
 width: 134rpx;
-height: 100rpx;
-line-height: 100rpx;
-color: #f7f3f4;
+height: 80rpx;
+line-height: 80rpx;
+color: #131212;
 text-align: center;
-font-size: 30rpx;
+font-size: 26rpx;
 font-family: Arial;
 border-right: 2rpx dashed #e5e5e5;
 }
 
 .bus-list .bus-list-item .tobooking {
-background-color: rgb(85, 84, 84); 
+background-color: rgb(11, 143, 103); 
 position: absolute;
 right: 0;
-width: 200rpx;
+width: 120rpx;
+height: 80rpx;
 line-height: 80rpx;
 text-align: center;
-color: #fff;
-font-size: 24rpx;
-
+color: rgb(19, 18, 18);
+font-size: 26rpx;
 }
-.bus-list .bus-list-item .tobooking .flights1{
-  color: rgb(9, 230, 156);
-  font-size: 20rpx;
-}
-
 
 .bus-list .bus-list-item.disabled .tobooking {
 background-color: #c5c5c5;
-display: flex;
-flex-direction: row;
 }
 
 .bus-list .bus-list-item .detail {
 height: 80rpx;
-padding: 20rpx 0;
-margin: 10rpx 140rpx 0 144rpx;
+margin: 2rpx 140rpx 0 144rpx;
 }
 
 .bus-list .bus-list-item .detail  .sub-list{
@@ -114,14 +83,14 @@ margin: 10rpx 140rpx 0 144rpx;
 
 
 .bus-list .bus-list-item .start, .bus-list .bus-list-item .end {
-color: #f7f3f4;
+color: #0c0c0c;
 font-size: 26rpx;
 
 }
 
 .bus-list .bus-list-item .price {
 font-family: Arial;
-color: #f7f3f4;
+color: #161516;
 font-size: 24rpx;
 font-weight: 600;
 }
@@ -159,7 +128,7 @@ border-color: #f06463;
   position: absolute;
   right: 0;
   margin-right: 138rpx;
-  margin-top: 24rpx;
+  margin-top: 2rpx;
   top: 0;
 }
 
@@ -340,33 +309,4 @@ text-align: center;
 .icon-next::before {
   -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
-}
-
-
-/************搜索框******/
-.search-top navigator{
-  width: 20%;
-  text-align: center;
-}
-.search-container{
-  width: 100%;
-  background-color: #efefef;
-  justify-content: center;
-  align-items: center;
-  padding:10rpx 10rpx 10rpx 20rpx;
-  border-radius: 6rpx;
-  display: flex;
-}
-.search-container icon{
-  margin-right: 10rpx;
-}
-.search-container input{
-  width: 100%;
-}
-.search-top{
-  font-size: 28rpx;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  display: flex;
 }

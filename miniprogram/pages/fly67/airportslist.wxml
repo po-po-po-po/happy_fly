@@ -1,17 +1,3 @@
-    <view class="calendar-bar-wrapper js_calendar_wrapper">
-    <view class="bus-tabs calendar-bar">
-    <!--
-      <view class="tabs-item js_pre_day" ontap="preDay" >前一天</view>
-      -->
-      <view class="tabs-item js_pre_day" ontap="preDay1" ></view>
-      <view ontap="showCalendar" class="tabs-item js_show_calendar" style="-webkit-flex: 2; flex: 2; font-size: 30rpx;">全国机场({{count}})</view>
-       <!--
-      <view class="tabs-item js_next_day" ontap="nextDay">后一天</view>
-       -->
-        <view class="tabs-item js_pre_day" ontap="preDay2" ></view>
-    </view>
-  </view>
-  
 <view class=' wh-padding search-top'>
   <view class='search-container'>
     <icon type="search" size='14' />
@@ -19,42 +5,60 @@
   </view>
 </view>
 
-<view class="page-wrapper ">
 
+<view class="page-wrapper ">
+  <view class="calendar-bar-wrapper js_calendar_wrapper">
+    <view class="bus-tabs calendar-bar">
+    <!--
+      <view class="tabs-item js_pre_day" ontap="preDay" >前一天</view>
+      -->
+    
+        <view ontap="showCalendar" class="tabs-item js_show_calendar" style="-webkit-flex: 2; flex: 2;">东航周末随心飞</view>
+
+    </view>
+  </view>
   <view class="bus-list js_bus_list ">
 
-         <block wx:for="{{list}}" wx:key="k" wx:for-index="bindex">
+         <block wx:for="{{list}}" wx:key="k">
 
 
       <view class="bus-list-item  ">
-      
-      <view class="bus-time">
-       {{bindex+1}}
+        <view class="bus-time">
+        
+         <navigator url="../city/list2?airlinesCode={{item.airlinesCode}}&airportNameStartCode={{item.airportNameEndCode}}&airportNameEndCode={{item.airportNameStartCode}}&flightRequency={{item.flightRequency}}" class="mod-item">
+        出发
+         </navigator>
+        
         </view>
+        
         <view class="tobooking">
-       <view class="flights1">
-       航班{{item.airportFlightNum}}|航线{{item.airportAirwaysNum}}
-        </view>
+       到达
         </view>
         <view class="detail">
-            <navigator url="../airports/list1?airportNameStartCode={{item.airportCode}}&airportNameEndCode={{item.airportCode}}">
           <view class="detail1">
-         
             <view class="start">
-              <text class="icon-circle s-icon1"></text>{{item.airportName}}</view>
-                  
+              <text class="icon-circle s-icon1"></text>{{item.flightNameStart}}</view>
             <view class="end">
-              <text class="icon-circle s-icon2">
-  
-              </text></view>
+              <text class="icon-circle s-icon2"></text>{{item.flightNameEnd}}</view>
           </view>
-</navigator>
-         
+
+          <view class="tags">
+            <view>
+              <text class="price">{{util1.sub(item.flightDate)}}</text>
+            </view>
+            <view>
+              <text class="price">{{util2.sub(item.flightDate)}}</text>
+            </view>
+            <view>
+            <!--
+              <text class="b-tags js_tags"></text>-->
+            </view>
+          </view>
         </view>
       </view>
     </block>
 
-
+ 
 
   </view>
 
@@ -89,12 +93,6 @@
     }
     module.exports.sub = sub;
 </wxs>
-
-
-
-
-
-  
 
 
 
