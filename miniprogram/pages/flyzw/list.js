@@ -144,6 +144,7 @@ Page(_page.initPage({
   bindInput(e) { 
     let that = this;
     let day =e.currentTarget.id; //获取表单所有name=id的值 
+    console.log(day)
     wx.showLoading({ title: '搜索中...' })
         // 拼接请求url
         const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEIZW';
