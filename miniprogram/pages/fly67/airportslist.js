@@ -1,176 +1,151 @@
-//获取公共ui操作类实例
-const _page = require('../utils/abstract-page.js');
-let modCalendar = require('../utils/calendar.js');
-const models = require('../utils/demo-model.js')
-const util = require('../utils/uti1l.js')
-let selectedDate = new Date().toString();
-const App  = getApp()
-//获取应用实例
-const app = getApp()
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
   data: {
-    times: [
-      {
-      "id": "00:00-08:00",
-      "value": "00:00-08:00"
-    }, 
-    {
-      "id": "08:00-12:00",
-      "text": "08:00-12:00"
-    }, 
-    {
-      "id": "12:00-18:00",
-      "text": "12:00-18:00"
-    }, 
-    {
-      "id": "18:00-20:00",
-      "text": "18:00-20:00"
-    }, 
-    {
-      "id": "20:00-24:00",
-      "text": "20:00-24:00"
-    }
-  
-  ],
-    airportStartList: [],
-    airportEndList: [],
+    title: '航线详情', // 状态
+    list: [], // 数据列表
+    type: '', // 数据类型
+    loading: true, // 显示等待框
+    tabTxt: ['出发机场', '起飞时间', '航班周期','到达机场'],//分类
+    tab: [true, true, true, true],
     airlinesList: [],
-    airportNameStartCode:"",
-    airportNameEndCode:"",
-    flightDate:"",
-    airlinesCode:"",
-    flightCondition :[]
+    airlinesCode: '',//航司id
+    pinpai_txt: '',
+    flight_date_start: '',//价格
+    jiage_txt: '',
+    sort_id: 0,//销量
+    xiaoliang_txt: '',
+    flightNameStart: '',
+    flightNameEnd: '',
+    flightList: []
   },
-
-  select1: function(e) {
-    var self = this
-    console.log(e.detail.airportCode)
-    self.setData({
-      airportNameStartCode: e.detail.airportCode
-    })
-    self.getDataList(e);
-  },
-  select2: function(e) {
-    var self = this
-    self.setData({
-      airlinesCode: e.detail.airlinesCode
-    })
-    self.getDataList(e);
-  },
-  select3: function(e) {
-    var self = this
-    self.setData({
-      flightDate: e.detail.id
-    })
-    self.getDataList(e);
-  },
-  select4: function(e) {
-    var self = this
-    self.setData({
-      airportNameEndCode: e.detail.airportCode
-    })
-    self.getDataList(e);
-  },
-  onLoad: function (options) {
+ 
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) { // options 为 board页传来的参数
     wx.showShareMenu({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     });
-    wx.showLoading({ title: '搜索中...' })
     const _this = this;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airport/findAllAirport' ;
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines' ;
     // 请求数据
     wx.request({
       url: url,
       method: 'post',
       data: {
-        "pageSize": 250 
+        airlinesCode:options.airline_id
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-        wx.hideLoading()
-        console.log(res.data.data);
+        console.log(res.data.data.airwayList)
         // 赋值
         _this.setData({
-          title: '热门机场TOP50',
-          list: res.data.data.data,
-          count: res.data.data.airlines,
-          loading: false // 关闭等待框
-        })
-      }
-    })
-
-  },
-  //调用数据接口，获取数据
-  getDataList:function(e){
-    wx.showLoading({ title: '搜索中...' })
-    const _this = this;
-    // 请求url
-    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsForSUIXINFEIHX';
-    // 请求数据
-    wx.request({
-      url: url,
-      method: 'post',
-      data: {
-        "pageSize": 500,
-        airportNameStartCode:_this.data.airportNameStartCode,
-        airportNameEndCode:_this.data.airportNameEndCode,
-        airlinesCode:_this.data.airlinesCode,
-        flightDateStart:_this.data.flightDate,
-        flightDateEnd:_this.data.flightDate
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-
-      success: function(res) {
-        console.log(res.data.data);
-        wx.hideLoading()
-        // 赋值
-        _this.setData({
-          airlines: res.data.data.airlines,
-          airlinesList: res.data.data.airlinesList,
-          airwayList: res.data.data.airwayList,
+          flightList: res.data.data.flightList,
           airportStartList: res.data.data.airportStartList,
           airportEndList: res.data.data.airportEndList,
-          flightCondition: res.data.data.flightCondition,
+          airlines:res.data.data.airlines,
+          airwayList: res.data.data.airwayList,
+          airlinesCode:res.data.data.airlines.airlinesCode,
           loading: false // 关闭等待框
         })
       }
     })
-        },
-  bindInput(e) { 
-          let that = this;
-          let inputValue =e.detail.value; //获取表单所有name=id的值 
-          wx.showLoading({ title: '正在搜索' })
-          console.log(inputValue)
-          wx.request({
-           url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airport/findAllAirport',
-           method: 'post',
-           data: {
-            "pageSize": 250  ,
-            "search": inputValue            //搜索内容     
-          },
-          dataType: 'json',
-           header: { 'Content-Type': 'application/json' },
-           success: function (res) {
-            wx.hideLoading()
-            console.log(res.data.data.data);
-            // 赋值
-            that.setData({
-              list: res.data.data.data,
-              count: res.data.data.airlines,
-              loading: false // 关闭等待框
-            })
-           }
-          })
-         }
-
+  },
+    // 选项卡
+    filterTab: function (e) {
+      var data = [true, true, true, true], 
+      index = e.currentTarget.dataset.index;
+      data[index] = !this.data.tab[index];
+      this.setData({
+        tab: data
+      })
+    },
+      //筛选项点击操作
+  filter: function (e) {
+    var self = this, 
+    id = e.currentTarget.dataset.id, 
+    txt = e.currentTarget.dataset.txt, 
+    tabTxt = this.data.tabTxt;
+    switch (e.currentTarget.dataset.index) {
+      case '0':
+        tabTxt[0] = txt;
+        self.setData({
+          tab: [true, true, true, true],
+          tabTxt: tabTxt,
+          //airline_id: id,
+          flightNameStart: id
+        });
+        break;
+      case '1':
+        tabTxt[1] = txt;
+        self.setData({
+          tab: [true, true, true, true],
+          tabTxt: tabTxt,
+          //flight_date_start: txt,
+          flight_date_start: txt
+        });
+        break;
+      case '2':
+        tabTxt[2] = txt;
+        self.setData({
+          tab: [true, true, true, true],
+          tabTxt: tabTxt,
+          sort_id: id
+          //xiaoliang_txt: txt
+        });
+        break;
+        case '3':
+          tabTxt[3] = txt;
+          self.setData({
+            tab: [true, true, true, true],
+            tabTxt: tabTxt,
+            //airline_id: id,
+            flightNameEnd: id
+          });
+          break;
+    }
+    //数据筛选
+    self.getDataList();
+  },
+    //调用数据接口，获取数据
+    getDataList:function(){
+      let that = this;
+      //console.log("flightNameStart::::"+that.data.flightNameStart);
+      //console.log("airlinesCode::::"+that.data.airlinesCode);
+      //console.log("sortId::::"+that.data.sort_id);
+      //console.log("flightDate::::"+that.data.flight_date_start);
+      wx.request({
+       url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/airlines/findFlightsAndAirportsByAirlines',
+       method: 'post',
+       data: {
+        flightNameStart:that.data.flightNameStart,
+        flightNameEnd:that.data.flightNameEnd,
+        airlinesCode:that.data.airlinesCode,
+        sortId:that.data.sort_id,
+        flightDate:that.data.flight_date_start
+      },
+      dataType: 'json',
+       header: { 'Content-Type': 'application/json' },
+       success: function (res) {
+        wx.hideLoading()
+        console.log(res.data.data.flightCondition)
+        that.setData({
+          flightList: res.data.data.flightList,
+          airportStartList: res.data.data.airportStartList,
+          airportEndList: res.data.data.airportEndList,
+          airlines:res.data.data.airlines,
+          airwayList: res.data.data.airwayList,
+          airlinesCode:res.data.data.airlines.airlinesCode,
+          condition:res.data.data.flightCondition
+        })
+       }
+      })
+    }
 })

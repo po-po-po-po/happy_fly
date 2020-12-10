@@ -1,312 +1,256 @@
+/*首页样式*/
 
-.page-wrapper {
-  margin: 0;
-  font-size: 28rpx;
-  line-height: 1.5;
-  color: #333;
-  background-color: #efefef;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: transparent;
-  min-height:2000rpx;
+/*单元行*/
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+}
+.top, .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.bus-list .bus-list-item {
-position: relative;
-height: 80rpx;
-background-color: rgb(247, 241, 241); 
-margin: 6rpx 0;
-border: 2rpx solid #fa0202;
-border-width: 1rpx 0;
+/*航班时间*/
+.flightDate {
+    color: #4d4d4d;
+    font-size: 23rpx;
+    margin: 5rpx;
 }
 
-.bus-list .bus-list-item::before,.bus-list .bus-list-item::after {
-position: absolute;
-left: 122rpx;
-content: '';
-width: 24rpx;
-height: 12rpx;
-background-color: #efefef;
-border: 2rpx solid #e5e5e5;
+/*日期*/
+.flight {
+    width: 100%;
+    font-size: 24rpx;
+    color: #b2b2b2;
 }
 
-.bus-list .bus-list-item::before {
-border-radius: 0 0 60rpx 60rpx;
-  border-top: none;
-top: -2rpx;
+  
+  .meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 100rpx, 200rpx;
+    padding-left: 60rpx;
+  }
+
+  .title {
+    font-size: 32rpx;
+    margin-top: 100rpx;
+    color: rgb(158, 10, 72);
+    align-items: center;
+    padding-left: 100rpx;
+  }
+  .title1 {
+    font-size: 22rpx;
+    color: rgb(158, 10, 72);
+    align-items: center;
+  }
+  .info {
+    font-size: 18rpx;
+    color: #888;
+    margin-top: 20rpx;
+    margin: 20rpx 20rpx 20rpx 0rpx;
+    padding: 0px,50px;
+    width: 80%;
+  }
+
+  .plane {
+    width: 40rpx;
+    height:40rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+
+
+/*筛选框*/
+
+ 
+.tabTit{
+  height:90rpx;
+  line-height: 90rpx;
+  border-bottom: solid 1px #eee;
+  position:fixed;
+  top:0;
+  width: 750rpx;
+  z-index: 1;
+  background: #fff;
+  font-size:15px;
+  text-align: center;
+}
+ 
+ 
+ 
+.tabTit .active{
+  color:#e64340;
+  background: #fff;
+}
+ 
+.tabTit .active image{
+  transform: rotate(180deg);
+  background: none;
+}
+ 
+.tabTit image{
+  width:26rpx;
+  height:26rpx;
+  vertical-align: middle;
+  margin-left: 5px;
+ 
+}
+ 
+.tabLayer{
+  box-shadow: 0 5px 5px #00000026;
+  width:750rpx;
+  overflow: hidden;
+  position: fixed;
+  top:60rpx;
+  z-index: 1;
+  background: #fff;
+  padding-bottom: 40rpx;
+  border-bottom: solid 1px #eee;
+  text-align: center;
+}
+.tabLayer text{
+  color: #463535;
+  width:110rpx;
+  height:26rpx;
+  line-height:26rpx;
+  float:left;
+  border: solid 1px rgb(235, 9, 141);
+  margin:10rpx 0 0 10rpx;
+  font-size:11px;
+  background-color: rgb(6, 231, 138);
+}
+.tabLayer .active{
+  color:#e64340;
+  border-color:#e64340;
+  }
+ 
+.flex1 {
+    flex: 1;
+    overflow: hidden;
+    display: block;
+}
+ 
+/*弹性盒模型*/
+.box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
 
-.bus-list .bus-list-item::after {
-border-radius: 60rpx 60rpx 0 0;
-  border-bottom: none;
-bottom: -2rpx;
+
+/******多列展示****/
+.grids {
+  position: relative;
+  overflow: hidden;
 }
 
-.bus-list .bus-list-item .bus-time {
-background-color: rgb(11, 143, 103); 
-position: absolute;
-left: 0;
-width: 134rpx;
-height: 80rpx;
-line-height: 80rpx;
-color: #131212;
-text-align: center;
-font-size: 26rpx;
-font-family: Arial;
-border-right: 2rpx dashed #e5e5e5;
+.grids:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+} 
+
+.grids:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+} 
+
+/* 睁大眼睛看这里，尤其下面的width，50%是两列，33.3333%是三列，25%是四列 */
+
+.grid {
+  position: relative;
+  float: left;
+  width:33.3%;              
+  box-sizing: border-box;
 }
 
-.bus-list .bus-list-item .tobooking {
-background-color: rgb(11, 143, 103); 
-position: absolute;
-right: 0;
-width: 120rpx;
-height: 80rpx;
-line-height: 80rpx;
-text-align: center;
-color: rgb(19, 18, 18);
-font-size: 26rpx;
-}
-
-.bus-list .bus-list-item.disabled .tobooking {
-background-color: #c5c5c5;
-}
-
-.bus-list .bus-list-item .detail {
-height: 80rpx;
-margin: 2rpx 140rpx 0 144rpx;
-}
-
-.bus-list .bus-list-item .detail  .sub-list{
-  height: 52rpx;
-}
-
-
-.bus-list .bus-list-item .start, .bus-list .bus-list-item .end {
-color: #0c0c0c;
-font-size: 26rpx;
-
-}
-
-.bus-list .bus-list-item .price {
-font-family: Arial;
-color: #161516;
-font-size: 24rpx;
-font-weight: 600;
-}
-
-.bus-list .bus-list-item.disabled .ticket {
-display: none;
-}
-
-.bus-list .bus-list-item .ticket {
-color: #fd8f01;
-font-size: 24rpx;
-border: 2rpx solid #fd8f01;
-padding: 2rpx 8rpx;
-border-radius: 10rpx;
-font-family: Arial;
-}
-
-.bus-list .bus-list-item.disabled .ticket {
-color: #c5c5c5;
-}
-
-.bus-list .bus-list-item .s-icon1 {
-margin: 0 10rpx;
-border-color: #00B358;
-}
-
-.bus-list .bus-list-item .s-icon2 {
-margin: 0 10rpx;
-border-color: #f06463;
-}
-
-.bus-list .bus-list-item .tags {
-  width: 160rpx;
-  text-align: right;
+.grid:before {
+  content: " ";
   position: absolute;
   right: 0;
-  margin-right: 138rpx;
-  margin-top: 2rpx;
   top: 0;
-}
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+} 
 
-
-.calendar-bar-wrapper {
-height: 72rpx;
-}
-
-.calendar-bar {
-height: 72rpx;
-line-height: 72rpx;
-background-color: #08c563;
-color: #fff;
-top: 0;
-left: 0;
-position: fixed;
-}
-
-.calendar-bar .tabs-item {
-font-size: 26rpx;
-border-right: 1px solid #02ad56;
-}
-
-.calendar-bar .tabs-item.disabled {
-color: #01994c;
-}
-
-.bus-tabs {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  line-height: 80rpx;
-  z-index: 500;
-}
-
-.bus-tabs .tabs-item {
-  text-align: center;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-.bus-tabs.list-filter {
-position:  fixed;
-left: 0;
-bottom: 0;
-height: 90rpx;
-line-height: 90rpx;
-background-color: #fcfcfc;
-}
-
-.bus-tabs.list-filter .tabs-item {
-font-size: 26rpx;
-border-right: 2rpx solid #d2d2d2;
-border-top: 2rpx solid #d2d2d2;
-}
-
-.bus-tabs.list-filter .tabs-item.active {
-color: #fff;
-background-color: #00b358;
-}
-
-.bus-tabs.list-filter .tabs-item .line{
-height: 44rpx;
-line-height: 44rpx;
-text-align: center;
-font-size: 24rpx;
-}
-
-.bus-tabs.list-filter .tabs-item .line:last-child{
-color: #00b358
-}
-
-.bus-tabs.list-filter .tabs-item.active .line:last-child{
-color: #fff
-}
-
-.bus-tabs.list-filter .tabs-item .line .icon-time{
-top: 4rpx;
-margin-right: 8rpx;
-}
-
-.calendar-wrapper-box {
-background-color: #fff;
-width: 100%;
-position: fixed;
-left: 0px;
-right: 0px;
-bottom: 0px;
-}
-
-.calendar-wrapper-box .box-hd {
-position: relative;
-height: 90rpx;
-line-height: 90rpx;
-text-align: center;
-width: 100%;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-overflow: hidden;
-}
-
-.calendar-wrapper-box .icon-back, .calendar-wrapper-box .icon-next {
-position: absolute;
-top: 0;
-
-}
-
-.calendar-wrapper-box .icon-back::before,
-.calendar-wrapper-box .icon-next::before {
-border-color: #00b25a;
-width: 24rpx;
-height: 24rpx;
-}
-
-.calendar-wrapper-box .icon-back.disabled::before,
-.calendar-wrapper-box .icon-next.disabled::before {
-border-color: #ddd;
-}
-
-.calendar-wrapper-box .icon-back {
-left: 30rpx;
-}
-
-.calendar-wrapper-box .icon-next {
-right: 30rpx;
-}
-
-.calendar-wrapper-box .calendar-title {
-position: absolute;
-top: 0;
-left: 130rpx;
-right: 130rpx;
-height: 45px;
-line-height: 90rpx;
-color: #00b358;
-text-align: center;
-}
-
-.calendar-cm-month {
+.grid:after {
+  content: " ";
   position: absolute;
-  top: 0;
-  height: 90rpx;
-  line-height: 90rpx;
-  color: #00b358;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+} 
+
+.grid-bg {
+  background-color: rgb(12, 12, 12);
+  position: relative;
+  float: left;
+  padding: 0px 0px;
+  border: 1px solid rgba(248, 244, 244, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+.grid-label2{
+display: flex;
+justify-content: center;
+margin: 5rpx auto;
+font-size: 10px;
+color: rgb(245, 238, 238)
+  
+}
+
+.grid-label {
+  display: block;
+  margin-top: 5px;
   text-align: center;
-  left: 90rpx;
-  right: 90rpx;
-}
-
-.icon-back, .icon-next {
-  width: 88rpx;
-  height: 88rpx;
-  line-height: 88rpx
-}
-
-.icon-back::before, .icon-next::before  {
-  content: "";
-  display: inline-block;
-  width: 20rpx;
-  height: 20rpx;
-  vertical-align: middle;
-  border-left: 4rpx solid #fff;
-  border-bottom: 4rpx solid #fff;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box
-}
-
-.icon-next::before {
-  -webkit-transform: rotate(225deg);
-  transform: rotate(225deg);
+  font-weight: bold;
+  color: rgb(243, 241, 241);
+  font-size: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

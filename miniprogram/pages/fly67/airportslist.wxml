@@ -1,98 +1,66 @@
-<view class=' wh-padding search-top'>
-  <view class='search-container'>
-    <icon type="search" size='14' />
-    <input placeholder='请输入机场名称或所在城市或所在省份' name="id"  bindconfirm='bindInput' value='{{inputValue}}'></input>
+<scroll-view scroll-y="true" >
+
+<!--筛选框-->
+<view class="tabTit box">
+  <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+    <text style="font-size:12px">{{item}}</text>
+    <image src="/images/arrow-down.png"></image>
   </view>
 </view>
 
 
-<view class="page-wrapper ">
-  <view class="calendar-bar-wrapper js_calendar_wrapper">
-    <view class="bus-tabs calendar-bar">
-    <!--
-      <view class="tabs-item js_pre_day" ontap="preDay" >前一天</view>
-      -->
-    
-        <view ontap="showCalendar" class="tabs-item js_show_calendar" style="-webkit-flex: 2; flex: 2;">东航周末随心飞</view>
+<!--筛选项-->
+<view class="tabLayer" hidden="{{tab[0]}}">
 
-    </view>
-  </view>
-  <view class="bus-list js_bus_list ">
+    <text class="{{flightNameStart==''?'active':''}}" data-id="" data-index="0" data-txt="出发机场" bindtap="filter">不限</text>
 
-         <block wx:for="{{list}}" wx:key="k">
-
-
-      <view class="bus-list-item  ">
-        <view class="bus-time">
-        
-         <navigator url="../city/list2?airlinesCode={{item.airlinesCode}}&airportNameStartCode={{item.airportNameEndCode}}&airportNameEndCode={{item.airportNameStartCode}}&flightRequency={{item.flightRequency}}" class="mod-item">
-        出发
-         </navigator>
-        
-        </view>
-        
-        <view class="tobooking">
-       到达
-        </view>
-        <view class="detail">
-          <view class="detail1">
-            <view class="start">
-              <text class="icon-circle s-icon1"></text>{{item.flightNameStart}}</view>
-            <view class="end">
-              <text class="icon-circle s-icon2"></text>{{item.flightNameEnd}}</view>
-          </view>
-
-          <view class="tags">
-            <view>
-              <text class="price">{{util1.sub(item.flightDate)}}</text>
-            </view>
-            <view>
-              <text class="price">{{util2.sub(item.flightDate)}}</text>
-            </view>
-            <view>
-            <!--
-              <text class="b-tags js_tags"></text>-->
-            </view>
-          </view>
-        </view>
-      </view>
-    </block>
-
+    <text class="{{flightNameStart==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="0" data-txt="{{item.airportAbbreviate}}" bindtap="filter">    {{item.airportLocation}} </text>
  
-
-  </view>
-
-  <include src="../mod/calendar.wxml" />
-  <include src="../../utils/abstract-page.wxml" />
-
 </view>
 
+<view class="tabLayer" hidden="{{tab[1]}}">
+    <text class="{{flight_date_start==0?'active':''}}" data-id="0" data-index="1" data-txt="起飞时间" bindtap="filter">不限</text>
+    <text class="{{flight_date_start==1?'active':''}}" data-id="1" data-index="1" data-txt="00:00-08:00" bindtap="filter">00:00-08:00</text>
+    <text class="{{flight_date_start==2?'active':''}}" data-id="2" data-index="1" data-txt="08:00-12:00" bindtap="filter">08:00-12:00</text>
+     <text class="{{flight_date_start==3?'active':''}}" data-id="3" data-index="1" data-txt="12:00-20:00" bindtap="filter">12:00-20:00</text>
+    <text class="{{flight_date_start==4?'active':''}}" data-id="4" data-index="1" data-txt="20:00-24:00" bindtap="filter">20:00-24:00</text>
+      
+</view>
 
-{{dateUtil.test()}}
+<view class="tabLayer" hidden="{{tab[2]}}">
+   <text class="{{sort_id==1?'active':''}}" data-id="1" data-index="2" data-txt="周一" bindtap="filter">周一</text>
+  <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="周二" bindtap="filter">周二</text>
+  <text class="{{sort_id==3?'active':''}}" data-id="3" data-index="2" data-txt="周三" bindtap="filter">周三</text>
+  <text class="{{sort_id==4?'active':''}}" data-id="4" data-index="2" data-txt="周四" bindtap="filter">周四</text>
+  <text class="{{sort_id==5?'active':''}}" data-id="5" data-index="2" data-txt="周五" bindtap="filter">周五</text>
+  <text class="{{sort_id==6?'active':''}}" data-id="6" data-index="2" data-txt="周六" bindtap="filter">周六</text>
+  <text class="{{sort_id==7?'active':''}}" data-id="7" data-index="2" data-txt="周日" bindtap="filter">周日</text>
+</view>
 
-<wxs module="dateUtil">
-  console.log(111)
-  module.exports = {
-        test: function (zzz) {
-              console.log('test', zzz)
-        }
-  }
-</wxs>
+<view class="tabLayer" hidden="{{tab[3]}}">
+    <text class="{{flightNameEnd==''?'active':''}}" data-id="" data-index="3" data-txt="到达机场" bindtap="filter">不限</text>
+    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportEndList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="3" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportLocation}}</text>
+</view>
 
-<!--截取字符串工具类-->
-<wxs module="util1">
-    var sub = function(val) {
-        return val.substring(0, 5)
-    }
-    module.exports.sub = sub;
-</wxs>
+<!--航线头-->
 
-<wxs module="util2">
-    var sub = function(val) {
-        return val.substring(6)
-    }
-    module.exports.sub = sub;
-</wxs>
+    <view class='meta'>
+      <text class='title'>  </text>
+  </view>
+
+<!-- grid   画个重点-->
+  <view class="grids">
+        <view class="grid" wx:for="{{airwayList}}" wx:key="index" wx:for-index="bindex">
+            <view>
+                <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
+                        <navigator url='../flightdetail/list1?flightNameEnd={{item.airportNameEndCode}}&flightNameStart={{item.airportNameStartCode}}&airlinesCode={{airlines.airlinesCode}}&&flightRequency={{condition.sortId}}'>
+                    <text class="grid-label">{{item.airportNameStart}}--{{item.airportNameEnd}}</text>
+                         <text class="grid-label2">{{item.flightNumber}}班</text>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
 
 
-
+</scroll-view>
