@@ -125,10 +125,10 @@
   height:26rpx;
   line-height:26rpx;
   float:left;
-  border: solid 1px rgb(9, 235, 216);
+  border: solid 1px rgb(235, 9, 141);
   margin:10rpx 0 0 10rpx;
   font-size:11px;
-  background-color: rgb(179, 199, 240);
+  background-color: rgb(6, 231, 138);
 }
 .tabLayer .active{
   color:#e64340;
