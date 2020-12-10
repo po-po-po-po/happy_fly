@@ -105,7 +105,7 @@ Page({
       //console.log("sortId::::"+that.data.sort_id);
       //console.log("flightDate::::"+that.data.flight_date_start);
       wx.request({
-       url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlights67',
+       url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlights820',
        method: 'post',
        data: {
         flightNameStart:that.data.flightNameStart,

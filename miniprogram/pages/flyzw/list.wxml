@@ -1,22 +1,30 @@
 <view class="page-wrapper ">
   <view class="calendar-bar-wrapper js_calendar_wrapper">
     <view class="bus-tabs calendar-bar">
-    <!--
-      <view class="tabs-item js_pre_day" ontap="preDay" >前一天</view>
-      -->
-      <view ontap="showCalendar" class="tabs-item js_show_calendar" style="-webkit-flex: 2; flex: 2;">东航周末随心飞</view>
-       <!--
-      <view class="tabs-item js_next_day" ontap="nextDay">后一天</view>
-       -->
+        <view class="tabs-item js_pre_day" ontap='bindInput' id="1" >周一</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="2">周二</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="3">周三</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="4">周四</view>
+        <view class="tabs-item js_pre_day" ontap="bindInput" id="5">周五</view>
     </view>
   </view>
   <view class="bus-list js_bus_list ">
 
-    <block wx:for="{{list}}" wx:key="k">
+         <block wx:for="{{list}}" wx:key="k">
+
+
       <view class="bus-list-item  ">
-        <view class="bus-time">{{item.flightNo}}</view>
+        <view class="bus-time">
         
-        <view class="tobooking">{{item.flightRequency}} </view>
+         <navigator url="../city/list2?airlinesCode={{item.airlinesCode}}&airportNameStartCode={{item.airportNameEndCode}}&airportNameEndCode={{item.airportNameStartCode}}&flightRequency={{item.flightRequency}}" class="mod-item">
+        {{item.flightNo}}
+         </navigator>
+        
+        </view>
+        
+        <view class="tobooking">
+        {{item.flightRequency}} 
+        </view>
         <view class="detail">
           <view class="detail1">
             <view class="start">
@@ -39,8 +47,9 @@
           </view>
         </view>
       </view>
-
     </block>
+
+ 
 
   </view>
 
