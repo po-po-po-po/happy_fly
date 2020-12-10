@@ -6,13 +6,15 @@
 
 <view class="container">
   <view class="flyinfo">
+    <navigator url='../airlines/index1' class="mod-item">
     随心飞
+  </navigator>
   </view>
   </view>
 
 
 
-<!-- grid   画个重点-->
+<!-- grid   画个重点
   <view class="grids">
         <view class="grid" wx:for="{{list}}" wx:key="index" wx:for-index="bindex">
             <view>
@@ -30,5 +32,5 @@
         </view>
     </view>
 
-
+-->
 </scroll-view>
