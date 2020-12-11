@@ -29,6 +29,14 @@
   </view>
   </view>
 
+  <view class="container">
+  <view class="flyinfo3">
+    <navigator url='../flyzw/airportslist?airline_id=MU' class="mod-item">
+    春秋随心飞(区域版)
+  </navigator>
+  </view>
+  </view>
+
 
 <!-- grid   画个重点
   <view class="grids">
