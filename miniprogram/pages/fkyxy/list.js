@@ -97,7 +97,7 @@ Page(_page.initPage({
             acity:options.flightNameEnd,
             flightNameEnd: params.acityName,
             airlinesCode: options.airlinesCode,
-            flightRequency: options.flightRequency
+            flightRequency: 5
           })
         })
         var day=App.globalData.searchParams.day;
@@ -112,7 +112,7 @@ Page(_page.initPage({
         airportNameStartCode:this.data.dcity,
         airportNameEndCode:this.data.acity,
         airlinesCode:this.data.airlinesCode,
-        flightRequency:day
+        flightRequency:5
       },
       header: {
         'content-type': 'application/json' // 默认值
