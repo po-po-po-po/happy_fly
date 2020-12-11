@@ -22,7 +22,7 @@
   </view>
 
   <view class="container">
-  <view class="flyinfo2">
+  <view class="flyinfo3">
     <navigator url='../flyzw/airportslist?airline_id=MU' class="mod-item">
     早晚随心飞
   </navigator>
@@ -30,13 +30,20 @@
   </view>
 
   <view class="container">
-  <view class="flyinfo3">
+  <view class="flyinfo2">
     <navigator url='../flycq/flycq?airline_id=9C' class="mod-item">
     春秋随心飞(区域版)
   </navigator>
   </view>
   </view>
 
+  <view class="container">
+  <view class="flyinfo4">
+    <navigator url='../flycity/airlinesflights?airline_id=SC' class="mod-item">
+   山航魔毯
+  </navigator>
+  </view>
+  </view>
 
 <!-- grid   画个重点
   <view class="grids">
