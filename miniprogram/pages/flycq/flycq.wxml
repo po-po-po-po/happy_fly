@@ -1,80 +1,48 @@
-<view class="page-wrapper ">
-  <view class="calendar-bar-wrapper js_calendar_wrapper">
-    <view class="bus-tabs calendar-bar">
-    <!--
-      <view class="tabs-item js_pre_day" ontap="preDay" >前一天</view>
-      -->
-      <view ontap="showCalendar" class="tabs-item js_show_calendar" style="-webkit-flex: 2; flex: 2;">春秋随心飞</view>
-       <!--
-      <view class="tabs-item js_next_day" ontap="nextDay">后一天</view>
-       -->
-    </view>
+<scroll-view scroll-y="true" >
+
+<!--筛选框-->
+<view class="tabTit box">
+  <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+    <text style="font-size:12px">{{item}}</text>
+    <image src="/images/arrow-down.png"></image>
   </view>
-  <view class="bus-list js_bus_list ">
-
-    <block wx:for="{{list}}" wx:key="k">
-      <view class="bus-list-item  ">
-        <view class="bus-time">{{item.flightNo}}</view>
-        
-        <view class="tobooking">{{item.flightRequency}} </view>
-        <view class="detail">
-          <view class="detail1">
-            <view class="start">
-              <text class="icon-circle s-icon1"></text>{{item.flightNameStart}}</view>
-            <view class="end">
-              <text class="icon-circle s-icon2"></text>{{item.flightNameEnd}}</view>
-          </view>
-
-          <view class="tags">
-            <view>
-              <text class="price">{{util1.sub(item.flightDate)}}</text>
-            </view>
-            <view>
-              <text class="price">{{util2.sub(item.flightDate)}}</text>
-            </view>
-            <view>
-            <!--
-              <text class="b-tags js_tags"></text>-->
-            </view>
-          </view>
-        </view>
-      </view>
-
-    </block>
-
-  </view>
-
-  <include src="../mod/calendar.wxml" />
-  <include src="../../utils/abstract-page.wxml" />
-
 </view>
 
 
-{{dateUtil.test()}}
+<!--筛选项-->
+<view class="tabLayer" hidden="{{tab[0]}}">
 
-<wxs module="dateUtil">
-  console.log(111)
-  module.exports = {
-        test: function (zzz) {
-              console.log('test', zzz)
-        }
-  }
-</wxs>
+    <text class="{{flightNameStart==''?'active':''}}" data-id="" data-index="0" data-txt="出发机场" bindtap="filter">不限</text>
 
-<!--截取字符串工具类-->
-<wxs module="util1">
-    var sub = function(val) {
-        return val.substring(0, 5)
-    }
-    module.exports.sub = sub;
-</wxs>
-
-<wxs module="util2">
-    var sub = function(val) {
-        return val.substring(6)
-    }
-    module.exports.sub = sub;
-</wxs>
+    <text class="{{flightNameStart==item.airportAbbreviate?'active':''}}" wx:for="{{airportStartList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="0" data-txt="{{item.airportAbbreviate}}" bindtap="filter">    {{item.airportLocation}} </text>
+ 
+</view>
 
 
+<view class="tabLayer" hidden="{{tab[1]}}">
+    <text class="{{flightNameEnd==''?'active':''}}" data-id="" data-index="1" data-txt="到达机场" bindtap="filter">不限</text>
+    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportEndList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="1" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportLocation}}</text>
+</view>
 
+<!--航线头-->
+
+    <view class='meta'>
+      <text class='title'>  </text>
+  </view>
+
+<!-- grid   画个重点-->
+  <view class="grids">
+        <view class="grid" wx:for="{{airwayList}}" wx:key="index" wx:for-index="bindex">
+            <view>
+                <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
+                        <navigator url='../flightdetail/list1?flightNameEnd={{item.airportNameEndCode}}&flightNameStart={{item.airportNameStartCode}}&airlinesCode=9C&&flightRequency={{condition.sortId}}'>
+                    <text class="grid-label">{{item.airportNameStart}}--{{item.airportNameEnd}}</text>
+                         <text class="grid-label2">{{item.flightNumber}}班</text>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+</scroll-view>

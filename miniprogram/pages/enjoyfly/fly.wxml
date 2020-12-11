@@ -31,7 +31,7 @@
 
   <view class="container">
   <view class="flyinfo3">
-    <navigator url='../flyzw/airportslist?airline_id=MU' class="mod-item">
+    <navigator url='../flycq/flycq?airline_id=9C' class="mod-item">
     春秋随心飞(区域版)
   </navigator>
   </view>

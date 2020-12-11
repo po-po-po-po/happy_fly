@@ -1,142 +1,134 @@
-//获取公共ui操作类实例
-const _page = require('../utils/abstract-page.js');
-let modCalendar = require('../utils/calendar.js');
-const models = require('../utils/demo-model.js')
-const util = require('../utils/uti1l.js')
-let selectedDate = new Date().toString();
-const App = getApp()
-
-//获取应用实例
-const app = getApp()
-
-Page(_page.initPage({
+Page({
+ 
+  /**
+   * 页面的初始数据
+   */
   data: {
-    listData: [],
-    calendarSelectedDate: '东航周六航班',
-    calendarSelectedDateStr: '东航周六航班',
-    flightNameStart:'上海虹桥',
-    flightNameEnd:'',
-    day:''
+    title: '航线详情', // 状态
+    list: [], // 数据列表
+    type: '', // 数据类型
+    loading: true, // 显示等待框
+    tabTxt: ['出发城市','到达城市'],//分类
+    tab: [true, true],
+    airlinesList: [],
+    airlinesCode: '',//航司id
+    pinpai_txt: '',
+    flight_date_start: '',//价格
+    jiage_txt: '',
+    sort_id: 0,//销量
+    xiaoliang_txt: '',
+    flightNameStart: '',
+    flightNameEnd: '',
+    flightList: []
   },
-  // methods: uiUtil.getPageMethods(),
-  methods: {
-  },
-
-  preDay: function () {
-    this.setData({
-      calendarSelectedDate: '周六',
-      calendarSelectedDateStr: '东航周六航班'
-    })
-  
-  },
-
-  nextDay: function () {
-   // let date = util.dateUtil.nextDay(this.data.calendarSelectedDate);
-    this.setData({
-      calendarSelectedDate: '周日',
-      calendarSelectedDateStr: '东航周日航班'
-    })
-  },
-
-  calendarHook: function (date) {
-    this.index = 0;
-    this.data.listData = [];
-    this._initData({
-      date: date.getTime()
+ 
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) { // options 为 board页传来的参数
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
     });
-  },
-
-  onShow: function () {
-    global.sss = this;
-    let scope = this;
-  },
-
-  _setDateInfo: function (date) {
-    let selectedDate = new Date(date * 1);
-    this.setData({
-      calendarSelectedDate: selectedDate.toString(),
-      calendarSelectedDateStr: util.dateUtil.format(selectedDate, 'Y年M月D日')
-    });
-  },
-
-  _appendList: function (data) {
-
-    for(let i = 0, len = data.length; i < len; i++) {
-      data[i].dateStr = util.dateUtil.format(new Date(data[i].datetime * 1000), 'H:F' )
-    }
-
-    this.setData({
-      listData: this.data.listData.concat(data)
-    });
-  },
-  _initData: function (data) {
-    let scope = this;
-    let listModel = models.listModel;
-
-    listModel.setParam({
-      startcityid: this._sid,
-      arrivalcityid: this._aid,
-      startdatetime: data.date / 1000,
-      page: this.index + 1
-    });
-
-    this.showLoading();
-    listModel.execute(function(data) {
-      scope.hideLoading();
-
-      if(!data.schedules) return;
-      scope._appendList(data.schedules);
-
-    });
-  },
-  onLoad: function (options) {
     const _this = this;
-    console.log("1111")
-        //调用应用实例的方法获取全局数据
-        app.getSearchParams(function(params){    
-          //更新数据
-          _this.setData({
-            dcity:params.dcity,
-            flightNameStart: params.dcityName,
-            acity:params.acity,
-            flightNameEnd: params.acityName,
-          })
-        })
-        var day=App.globalData.searchParams.day;
     // 拼接请求url
-    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/find9CFlightsZHE';
+    const url = 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsCQ' ;
     // 请求数据
     wx.request({
       url: url,
       method: 'post',
       data: {
-        "pageSize": 500,
-        airportNameStartCode:options.airportCode,
-        airportNameEndCode:options.airportCode
+        airlinesCode:options.airline_id
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
+        console.log(res.data.data.airwayList)
         // 赋值
         _this.setData({
-          list: res.data.data,
+          flightList: res.data.data.flightList,
+          airportStartList: res.data.data.airportStartList,
+          airportEndList: res.data.data.airportEndList,
+          airlines:res.data.data.airlines,
+          airwayList: res.data.data.airwayList,
+          airlinesCode:res.data.data.airlines.airlinesCode,
           loading: false // 关闭等待框
         })
       }
     })
-
   },
+    // 选项卡
+    filterTab: function (e) {
+      var data = [true, true], 
+      index = e.currentTarget.dataset.index;
+      data[index] = !this.data.tab[index];
+      this.setData({
+        tab: data
+      })
+    },
+      //筛选项点击操作
+  filter: function (e) {
+    var self = this, 
+    id = e.currentTarget.dataset.id, 
+    txt = e.currentTarget.dataset.txt, 
+    tabTxt = this.data.tabTxt;
+    switch (e.currentTarget.dataset.index) {
+      case '0':
+        tabTxt[0] = txt;
+        self.setData({
+          tab: [true,  true],
+          tabTxt: tabTxt,
+          //airline_id: id,
+          flightNameStart: id
+        });
+        break;
 
-  onReady: function () {
-
+        case '1':
+          tabTxt[1] = txt;
+          self.setData({
+            tab: [true, true],
+            tabTxt: tabTxt,
+            //airline_id: id,
+            flightNameEnd: id
+          });
+          break;
+    }
+    //数据筛选
+    self.getDataList();
   },
-  onShow: function () {
-
-    global.sss = this;
-    let scope = this;
-  }
-  
-}, {
-  modCalendar: modCalendar
-}))
+    //调用数据接口，获取数据
+    getDataList:function(){
+      let that = this;
+      //console.log("flightNameStart::::"+that.data.flightNameStart);
+      //console.log("airlinesCode::::"+that.data.airlinesCode);
+      //console.log("sortId::::"+that.data.sort_id);
+      //console.log("flightDate::::"+that.data.flight_date_start);
+      wx.request({
+       url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/flight/findFlightsCQ',
+       method: 'post',
+       data: {
+        flightNameStart:that.data.flightNameStart,
+        flightNameEnd:that.data.flightNameEnd,
+        airlinesCode:that.data.airlinesCode,
+        sortId:that.data.sort_id,
+        flightDate:that.data.flight_date_start
+      },
+      dataType: 'json',
+       header: { 'Content-Type': 'application/json' },
+       success: function (res) {
+        wx.hideLoading()
+        console.log(res.data.data.airportStartList)
+        that.setData({
+          flightList: res.data.data.flightList,
+          airportStartList: res.data.data.airportStartList,
+          airportEndList: res.data.data.airportEndList,
+          airlines:res.data.data.airlines,
+          airwayList: res.data.data.airwayList,
+          airlinesCode:res.data.data.airlines.airlinesCode,
+          condition:res.data.data.flightCondition
+        })
+       }
+      })
+    }
+})
