@@ -31,6 +31,7 @@
     "pages/city/list",
     "pages/airlines/index1",
     "pages/my/index",
+    "pages/flyxy/airportslist",
     "pages/enjoyfly/enjoyfly"
   ],
   "permission": {

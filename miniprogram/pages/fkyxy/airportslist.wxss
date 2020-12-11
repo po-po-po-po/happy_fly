@@ -120,13 +120,15 @@
   text-align: center;
 }
 .tabLayer text{
-  width:90rpx;
-  height:40rpx;
-  line-height:40rpx;
+  color: #463535;
+  width:110rpx;
+  height:26rpx;
+  line-height:26rpx;
   float:left;
-  border: solid 1px #eee;
+  border: solid 1px rgb(235, 9, 141);
   margin:10rpx 0 0 10rpx;
-  font-size:8px;
+  font-size:11px;
+  background-color: rgb(6, 231, 138);
 }
 .tabLayer .active{
   color:#e64340;
@@ -153,7 +155,6 @@
   position: relative;
   overflow: hidden;
 }
-
 
 .grids:before {
   content: " ";
@@ -225,181 +226,31 @@
 } 
 
 .grid-bg {
+  background-color: rgb(12, 12, 12);
   position: relative;
   float: left;
   padding: 0px 0px;
+  border: 1px solid rgba(248, 244, 244, 0.1);
   width: 100%;
-  height:270rpx;
   box-sizing: border-box;
-  background-color:	#383636;
 }
 .grid-label2{
 display: flex;
 justify-content: center;
-margin: 10rpx auto;
+margin: 5rpx auto;
 font-size: 10px;
-color: rgb(187, 184, 184);
+color: rgb(245, 238, 238)
+  
 }
 
 .grid-label {
   display: block;
-  margin-top: 14px;
+  margin-top: 5px;
   text-align: center;
   font-weight: bold;
-  color: rgb(116, 117, 116);
+  color: rgb(243, 241, 241);
   font-size: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
-.poster {
-  width: 180rpx;
-  height: 160rpx;
-  margin-right: 30rpx;
-}
-
-/*******首页图片****/
-.index-img{
-  display:flex;                
-  justify-content: center;
-  }
-  .index-img image { 
-    width:100%;
-    }
-
-    .flyinfo {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #0589e0;   
-      font-size: 20px;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-
-    .flyinfo1 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #05ce60;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-
-
-
-    .flyinfo2 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #05d18d;   
-      font-size: 20px;
-      width: 100%; 
-      border-top: 1rpx solid;
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-    .flyinfo3 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #1de2d2;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-    
-    .flyinfo4 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #65f03a;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-
-
-    .flyinfo5 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #29e743;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-
-    .flyinfo6 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #8058ee;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-
-    .flyinfo7 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #dbaa21;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-
-    
-    .flyinfo8 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #ac3a80;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-
-    .flyinfo9 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #22a2b3;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }
-
-
-        
-    .flyinfo10 {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      background: #db4a11;   
-      font-size: 20px;
-      border-top: 1rpx solid;
-      width: 100%; 
-      height: 120rpx;
-      line-height: 120rpx;
-    }

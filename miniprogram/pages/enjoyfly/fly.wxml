@@ -22,12 +22,48 @@
   </view>
 
   <view class="container">
+  <view class="flyinfo8">
+    <navigator url='../flycity/airlinesflights?airline_id=SC' class="mod-item">
+   山航魔毯
+  </navigator>
+  </view>
+  </view>
+
+
+
+  <view class="container">
+  <view class="flyinfo5">
+    <navigator url='../flycity/airlinesflights?airline_id=HNA' class="mod-item">
+    海航畅享中国行
+  </navigator>
+  </view>
+  </view>
+
+  <view class="container">
+  <view class="flyinfo7">
+    <navigator url='../flycity/airlinesflights?airline_id=CZ' class="mod-item">
+    南航快乐飞
+  </navigator>
+  </view>
+  </view>
+
+  <view class="container">
   <view class="flyinfo3">
     <navigator url='../flyzw/airportslist?airline_id=MU' class="mod-item">
     早晚随心飞
   </navigator>
   </view>
   </view>
+
+
+  <view class="container">
+  <view class="flyinfo10">
+    <navigator url='../fkyxy/airportslist?airline_id=MU' class="mod-item">
+    西域随心飞
+  </navigator>
+  </view>
+  </view>
+
 
   <view class="container">
   <view class="flyinfo2">
@@ -37,21 +73,8 @@
   </view>
   </view>
 
-  <view class="container">
-  <view class="flyinfo4">
-    <navigator url='../flycity/airlinesflights?airline_id=SC' class="mod-item">
-   山航魔毯
-  </navigator>
-  </view>
-  </view>
 
-  <view class="container">
-  <view class="flyinfo5">
-    <navigator url='../flycity/airlinesflights?airline_id=HNA' class="mod-item">
-    海航畅享中国行
-  </navigator>
-  </view>
-  </view>
+
 
 
   <view class="container">
@@ -63,13 +86,7 @@
   </view>
 
 
-  <view class="container">
-  <view class="flyinfo7">
-    <navigator url='../flycity/airlinesflights?airline_id=CZ' class="mod-item">
-    南航快乐飞
-  </navigator>
-  </view>
-  </view>
+
   <view class="container">
   <view class="flyinfo9">
     <navigator url='../flycity/airlinesflights?airline_id=HO' class="mod-item">
@@ -78,7 +95,7 @@
   </view>
   </view>
   <view class="container">
-  <view class="flyinfo8">
+  <view class="flyinfo4">
     <navigator url='../flycity/airlinesflights?airline_id=AQ' class="mod-item">
     九元航空随心飞
   </navigator>
