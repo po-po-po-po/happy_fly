@@ -45,6 +45,45 @@
   </view>
   </view>
 
+  <view class="container">
+  <view class="flyinfo5">
+    <navigator url='../flycity/airlinesflights?airline_id=HNA' class="mod-item">
+    海航畅享中国行
+  </navigator>
+  </view>
+  </view>
+
+
+  <view class="container">
+  <view class="flyinfo6">
+    <navigator url='../flycity/airlinesflights?airline_id=9C' class="mod-item">
+    春秋随心飞(全国)
+  </navigator>
+  </view>
+  </view>
+
+
+  <view class="container">
+  <view class="flyinfo7">
+    <navigator url='../flycity/airlinesflights?airline_id=CZ' class="mod-item">
+    南航快乐飞
+  </navigator>
+  </view>
+  </view>
+  <view class="container">
+  <view class="flyinfo9">
+    <navigator url='../flycity/airlinesflights?airline_id=HO' class="mod-item">
+  吉祥畅飞卡
+  </navigator>
+  </view>
+  </view>
+  <view class="container">
+  <view class="flyinfo8">
+    <navigator url='../flycity/airlinesflights?airline_id=AQ' class="mod-item">
+    九元航空随心飞
+  </navigator>
+  </view>
+  </view>
 <!-- grid   画个重点
   <view class="grids">
         <view class="grid" wx:for="{{list}}" wx:key="index" wx:for-index="bindex">

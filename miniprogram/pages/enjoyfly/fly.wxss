@@ -327,3 +327,65 @@ color: rgb(187, 184, 184);
       height: 120rpx;
       line-height: 120rpx;
     }
+
+
+    .flyinfo5 {  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      background: #29e743;   
+      font-size: 20px;
+      border-top: 1rpx solid;
+      width: 100%; 
+      height: 120rpx;
+      line-height: 120rpx;
+    }
+
+    .flyinfo6 {  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      background: #4c16e2;   
+      font-size: 20px;
+      border-top: 1rpx solid;
+      width: 100%; 
+      height: 120rpx;
+      line-height: 120rpx;
+    }
+
+    .flyinfo7 {  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      background: #dbaa21;   
+      font-size: 20px;
+      border-top: 1rpx solid;
+      width: 100%; 
+      height: 120rpx;
+      line-height: 120rpx;
+    }
+
+    
+    .flyinfo8 {  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      background: #ac3a80;   
+      font-size: 20px;
+      border-top: 1rpx solid;
+      width: 100%; 
+      height: 120rpx;
+      line-height: 120rpx;
+    }
+
+    .flyinfo9 {  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      background: #22a2b3;   
+      font-size: 20px;
+      border-top: 1rpx solid;
+      width: 100%; 
+      height: 120rpx;
+      line-height: 120rpx;
+    }
