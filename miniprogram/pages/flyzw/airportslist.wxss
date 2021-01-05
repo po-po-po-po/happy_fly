@@ -245,7 +245,8 @@ color: rgb(245, 238, 238)
 
 .grid-label {
   display: block;
-  margin-top: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   text-align: center;
   font-weight: bold;
   color: rgb(243, 241, 241);

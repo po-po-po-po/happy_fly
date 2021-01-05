@@ -37,7 +37,8 @@
                 <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
                         <navigator url='../fly67/list?flightNameEnd={{item.airportNameEndCode}}&flightNameStart={{item.airportNameStartCode}}&airlinesCode={{airlines.airlinesCode}}&&flightRequency={{condition.sortId}}'>
                     <text class="grid-label">{{item.airportNameStart}}--{{item.airportNameEnd}}</text>
-                         <text class="grid-label2">{{item.flightNumber}}班</text>
+                    <!--
+                         <text class="grid-label2">{{item.flightNumber}}班</text>-->
                     </navigator>
                 </view>
             </view>
