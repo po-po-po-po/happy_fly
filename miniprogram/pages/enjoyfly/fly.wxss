@@ -403,3 +403,15 @@ color: rgb(187, 184, 184);
       height: 120rpx;
       line-height: 120rpx;
     }
+
+    .flyinfo11 {  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      background: #288aa8;   
+      font-size: 20px;
+      border-top: 1rpx solid;
+      width: 100%; 
+      height: 120rpx;
+      line-height: 120rpx;
+    }
