@@ -120,7 +120,7 @@
   text-align: center;
 }
 .tabLayer text{
-  color: #463535;
+  color: #44f30e;
   width:110rpx;
   height:26rpx;
   line-height:26rpx;
@@ -128,7 +128,7 @@
   border: solid 1px rgb(235, 9, 141);
   margin:10rpx 0 0 10rpx;
   font-size:11px;
-  background-color: rgb(6, 231, 138);
+  background-color: rgb(13, 14, 13);
 }
 .tabLayer .active{
   color:#e64340;
@@ -226,6 +226,7 @@
 } 
 
 .grid-bg {
+  text-align: left;
   background-color: rgb(12, 12, 12);
   position: relative;
   float: left;
@@ -236,7 +237,7 @@
 }
 .grid-label2{
 display: flex;
-justify-content: center;
+justify-content: left;
 margin: 5rpx auto;
 font-size: 10px;
 color: rgb(245, 238, 238)
