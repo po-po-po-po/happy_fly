@@ -55,7 +55,7 @@ Page({
             url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/userflight/findUseRoutes',
             method: 'POST',  
             data: {
-              code:code
+              // code:code
             } ,
              header: {
               'content-type': 'application/json' // 默认值

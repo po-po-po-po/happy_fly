@@ -1,6 +1,6 @@
 .view-liuyan {
   margin: 25rpx;
-  font-size: 26rpx;
+  font-size: 40rpx;
   border-style: solid;
   border-width: 2rpx;
   border-color: #ccc;

@@ -15,17 +15,19 @@ Page({
         imageurl: 'http://www.potucs.com:9998/wechat/logo/fankui.png',
       }
     ,
+    /** 
     item2: 
       {        
         typeId: 1,        
         name: '我的行程',        
         url: '../message/message?userInfo=userInfo',        
         imageurl: 'http://www.potucs.com:9998/wechat/logo/xingcheng.png',
-      },
+      }, 
+      */
       item3: 
       {        
         typeId: 2,        
-        name: '我的足迹',        
+        name: '中国机场',        
         url: '../flightsplan/flightsplan',        
         imageurl: 'http://www.potucs.com:9998/wechat/logo/zuji.png',
       },

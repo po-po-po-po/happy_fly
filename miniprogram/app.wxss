@@ -5,7 +5,7 @@
   align-items: center;
   
   box-sizing: border-box;
-  background-color:  #37afc4;  
+  background-color:  #0ce9b9;  
 } 
 
 button {
