@@ -4,6 +4,7 @@
     "pages/enjoyfly/fly",
     "pages/airports/airports",
     "pages/city/city",
+    "pages/hu_xd/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",

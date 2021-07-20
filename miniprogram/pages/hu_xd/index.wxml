@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class='slider'>
+  <swiper autoplay='{{true}}' indicator-dots='{{false}}' circular='{{true}}'>
+    <swiper-item wx:for='{{airlines}}' wx:for-index="bindex" wx:key='{{index}}'>
+      <image src='https://www.potucs.com/wechat/banner/hnair.jpg' mode='aspectFill' height="390"></image>
+      <image src='https://www.potucs.com/wechat/banner/hnair2.jpg' mode='aspectFill' height="390"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class='index-nav bgw'>
+<navigator class='nav-item bdr' url='/pages/shopList/shopList?id={{item.id}}' wx:for='{{airlines}}' wx:key="{{index}}">
+    <image src='{{item.airlinesImg }}'></image>
+    <text>{{item.airlinesName}}</text>
+  </navigator>
+</view>
