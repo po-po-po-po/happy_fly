@@ -83,7 +83,7 @@ page {
 
 .follow {
   flex-shrink: 0;
-  width: 100rpx;
+  width: 140rpx;
   height: 40rpx;
   font-size: 24rpx;
   color: #fff;

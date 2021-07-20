@@ -1,0 +1,22 @@
+<view class="container">
+
+
+	<view class="page-section page-section-spacing swiper">
+		<swiper indicator-dots="true" autoplay="true}">
+			<block wx:for="{{swiperimg}}" wx:key="*this">
+				<swiper-item>
+					<image src="https://www.potucs.com/wechat/airline/cz.png" mode="widthFix"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view id="tab_list">
+		<view wx:for="{{tablist}}" wx:key="*this" class="tab_item">
+			<navigator class="tab_itemurl" url="/pages/index/Navitem/{{item.url}}">
+				<image style="width: 80rpx;" src="https://www.potucs.com/wechat/airline/cz.png" mode="widthFix"></image>
+				<text class="name">{{item.name}}</text>
+			</navigator>
+		</view>
+	</view>
+
+</view>

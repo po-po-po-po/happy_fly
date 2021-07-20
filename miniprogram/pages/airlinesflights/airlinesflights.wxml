@@ -18,28 +18,12 @@
  
 </view>
 
+
+
+
 <view class="tabLayer" hidden="{{tab[1]}}">
-    <text class="{{flight_date_start==0?'active':''}}" data-id="0" data-index="1" data-txt="起飞时间" bindtap="filter">不限</text>
-    <text class="{{flight_date_start==1?'active':''}}" data-id="1" data-index="1" data-txt="00:00-08:00" bindtap="filter">00:00-08:00</text>
-    <text class="{{flight_date_start==2?'active':''}}" data-id="2" data-index="1" data-txt="08:00-12:00" bindtap="filter">08:00-12:00</text>
-     <text class="{{flight_date_start==3?'active':''}}" data-id="3" data-index="1" data-txt="12:00-20:00" bindtap="filter">12:00-20:00</text>
-    <text class="{{flight_date_start==4?'active':''}}" data-id="4" data-index="1" data-txt="20:00-24:00" bindtap="filter">20:00-24:00</text>
-      
-</view>
-
-<view class="tabLayer" hidden="{{tab[2]}}">
-   <text class="{{sort_id==1?'active':''}}" data-id="1" data-index="2" data-txt="周一" bindtap="filter">周一</text>
-  <text class="{{sort_id==2?'active':''}}" data-id="2" data-index="2" data-txt="周二" bindtap="filter">周二</text>
-  <text class="{{sort_id==3?'active':''}}" data-id="3" data-index="2" data-txt="周三" bindtap="filter">周三</text>
-  <text class="{{sort_id==4?'active':''}}" data-id="4" data-index="2" data-txt="周四" bindtap="filter">周四</text>
-  <text class="{{sort_id==5?'active':''}}" data-id="5" data-index="2" data-txt="周五" bindtap="filter">周五</text>
-  <text class="{{sort_id==6?'active':''}}" data-id="6" data-index="2" data-txt="周六" bindtap="filter">周六</text>
-  <text class="{{sort_id==7?'active':''}}" data-id="7" data-index="2" data-txt="周日" bindtap="filter">周日</text>
-</view>
-
-<view class="tabLayer" hidden="{{tab[3]}}">
-    <text class="{{flightNameEnd==''?'active':''}}" data-id="" data-index="3" data-txt="到达机场" bindtap="filter">不限</text>
-    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportEndList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="3" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportLocation}}</text>
+    <text class="{{flightNameEnd==''?'active':''}}" data-id="" data-index="1" data-txt="到达机场" bindtap="filter">不限</text>
+    <text class="{{flightNameEnd==item.airportAbbreviate?'active':''}}" wx:for="{{airportEndList}}" wx:key="pp" wx:for-item="item" data-id="{{item.airportAbbreviate}}" data-index="1" data-txt="{{item.airportAbbreviate}}" bindtap="filter">{{item.airportLocation}}</text>
 </view>
 
 <!--航线头-->
@@ -55,8 +39,8 @@
                 <view class='grid-bg'  bindtap='clickTap' data-bindex='{{bindex}}'>
                         <navigator url='../flightdetail/list1?flightNameEnd={{item.airportNameEndCode}}&flightNameStart={{item.airportNameStartCode}}&airlinesCode={{airlines.airlinesCode}}&&flightRequency={{condition.sortId}}'>
                     <text class="grid-label">{{item.airportNameStart}}--{{item.airportNameEnd}}</text>
-                    <!--
-                         <text class="grid-label2">{{item.flightNumber}}班</text>-->
+
+                         <text class="grid-label2">{{item.flightNumber}}班</text>
                     </navigator>
                 </view>
             </view>

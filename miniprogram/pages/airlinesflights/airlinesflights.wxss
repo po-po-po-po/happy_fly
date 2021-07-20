@@ -237,11 +237,12 @@
 }
 .grid-label2{
 display: flex;
-justify-content: left;
+justify-content: center;
+margin: 10rpx auto;
 margin: 5rpx auto;
 font-size: 10px;
-color: rgb(245, 238, 238)
-  
+color: rgb(248, 244, 244)
+
 }
 
 .grid-label {

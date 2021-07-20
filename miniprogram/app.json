@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/enjoyfly/fly",
     "pages/airports/airports",
-    "pages/index/index",
     "pages/city/city",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -51,14 +51,16 @@
   "style": "v2",
   "tabBar": {
     "list": [
+      
       {
-        "pagePath": "pages/enjoyfly/fly",
-        "text": "随心飞"
+        "pagePath": "pages/index/index",
+        "text": "首页"
       },
       {
         "pagePath": "pages/my/index",
         "text": "我的"
       }
+      
     ]
   }
 }
