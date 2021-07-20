@@ -29,11 +29,17 @@
   </view>
 
   <view class="container">
+
   <view class="flyinfo1">
+    <view >
     <navigator url='../fly67/airportslist?airline_id=mu' class="mod-item">
     周末随心飞
   </navigator>
+</view>
+
   </view>
+
+
   </view>
 
   <view class="container">
