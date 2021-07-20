@@ -8,7 +8,7 @@
   </swiper>
 </view>
 <view class='index-nav bgw'>
-<navigator class='nav-item bdr' url='/pages/shopList/shopList?id={{item.id}}' wx:for='{{airlines}}' wx:key="{{index}}">
+<navigator class='nav-item bdr' url='/pages/hu_score/scoredetail?airportCode={{item.airlinesCode}}' wx:for='{{airlines}}' wx:key="{{index}}">
     <image src='{{item.airlinesImg }}'></image>
     <text>{{item.airlinesName}}</text>
   </navigator>
