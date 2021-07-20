@@ -10,7 +10,7 @@
        </navigator>
     <view class="center">
       <view class="name">
-        <text class="name-text">{{item.airlinesName}}({{item.airlinesCode}})</text>
+        <text class="name-text">{{item.airlinesAbbreviate}}</text>
         <i class="iconfont {{item.gender ? 'nv' : 'nan'}}"></i>
       </view>
       <view class="code">航线:{{item.airwayNumber}}条</view>
