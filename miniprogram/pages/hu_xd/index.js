@@ -3,6 +3,7 @@ const app = getApp()
 
 Page({
   data: {
+    motto: 'Hello World',
     avatarUrl: './user-unlogin.png',
     userInfo: {},
     logged: false,
