@@ -17,7 +17,7 @@ Page({
                   }
                 }),
                 wx.request({
-                  url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/activity/activityDetail',
+                  url: 'https://www.potucs.com/flytosky-2.0-SNAPSHOT/activity/activityDetails',
                   method: 'post',
                   data: {
                     id:options.id,
@@ -29,7 +29,8 @@ Page({
                   success: function(res) {
                     // 赋值
                     winPage.setData({
-                      dkcontent:  wxparse.wxParse('dkcontent', 'html', res.data.data.content, winPage, 5)
+                      dkcontent:  wxparse.wxParse('dkcontent', 'html', res.data.data.activity.content, winPage, 5),
+                      airlines:  res.data.data.airlines
                     })
                   }
                 })

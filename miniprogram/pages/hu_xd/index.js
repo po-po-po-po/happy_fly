@@ -20,7 +20,7 @@ Page({
      
       method: 'post',
       data: {
-        "parentCode":"HNA",
+        "parentCode":options.parentCode,
         "pageSize": 250 
       },
       header: {

@@ -1,1 +1,30 @@
 @import "/wxParse/wxParse.wxss";
+/**index.wxss**/
+.slider{
+  width: 100%;
+  height: 390rpx;
+  overflow: hidden;
+}
+.slider swiper{
+  height: 100%;
+}
+/* 小程序图片要设置宽高 */
+.slider image{
+  width: 100%; 
+  height: 390rpx;
+
+}
+page{
+  background: #f1f1f1;
+}
+
+.flyinfo {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  background: #0589e0;   
+  font-size: 20px;
+  width: 100%; 
+  height: 120rpx;
+  line-height: 120rpx;
+}
